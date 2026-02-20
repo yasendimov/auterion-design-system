@@ -1,0 +1,594 @@
+/* ============================================================
+   AUTERION DESIGN SYSTEM — COLOR TOKENS
+
+   Architecture:
+   - Layer 1: Primitive scales (10-step chromatic + 2 backgrounds)
+   - Layer 2: Semantic aliases (mapped to primitives)
+
+   Scale semantic mapping (mirrors Radix UI steps 3–12):
+     step 1  → UI element background
+     step 2  → Hovered UI element background
+     step 3  → Active / selected UI element background
+     step 4  → Subtle borders & separators
+     step 5  → UI element border & focus rings
+     step 6  → Hovered border
+     step 7  → Solid fill (primary accent for each hue)
+     step 8  → Hovered solid fill
+     step 9  → Low-contrast text
+     step 10 → High-contrast text
+
+   How theming works:
+     Semantic aliases (Layer 2) are defined once in :root using
+     var() references to primitives. When [data-theme="dark"]
+     overrides those primitives, all aliases resolve to the new
+     values automatically — no need to redefine them per theme.
+     Only hardcoded values (e.g. --color-on-primary: #fff) are
+     truly static.
+
+   Brand character:
+     Monochrome foundation — pure neutral gray (c=0, no hue tint).
+     Slate (h=240°) available as cool blue-tinted neutral option.
+     Blue + status colors used as accent only.
+     Dark mode is primary. Light mode is secondary.
+
+   Neutrals:
+     gray   — pure achromatic (c=0). Primary neutral.
+     slate  — cool, blue-tinted (h=240°). UI chrome option.
+     mauve  — red-tinted (h=310°). Warm neutral option.
+     sage   — green-tinted (h=165°). Natural neutral option.
+     sand   — warm khaki (h=90°). Content background option.
+
+   Chromatic scales:
+     blue · indigo · violet · pink ·
+     red · orange · amber · green · lime · teal · cyan · bronze
+
+   Alert hierarchy (aligned with OpenBridge / aviation standards):
+     alarm   → red    (immediate action required)
+     warning → orange (prompt action required)
+     caution → amber  (awareness required)
+     ok      → green  (nominal / running)
+
+   Themes:    light (default) · dark [data-theme="dark"]
+   ============================================================ */
+
+/* ------------------------------------------------------------------ */
+/* LIGHT MODE                                                           */
+/* ------------------------------------------------------------------ */
+:root {
+  /* Backgrounds (outside chromatic scales) */
+  --color-background-1: #ffffff;
+  --color-background-2: #fafafa;
+
+  /* ── NEUTRALS ─────────────────────────────────────────────────── */
+
+  /* Gray (primary neutral — pure achromatic, c=0) ────────────── */
+  --color-gray-1:  #fafafa;
+  --color-gray-2:  #f3f3f3;
+  --color-gray-3:  #e8e8e8;
+  --color-gray-4:  #d7d7d7;
+  --color-gray-5:  #bebebe;
+  --color-gray-6:  #9e9e9e;
+  --color-gray-7:  #747474;
+  --color-gray-8:  #505050;
+  --color-gray-9:  #303030;
+  --color-gray-10: #101010;
+
+  /* Slate (cool blue-tinted neutral, h=240°) ─────────────────── */
+  --color-slate-1:  #f7fbfe;
+  --color-slate-2:  #eef5fa;
+  --color-slate-3:  #e1ebf3;
+  --color-slate-4:  #cddbe6;
+  --color-slate-5:  #b0c4d3;
+  --color-slate-6:  #8da5b7;
+  --color-slate-7:  #637e92;
+  --color-slate-8:  #415a6c;
+  --color-slate-9:  #263947;
+  --color-slate-10: #0a161f;
+
+  /* Mauve (red-tinted neutral, h=310°) ───────────────────────── */
+  --color-mauve-1:  #fbfafc;
+  --color-mauve-2:  #f6f3f9;
+  --color-mauve-3:  #eee9f2;
+  --color-mauve-4:  #dfd8e6;
+  --color-mauve-5:  #cabfd2;
+  --color-mauve-6:  #ab9fb5;
+  --color-mauve-7:  #85778f;
+  --color-mauve-8:  #5f5369;
+  --color-mauve-9:  #3d3444;
+  --color-mauve-10: #18131c;
+
+  /* Sage (green-tinted neutral, h=165°) ──────────────────────── */
+  --color-sage-1:  #f7fcf9;
+  --color-sage-2:  #eef7f3;
+  --color-sage-3:  #e1efe8;
+  --color-sage-4:  #cce1d7;
+  --color-sage-5:  #afccbe;
+  --color-sage-6:  #8cae9e;
+  --color-sage-7:  #628776;
+  --color-sage-8:  #406152;
+  --color-sage-9:  #263e33;
+  --color-sage-10: #0a1913;
+
+  /* Sand (warm khaki neutral, h=90°) ─────────────────────────── */
+  --color-sand-1:  #fcfbf8;
+  --color-sand-2:  #f8f6f0;
+  --color-sand-3:  #f1eee4;
+  --color-sand-4:  #e5dfd1;
+  --color-sand-5:  #d1c9b6;
+  --color-sand-6:  #b4ab93;
+  --color-sand-7:  #8f856a;
+  --color-sand-8:  #696048;
+  --color-sand-9:  #443d2a;
+  --color-sand-10: #1d190d;
+
+  /* Neutral Alpha (black overlays, light surfaces) ───────────── */
+  --color-neutral-alpha-1:  rgba(0, 0, 0, 0.02);
+  --color-neutral-alpha-2:  rgba(0, 0, 0, 0.04);
+  --color-neutral-alpha-3:  rgba(0, 0, 0, 0.07);
+  --color-neutral-alpha-4:  rgba(0, 0, 0, 0.11);
+  --color-neutral-alpha-5:  rgba(0, 0, 0, 0.17);
+  --color-neutral-alpha-6:  rgba(0, 0, 0, 0.25);
+  --color-neutral-alpha-7:  rgba(0, 0, 0, 0.38);
+  --color-neutral-alpha-8:  rgba(0, 0, 0, 0.52);
+  --color-neutral-alpha-9:  rgba(0, 0, 0, 0.68);
+  --color-neutral-alpha-10: rgba(0, 0, 0, 0.88);
+
+  /* ── CHROMATIC ────────────────────────────────────────────────── */
+
+  /* Blue (primary accent, h=259°) ────────────────────────────── */
+  --color-blue-1:  #f7faff;
+  --color-blue-2:  #edf4ff;
+  --color-blue-3:  #e0ecff;
+  --color-blue-4:  #c1d9ff;
+  --color-blue-5:  #97bffe;
+  --color-blue-6:  #609dff;
+  --color-blue-7:  #1475ff;
+  --color-blue-8:  #0062e1;
+  --color-blue-9:  #0046a5;
+  --color-blue-10: #00245e;
+
+  /* Indigo (h=268°) ──────────────────────────────────────────── */
+  --color-indigo-1:  #f9fbff;
+  --color-indigo-2:  #f1f5ff;
+  --color-indigo-3:  #e8eeff;
+  --color-indigo-4:  #cedcff;
+  --color-indigo-5:  #abc3ff;
+  --color-indigo-6:  #7e9fff;
+  --color-indigo-7:  #466bff;
+  --color-indigo-8:  #3351ed;
+  --color-indigo-9:  #1d2db6;
+  --color-indigo-10: #0b0072;
+
+  /* Violet (h=295°) ──────────────────────────────────────────── */
+  --color-violet-1:  #fbfaff;
+  --color-violet-2:  #f6f3ff;
+  --color-violet-3:  #efebff;
+  --color-violet-4:  #ded6ff;
+  --color-violet-5:  #c8b8fc;
+  --color-violet-6:  #ac90f5;
+  --color-violet-7:  #895be5;
+  --color-violet-8:  #7642cf;
+  --color-violet-9:  #53239b;
+  --color-violet-10: #2c005e;
+
+  /* Pink (h=335°) ────────────────────────────────────────────── */
+  --color-pink-1:  #fff9fd;
+  --color-pink-2:  #fff1fb;
+  --color-pink-3:  #ffe8f9;
+  --color-pink-4:  #fbcff0;
+  --color-pink-5:  #f4afe4;
+  --color-pink-6:  #e681d2;
+  --color-pink-7:  #cf41b8;
+  --color-pink-8:  #b721a2;
+  --color-pink-9:  #830073;
+  --color-pink-10: #45003c;
+
+  /* Red (alarm, h=25°) ───────────────────────────────────────── */
+  --color-red-1:  #fff8f8;
+  --color-red-2:  #ffefee;
+  --color-red-3:  #ffe4e1;
+  --color-red-4:  #ffc8c3;
+  --color-red-5:  #ffa098;
+  --color-red-6:  #f66d67;
+  --color-red-7:  #e32631;
+  --color-red-8:  #c6001f;
+  --color-red-9:  #8a0012;
+  --color-red-10: #4b0006;
+
+  /* Orange (warning, h=57°) ──────────────────────────────────── */
+  --color-orange-1:  #fffbf8;
+  --color-orange-2:  #fff5ed;
+  --color-orange-3:  #ffeee3;
+  --color-orange-4:  #ffddc5;
+  --color-orange-5:  #ffc297;
+  --color-orange-6:  #ffa661;
+  --color-orange-7:  #ff8e22;
+  --color-orange-8:  #e67b00;
+  --color-orange-9:  #ae5c00;
+  --color-orange-10: #663300;
+
+  /* Amber (caution, h=96°) ───────────────────────────────────── */
+  --color-amber-1:  #fefcf4;
+  --color-amber-2:  #fbf7e7;
+  --color-amber-3:  #fcf3d1;
+  --color-amber-4:  #f9eaad;
+  --color-amber-5:  #f6de7d;
+  --color-amber-6:  #ebcd45;
+  --color-amber-7:  #ffdb37;
+  --color-amber-8:  #ecc900;
+  --color-amber-9:  #bda000;
+  --color-amber-10: #7b6800;
+
+  /* Green (ok / running, h=145°) ─────────────────────────────── */
+  --color-green-1:  #f5fcf5;
+  --color-green-2:  #ebf8eb;
+  --color-green-3:  #dbf3db;
+  --color-green-4:  #b9e5b9;
+  --color-green-5:  #8bd28d;
+  --color-green-6:  #4db956;
+  --color-green-7:  #009427;
+  --color-green-8:  #007c1f;
+  --color-green-9:  #005512;
+  --color-green-10: #002b05;
+
+  /* Lime (h=128°) ────────────────────────────────────────────── */
+  --color-lime-1:  #f9fcf5;
+  --color-lime-2:  #f1f9e9;
+  --color-lime-3:  #e8f6d8;
+  --color-lime-4:  #d5efb7;
+  --color-lime-5:  #bce38b;
+  --color-lime-6:  #a1d455;
+  --color-lime-7:  #87c000;
+  --color-lime-8:  #77ab00;
+  --color-lime-9:  #587f00;
+  --color-lime-10: #314900;
+
+  /* Teal (data / accent, h=185°) ─────────────────────────────── */
+  --color-teal-1:  #f2fdfb;
+  --color-teal-2:  #e4f9f5;
+  --color-teal-3:  #d0f4ee;
+  --color-teal-4:  #a1e8de;
+  --color-teal-5:  #55d6c7;
+  --color-teal-6:  #00b7a8;
+  --color-teal-7:  #008d82;
+  --color-teal-8:  #00766d;
+  --color-teal-9:  #00514a;
+  --color-teal-10: #002824;
+
+  /* Cyan (h=200°) ────────────────────────────────────────────── */
+  --color-cyan-1:  #f1fdfd;
+  --color-cyan-2:  #e3f8f9;
+  --color-cyan-3:  #cef5f6;
+  --color-cyan-4:  #a2e9ec;
+  --color-cyan-5:  #57d7de;
+  --color-cyan-6:  #00b8c0;
+  --color-cyan-7:  #009197;
+  --color-cyan-8:  #007a80;
+  --color-cyan-9:  #005559;
+  --color-cyan-10: #002b2d;
+
+  /* Bronze (aerospace / hardware tone, h=40°) ────────────────── */
+  --color-bronze-1:  #fffaf8;
+  --color-bronze-2:  #fff3ef;
+  --color-bronze-3:  #ffeae3;
+  --color-bronze-4:  #ffd7ca;
+  --color-bronze-5:  #fcbca6;
+  --color-bronze-6:  #f1997a;
+  --color-bronze-7:  #d96c44;
+  --color-bronze-8:  #c05228;
+  --color-bronze-9:  #8e3107;
+  --color-bronze-10: #4e1600;
+}
+
+/* ------------------------------------------------------------------ */
+/* DARK MODE (primary)                                                  */
+/* ------------------------------------------------------------------ */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-background-1: #000000;
+  --color-background-2: #0f0f0f;
+
+  /* Gray */
+  --color-gray-1:  #0b0b0b;
+  --color-gray-2:  #131313;
+  --color-gray-3:  #1c1c1c;
+  --color-gray-4:  #292929;
+  --color-gray-5:  #3a3a3a;
+  --color-gray-6:  #505050;
+  --color-gray-7:  #6f6f6f;
+  --color-gray-8:  #909090;
+  --color-gray-9:  #b8b8b8;
+  --color-gray-10: #ececec;
+
+  /* Slate */
+  --color-slate-1:  #060d12;
+  --color-slate-2:  #0a151c;
+  --color-slate-3:  #101e28;
+  --color-slate-4:  #192c3a;
+  --color-slate-5:  #273d4d;
+  --color-slate-6:  #3b5567;
+  --color-slate-7:  #597488;
+  --color-slate-8:  #7c94a6;
+  --color-slate-9:  #abbcc8;
+  --color-slate-10: #e5edf3;
+
+  /* Mauve */
+  --color-mauve-1:  #0d0b0f;
+  --color-mauve-2:  #16121a;
+  --color-mauve-3:  #211b25;
+  --color-mauve-4:  #2f2735;
+  --color-mauve-5:  #413749;
+  --color-mauve-6:  #594d62;
+  --color-mauve-7:  #776b81;
+  --color-mauve-8:  #978da0;
+  --color-mauve-9:  #bdb6c3;
+  --color-mauve-10: #edeaef;
+
+  /* Sage */
+  --color-sage-1:  #070e0b;
+  --color-sage-2:  #0a1712;
+  --color-sage-3:  #0f221a;
+  --color-sage-4:  #163126;
+  --color-sage-5:  #214435;
+  --color-sage-6:  #375b4c;
+  --color-sage-7:  #567a6a;
+  --color-sage-8:  #7b9a8b;
+  --color-sage-9:  #aabfb5;
+  --color-sage-10: #e5ede9;
+
+  /* Sand */
+  --color-sand-1:  #0f0e09;
+  --color-sand-2:  #19160e;
+  --color-sand-3:  #241f14;
+  --color-sand-4:  #332d1d;
+  --color-sand-5:  #453e2a;
+  --color-sand-6:  #5d553d;
+  --color-sand-7:  #7c735b;
+  --color-sand-8:  #9b937e;
+  --color-sand-9:  #bfbaaa;
+  --color-sand-10: #edeae3;
+
+  /* Neutral Alpha */
+  --color-neutral-alpha-1:  rgba(255, 255, 255, 0.03);
+  --color-neutral-alpha-2:  rgba(255, 255, 255, 0.06);
+  --color-neutral-alpha-3:  rgba(255, 255, 255, 0.09);
+  --color-neutral-alpha-4:  rgba(255, 255, 255, 0.13);
+  --color-neutral-alpha-5:  rgba(255, 255, 255, 0.19);
+  --color-neutral-alpha-6:  rgba(255, 255, 255, 0.28);
+  --color-neutral-alpha-7:  rgba(255, 255, 255, 0.40);
+  --color-neutral-alpha-8:  rgba(255, 255, 255, 0.54);
+  --color-neutral-alpha-9:  rgba(255, 255, 255, 0.70);
+  --color-neutral-alpha-10: rgba(255, 255, 255, 0.90);
+
+  /* Blue */
+  --color-blue-1:  #070e1a;
+  --color-blue-2:  #0a1527;
+  --color-blue-3:  #0b1c38;
+  --color-blue-4:  #0c2957;
+  --color-blue-5:  #083980;
+  --color-blue-6:  #0052c0;
+  --color-blue-7:  #1475ff;
+  --color-blue-8:  #428bff;
+  --color-blue-9:  #81b2ff;
+  --color-blue-10: #dbe9ff;
+
+  /* Indigo */
+  --color-indigo-1:  #080d19;
+  --color-indigo-2:  #0c1329;
+  --color-indigo-3:  #111c3f;
+  --color-indigo-4:  #152561;
+  --color-indigo-5:  #1d318c;
+  --color-indigo-6:  #2a45c4;
+  --color-indigo-7:  #466bff;
+  --color-indigo-8:  #6187ff;
+  --color-indigo-9:  #95b2ff;
+  --color-indigo-10: #dfe8ff;
+
+  /* Violet */
+  --color-violet-1:  #0e0b17;
+  --color-violet-2:  #181227;
+  --color-violet-3:  #22183b;
+  --color-violet-4:  #321f59;
+  --color-violet-5:  #47287f;
+  --color-violet-6:  #6437b1;
+  --color-violet-7:  #895be5;
+  --color-violet-8:  #9c74f6;
+  --color-violet-9:  #bca5ff;
+  --color-violet-10: #eae5ff;
+
+  /* Pink */
+  --color-pink-1:  #160913;
+  --color-pink-2:  #230e1f;
+  --color-pink-3:  #34112e;
+  --color-pink-4:  #4d1144;
+  --color-pink-5:  #6d0c60;
+  --color-pink-6:  #960c84;
+  --color-pink-7:  #cf41b8;
+  --color-pink-8:  #e05ec9;
+  --color-pink-9:  #f197de;
+  --color-pink-10: #ffe1f7;
+
+  /* Red */
+  --color-red-1:  #1b0a09;
+  --color-red-2:  #290d0c;
+  --color-red-3:  #3c0e0e;
+  --color-red-4:  #57080d;
+  --color-red-5:  #78000e;
+  --color-red-6:  #a50018;
+  --color-red-7:  #e32631;
+  --color-red-8:  #f64e4d;
+  --color-red-9:  #ff9088;
+  --color-red-10: #ffdfdc;
+
+  /* Orange */
+  --color-orange-1:  #1a0e05;
+  --color-orange-2:  #2b1301;
+  --color-orange-3:  #3d1c00;
+  --color-orange-4:  #522800;
+  --color-orange-5:  #703900;
+  --color-orange-6:  #954e00;
+  --color-orange-7:  #ff8e22;
+  --color-orange-8:  #ffb074;
+  --color-orange-9:  #ffcfad;
+  --color-orange-10: #ffeadb;
+
+  /* Amber */
+  --color-amber-1:  #141105;
+  --color-amber-2:  #201a00;
+  --color-amber-3:  #2e2500;
+  --color-amber-4:  #403500;
+  --color-amber-5:  #574900;
+  --color-amber-6:  #776400;
+  --color-amber-7:  #ffdb37;
+  --color-amber-8:  #ffe476;
+  --color-amber-9:  #ffeda5;
+  --color-amber-10: #fef6d1;
+
+  /* Green */
+  --color-green-1:  #061206;
+  --color-green-2:  #061b07;
+  --color-green-3:  #022806;
+  --color-green-4:  #003809;
+  --color-green-5:  #004b0f;
+  --color-green-6:  #006a19;
+  --color-green-7:  #009427;
+  --color-green-8:  #11ad32;
+  --color-green-9:  #74cc78;
+  --color-green-10: #d4f1d4;
+
+  /* Lime */
+  --color-lime-1:  #0d1405;
+  --color-lime-2:  #131f03;
+  --color-lime-3:  #1c2c00;
+  --color-lime-4:  #283d00;
+  --color-lime-5:  #385300;
+  --color-lime-6:  #4d7000;
+  --color-lime-7:  #87c000;
+  --color-lime-8:  #9ad338;
+  --color-lime-9:  #b9e57e;
+  --color-lime-10: #e0f4c8;
+
+  /* Teal */
+  --color-teal-1:  #00110f;
+  --color-teal-2:  #001a17;
+  --color-teal-3:  #002421;
+  --color-teal-4:  #00332e;
+  --color-teal-5:  #004640;
+  --color-teal-6:  #00635a;
+  --color-teal-7:  #008d82;
+  --color-teal-8:  #00a598;
+  --color-teal-9:  #23cebe;
+  --color-teal-10: #c4f2eb;
+
+  /* Cyan */
+  --color-cyan-1:  #001011;
+  --color-cyan-2:  #00191b;
+  --color-cyan-3:  #002426;
+  --color-cyan-4:  #003336;
+  --color-cyan-5:  #00474a;
+  --color-cyan-6:  #006368;
+  --color-cyan-7:  #009197;
+  --color-cyan-8:  #00a8af;
+  --color-cyan-9:  #20cfd7;
+  --color-cyan-10: #c7f3f6;
+
+  /* Bronze */
+  --color-bronze-1:  #180d09;
+  --color-bronze-2:  #27120b;
+  --color-bronze-3:  #3b180b;
+  --color-bronze-4:  #561e07;
+  --color-bronze-5:  #782601;
+  --color-bronze-6:  #9f3604;
+  --color-bronze-7:  #d96c44;
+  --color-bronze-8:  #ec845f;
+  --color-bronze-9:  #fcae92;
+  --color-bronze-10: #ffe1d7;
+}
+
+/* ------------------------------------------------------------------ */
+/* SEMANTIC ALIASES                                                     */
+/*                                                                     */
+/* Components consume these tokens — never raw primitives.            */
+/*                                                                     */
+/* Theme behaviour: aliases are defined once here using var()         */
+/* references. CSS resolves them at the element level, so when        */
+/* [data-theme="dark"] overrides the primitives above, all aliases    */
+/* automatically resolve to the correct dark values. No duplication   */
+/* needed. Only hardcoded leaf values (e.g. #ffffff) are static.      */
+/* ------------------------------------------------------------------ */
+:root {
+  /* Page */
+  --color-page-bg:          var(--color-background-1);
+  --color-page-bg-subtle:   var(--color-background-2);
+
+  /* Text */
+  --color-text-primary:     var(--color-gray-10);
+  --color-text-secondary:   var(--color-gray-9);
+  --color-text-tertiary:    var(--color-gray-8);
+  --color-text-disabled:    var(--color-gray-5);
+  --color-text-inverse:     var(--color-background-1);
+  --color-text-link:        var(--color-blue-7);
+
+  /* Borders */
+  --color-border-subtle:    var(--color-gray-4);
+  --color-border-default:   var(--color-gray-5);
+  --color-border-strong:    var(--color-gray-6);
+
+  /* Surfaces */
+  --color-surface-1:        var(--color-gray-1);
+  --color-surface-2:        var(--color-gray-2);
+  --color-surface-3:        var(--color-gray-3);
+
+  /* Primary (blue) */
+  --color-primary-subtle:   var(--color-blue-1);
+  --color-primary-muted:    var(--color-blue-3);
+  --color-primary-border:   var(--color-blue-5);
+  --color-primary:          var(--color-blue-7);
+  --color-primary-hover:    var(--color-blue-8);
+  --color-primary-text:     var(--color-blue-9);
+  --color-on-primary:       #ffffff;
+
+  /* Alarm / danger (red) */
+  --color-alarm-subtle:     var(--color-red-1);
+  --color-alarm-muted:      var(--color-red-3);
+  --color-alarm-border:     var(--color-red-5);
+  --color-alarm:            var(--color-red-7);
+  --color-alarm-hover:      var(--color-red-8);
+  --color-alarm-text:       var(--color-red-9);
+  --color-on-alarm:         #ffffff;
+
+  /* Warning (orange) */
+  --color-warning-subtle:   var(--color-orange-1);
+  --color-warning-muted:    var(--color-orange-3);
+  --color-warning-border:   var(--color-orange-5);
+  --color-warning:          var(--color-orange-7);
+  --color-warning-hover:    var(--color-orange-8);
+  --color-warning-text:     var(--color-orange-9);
+  --color-on-warning:       #1a1a1a;
+
+  /* Caution (amber) */
+  --color-caution-subtle:   var(--color-amber-1);
+  --color-caution-muted:    var(--color-amber-3);
+  --color-caution-border:   var(--color-amber-5);
+  --color-caution:          var(--color-amber-7);
+  --color-caution-hover:    var(--color-amber-8);
+  --color-caution-text:     var(--color-amber-9);
+  --color-on-caution:       #3d3200;
+
+  /* Ok / running (green) */
+  --color-ok-subtle:        var(--color-green-1);
+  --color-ok-muted:         var(--color-green-3);
+  --color-ok-border:        var(--color-green-5);
+  --color-ok:               var(--color-green-7);
+  --color-ok-hover:         var(--color-green-8);
+  --color-ok-text:          var(--color-green-9);
+  --color-on-ok:            #ffffff;
+
+  /* Data / accent (teal) */
+  --color-accent-subtle:    var(--color-teal-1);
+  --color-accent-muted:     var(--color-teal-3);
+  --color-accent-border:    var(--color-teal-5);
+  --color-accent:           var(--color-teal-7);
+  --color-accent-hover:     var(--color-teal-8);
+  --color-accent-text:      var(--color-teal-9);
+}

@@ -1,0 +1,88 @@
+/* ============================================================
+   AUTERION DESIGN SYSTEM — TYPOGRAPHY TOKENS
+
+   Font: Inter Variable
+   Weights: Regular (400), Medium (500), SemiBold (600)
+
+   Scale: 13 steps from xs (12px) to 9xl (128px)
+
+   Letter spacing tightens with size:
+     xs–lg    → -2%
+     xl–2xl   → -3%
+     3xl–9xl  → -4%
+
+   Note: Regular weight uses slightly looser tracking (-5%)
+   at display sizes (3xl+). The tokens below use the
+   SemiBold/Medium values as default. Override with
+   --font-tracking-*-loose for Regular at display sizes.
+
+   OpenType features enabled:
+     ss01 (open digits), ss07 (alt ß), ss08 (disambiguation),
+     cv02, cv03, cv04, cv06, cv09, cv12, cv13
+   ============================================================ */
+
+:root {
+  /* ── Font Family ──────────────────────────────────────────── */
+  --font-family-sans: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+
+  /* ── Font Feature Settings ────────────────────────────────── */
+  --font-features-sans: 'ss01' 1, 'ss07' 1, 'ss08' 1, 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv06' 1, 'cv09' 1, 'cv12' 1, 'cv13' 1;
+
+  /* ── Font Weights ─────────────────────────────────────────── */
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+
+  /* ── Font Sizes ───────────────────────────────────────────── */
+  --font-size-xs:    12px;
+  --font-size-sm:    14px;
+  --font-size-base:  16px;
+  --font-size-lg:    18px;
+  --font-size-xl:    20px;
+  --font-size-2xl:   24px;
+  --font-size-3xl:   30px;
+  --font-size-4xl:   40px;
+  --font-size-5xl:   48px;
+  --font-size-6xl:   60px;
+  --font-size-7xl:   80px;
+  --font-size-8xl:   96px;
+  --font-size-9xl:   128px;
+
+  /* ── Line Heights ─────────────────────────────────────────── */
+  --line-height-xs:    1.4;
+  --line-height-sm:    1.4;
+  --line-height-base:  1.4;
+  --line-height-lg:    1.4;
+  --line-height-xl:    1.4;
+  --line-height-2xl:   1.25;
+  --line-height-3xl:   1.25;
+  --line-height-4xl:   1.15;
+  --line-height-5xl:   1.15;
+  --line-height-6xl:   1.1;
+  --line-height-7xl:   1;
+  --line-height-8xl:   1;
+  --line-height-9xl:   1;
+
+  /* ── Letter Spacing (SemiBold / Medium default) ───────────── */
+  --tracking-xs:    -0.24px;
+  --tracking-sm:    -0.28px;
+  --tracking-base:  -0.32px;
+  --tracking-lg:    -0.36px;
+  --tracking-xl:    -0.6px;
+  --tracking-2xl:   -0.72px;
+  --tracking-3xl:   -1.2px;
+  --tracking-4xl:   -1.6px;
+  --tracking-5xl:   -1.92px;
+  --tracking-6xl:   -2.4px;
+  --tracking-7xl:   -3.2px;
+  --tracking-8xl:   -3.84px;
+  --tracking-9xl:   -5.12px;
+
+  /* ── Letter Spacing (Regular weight, display sizes) ───────── */
+  --tracking-3xl-loose:  -1.5px;
+  --tracking-4xl-loose:  -2px;
+  --tracking-7xl-loose:  -4px;
+  --tracking-8xl-loose:  -4.8px;
+  --tracking-9xl-loose:  -6.4px;
+}
