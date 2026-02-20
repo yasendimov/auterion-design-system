@@ -1,7 +1,18 @@
 @import "tailwindcss";
-@import "@fontsource-variable/inter";
 @import "./tokens/colors.css";
 @import "./tokens/typography.css";
+
+/* ── Self-hosted Inter Variable (official rsms/inter v4.1) ─────────── */
+/* The @fontsource-variable/inter package ships stripped woff2 files    */
+/* missing OpenType features (ss01, ss07, ss08, cv02–cv13). We use the */
+/* official release which includes all GSUB features.                   */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('./fonts/InterVariable.woff2') format('woff2');
+}
 
 @theme {
   /* ── Backgrounds ─────────────────────────────────────────────── */
