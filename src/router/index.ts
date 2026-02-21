@@ -3,6 +3,10 @@ import HomePage from '@/pages/HomePage.vue'
 import ColorsPage from '@/pages/ColorsPage.vue'
 import TypographyPage from '@/pages/TypographyPage.vue'
 import PlaceholderPage from '@/pages/PlaceholderPage.vue'
+import BrandIdeaPage from '@/pages/BrandIdeaPage.vue'
+import VoicePrinciplesPage from '@/pages/VoicePrinciplesPage.vue'
+import WritingAuterionPage from '@/pages/WritingAuterionPage.vue'
+import FormattingPage from '@/pages/FormattingPage.vue'
 
 function placeholder(section: string, title: string) {
   return {
@@ -21,10 +25,10 @@ const router = createRouter({
     },
 
     // Strategy
-    { path: '/strategy/brand-idea', ...placeholder('Strategy', 'Brand Idea') },
-    { path: '/strategy/voice-principles', ...placeholder('Strategy', 'Voice Principles') },
-    { path: '/strategy/writing', ...placeholder('Strategy', 'Writing Auterion') },
-    { path: '/strategy/formatting', ...placeholder('Strategy', 'Formatting & Structure') },
+    { path: '/strategy/brand-idea', component: BrandIdeaPage, meta: { section: 'Strategy', title: 'Brand Idea' } },
+    { path: '/strategy/voice-principles', component: VoicePrinciplesPage, meta: { section: 'Strategy', title: 'Voice Principles' } },
+    { path: '/strategy/writing', component: WritingAuterionPage, meta: { section: 'Strategy', title: 'Writing Auterion' } },
+    { path: '/strategy/formatting', component: FormattingPage, meta: { section: 'Strategy', title: 'Formatting & Structure' } },
 
     // Logo
     { path: '/logo/introduction', ...placeholder('Logo', 'Introduction') },
@@ -74,7 +78,9 @@ const router = createRouter({
     { path: '/language/social-media', ...placeholder('Language & Style', 'Social Media') },
 
     // Gallery
-    { path: '/gallery', ...placeholder('', 'Gallery') },
+    { path: '/gallery/introduction', ...placeholder('Gallery', 'Introduction') },
+    { path: '/gallery/marketing', ...placeholder('Gallery', 'Marketing') },
+    { path: '/gallery/applications', ...placeholder('Gallery', 'Applications') },
   ],
 })
 

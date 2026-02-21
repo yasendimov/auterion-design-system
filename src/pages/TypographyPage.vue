@@ -28,46 +28,43 @@ const features = [
 </script>
 
 <template>
-  <div class="p-8">
-    <header class="mb-12">
-      <h1 class="text-3xl font-bold">Typography</h1>
-      <p class="text-text-secondary mt-1">Inter Variable — type scale, weights, and OpenType features.</p>
+  <div>
+    <header class="px-8 lg:px-16 pt-16 pb-12">
+      <p class="text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium mb-3">Typography</p>
+      <h1 class="text-4xl font-semibold text-zinc-900 dark:text-white">Typography</h1>
+      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-4">Inter Variable — type scale, weights, and OpenType features.</p>
     </header>
 
-    <!-- Type Scale -->
-    <section class="mb-16">
-      <h2 class="text-xl font-semibold mb-1">Type Scale</h2>
-      <p class="text-text-tertiary text-sm mb-6">13 steps from xs (12px) to 9xl (128px). Three weight columns: SemiBold, Medium, Regular.</p>
+    <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
 
-      <!-- Weight legend -->
+    <section class="px-8 lg:px-16 py-16">
+      <h2 class="text-xl font-semibold text-zinc-900 dark:text-white mb-1">Type Scale</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">13 steps from xs (12px) to 9xl (128px). Three weight columns: SemiBold, Medium, Regular.</p>
+
       <div class="grid gap-6 mb-4" style="grid-template-columns: 100px repeat(3, 1fr)">
         <div></div>
-        <div v-for="w in weights" :key="w.label" class="text-xs text-text-tertiary">
+        <div v-for="w in weights" :key="w.label" class="text-xs text-zinc-400 dark:text-zinc-500">
           {{ w.label }} ({{ w.value }})
         </div>
       </div>
 
-      <!-- Scale rows -->
       <div
         v-for="step in typeScale"
         :key="step.token"
-        class="grid gap-6 mb-px border-t border-border-subtle py-3"
+        class="grid gap-6 border-t border-zinc-200 dark:border-zinc-800 py-3"
         style="grid-template-columns: 100px repeat(3, 1fr)"
       >
-        <!-- Token info -->
         <div class="flex flex-col justify-center">
-          <span class="text-xs font-medium text-text-primary font-mono">{{ step.token }}</span>
-          <span class="text-xs text-text-tertiary">{{ step.size }}</span>
+          <span class="text-xs font-medium text-zinc-900 dark:text-white font-mono">{{ step.token }}</span>
+          <span class="text-xs text-zinc-400 dark:text-zinc-500">{{ step.size }}</span>
         </div>
-
-        <!-- Weight samples -->
         <div
           v-for="w in weights"
           :key="w.label"
           class="min-w-0 overflow-hidden"
         >
           <p
-            class="truncate text-text-primary"
+            class="truncate text-zinc-800 dark:text-zinc-100"
             :style="{
               fontSize: `var(--font-size-${step.token})`,
               fontWeight: w.value,
@@ -81,93 +78,88 @@ const features = [
       </div>
     </section>
 
-    <!-- Scale Reference Table -->
-    <section class="mb-16">
-      <h2 class="text-xl font-semibold mb-1">Token Reference</h2>
-      <p class="text-text-tertiary text-sm mb-6">CSS custom properties and their values.</p>
+    <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
+
+    <section class="px-8 lg:px-16 py-16">
+      <h2 class="text-xl font-semibold text-zinc-900 dark:text-white mb-1">Token Reference</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">CSS custom properties and their values.</p>
 
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
           <thead>
-            <tr class="border-b border-border-subtle text-left">
-              <th class="py-2 pr-4 text-xs font-medium text-text-tertiary uppercase tracking-wider">Token</th>
-              <th class="py-2 pr-4 text-xs font-medium text-text-tertiary uppercase tracking-wider">Size</th>
-              <th class="py-2 pr-4 text-xs font-medium text-text-tertiary uppercase tracking-wider">Line Height</th>
-              <th class="py-2 pr-4 text-xs font-medium text-text-tertiary uppercase tracking-wider">Tracking</th>
-              <th class="py-2 text-xs font-medium text-text-tertiary uppercase tracking-wider">Tracking (Regular)</th>
+            <tr class="border-b border-zinc-300 dark:border-zinc-700 text-left">
+              <th class="py-2 pr-4 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Token</th>
+              <th class="py-2 pr-4 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Size</th>
+              <th class="py-2 pr-4 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Line Height</th>
+              <th class="py-2 pr-4 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Tracking</th>
+              <th class="py-2 text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">Tracking (Regular)</th>
             </tr>
           </thead>
           <tbody>
-            <tr
-              v-for="step in typeScale"
-              :key="step.token"
-              class="border-b border-border-subtle"
-            >
-              <td class="py-2 pr-4 font-mono text-text-primary">--font-size-{{ step.token }}</td>
-              <td class="py-2 pr-4 text-text-secondary">{{ step.size }}</td>
-              <td class="py-2 pr-4 text-text-secondary">{{ step.lineHeight }}</td>
-              <td class="py-2 pr-4 font-mono text-text-secondary">{{ step.tracking }}</td>
-              <td class="py-2 font-mono text-text-tertiary">{{ step.trackingLoose ?? '—' }}</td>
+            <tr v-for="step in typeScale" :key="step.token" class="border-b border-zinc-200 dark:border-zinc-800">
+              <td class="py-2 pr-4 font-mono text-zinc-900 dark:text-white">--font-size-{{ step.token }}</td>
+              <td class="py-2 pr-4 text-zinc-500 dark:text-zinc-400">{{ step.size }}</td>
+              <td class="py-2 pr-4 text-zinc-500 dark:text-zinc-400">{{ step.lineHeight }}</td>
+              <td class="py-2 pr-4 font-mono text-zinc-500 dark:text-zinc-400">{{ step.tracking }}</td>
+              <td class="py-2 font-mono text-zinc-500 dark:text-zinc-400">{{ step.trackingLoose ?? '—' }}</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Weights -->
-    <section class="mb-16">
-      <h2 class="text-xl font-semibold mb-1">Weights</h2>
-      <p class="text-text-tertiary text-sm mb-6">Three weights available across the entire scale.</p>
+    <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
 
-      <div class="grid gap-6 sm:grid-cols-3">
-        <div v-for="w in weights" :key="w.label" class="p-4 rounded-lg border border-border-subtle bg-surface-1">
+    <section class="px-8 lg:px-16 py-16">
+      <h2 class="text-xl font-semibold text-zinc-900 dark:text-white mb-1">Weights</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">Three weights available across the entire scale.</p>
+
+      <div class="grid gap-4 sm:grid-cols-3">
+        <div v-for="w in weights" :key="w.label" class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
           <p
-            class="text-2xl text-text-primary mb-2"
+            class="text-2xl text-zinc-900 dark:text-white mb-3"
             :style="{ fontWeight: w.value, letterSpacing: 'var(--tracking-2xl)' }"
           >
             Aa Bb Cc 123
           </p>
-          <p class="text-xs text-text-tertiary">
+          <p class="text-xs text-zinc-500 dark:text-zinc-400">
             <span class="font-mono">{{ w.label }}</span> — {{ w.value }}
           </p>
-          <p class="text-xs text-text-tertiary font-mono">--font-weight-{{ w.label === 'SemiBold' ? 'semibold' : w.label === 'Medium' ? 'medium' : 'normal' }}</p>
+          <p class="text-xs text-zinc-400 dark:text-zinc-500 font-mono">--font-weight-{{ w.label === 'SemiBold' ? 'semibold' : w.label === 'Medium' ? 'medium' : 'normal' }}</p>
         </div>
       </div>
     </section>
 
-    <!-- OpenType Features -->
-    <section class="mb-16">
-      <h2 class="text-xl font-semibold mb-1">OpenType Features</h2>
-      <p class="text-text-tertiary text-sm mb-6">Enabled by default via <code class="font-mono text-text-secondary">--font-features-sans</code>.</p>
+    <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
+
+    <section class="px-8 lg:px-16 py-16">
+      <h2 class="text-xl font-semibold text-zinc-900 dark:text-white mb-1">OpenType Features</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">Enabled by default via <code class="font-mono text-zinc-500 dark:text-zinc-400">--font-features-sans</code>.</p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-4 rounded-lg border border-border-subtle bg-surface-1">
-          <p class="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-3">Features enabled</p>
+        <div class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
+          <p class="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-3">Features enabled</p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="f in features"
               :key="f"
-              class="px-2 py-1 rounded bg-surface-2 text-xs font-mono text-text-secondary"
+              class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-xs font-mono text-zinc-600 dark:text-zinc-300"
             >
               {{ f }}
             </span>
           </div>
         </div>
 
-        <div class="p-4 rounded-lg border border-border-subtle bg-surface-1">
-          <p class="text-xs font-medium text-text-tertiary uppercase tracking-wider mb-3">Sample comparison</p>
+        <div class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
+          <p class="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-3">Sample comparison</p>
           <div class="space-y-2">
             <div>
-              <p class="text-xs text-text-tertiary mb-1">With features:</p>
-              <p class="text-xl text-text-primary" style="letter-spacing: -0.6px">
-                0123456789 Il1 agy
-              </p>
+              <p class="text-xs text-zinc-400 dark:text-zinc-500 mb-1">With features:</p>
+              <p class="text-xl text-zinc-900 dark:text-white" style="letter-spacing: -0.6px">0123456789 Il1 agy</p>
             </div>
             <div>
-              <p class="text-xs text-text-tertiary mb-1">Without features:</p>
-              <p class="text-xl text-text-primary" style="font-feature-settings: normal; letter-spacing: -0.6px">
-                0123456789 Il1 agy
-              </p>
+              <p class="text-xs text-zinc-400 dark:text-zinc-500 mb-1">Without features:</p>
+              <p class="text-xl text-zinc-900 dark:text-white" style="font-feature-settings: normal; letter-spacing: -0.6px">0123456789 Il1 agy</p>
             </div>
           </div>
         </div>

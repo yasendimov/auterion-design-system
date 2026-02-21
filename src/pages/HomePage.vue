@@ -1,94 +1,44 @@
 <script setup lang="ts">
 const sections = [
-  {
-    title: 'Strategy',
-    description: 'Brand idea, voice principles, and writing guidelines.',
-    items: [
-      { label: 'Brand Idea', to: '/strategy/brand-idea', description: 'Core brand positioning and mission.' },
-      { label: 'Voice Principles', to: '/strategy/voice-principles', description: 'How the brand sounds and communicates.' },
-    ],
-  },
-  {
-    title: 'Logo',
-    description: 'Logo usage, lockups, scale, and placement guidelines.',
-    items: [
-      { label: 'The Basics', to: '/logo/the-basics', description: 'Core logo rules and usage.' },
-      { label: 'Lockup', to: '/logo/lockup', description: 'Logo lockup variations.' },
-    ],
-  },
-  {
-    title: 'Typography',
-    description: 'Typeface selection, usage, and formatting rules.',
-    items: [
-      { label: 'Using Type', to: '/typography/using-type', description: 'Type hierarchy and application.' },
-    ],
-  },
-  {
-    title: 'Color',
-    description: 'Primitive scales, semantic tokens, and color usage.',
-    items: [
-      { label: 'Primitives', to: '/color/primitives', description: '17 chromatic scales with 10 steps each.' },
-      { label: 'Semantic Tokens', to: '/color/semantic', description: 'Status, text, border, and surface tokens.' },
-    ],
-  },
-  {
-    title: 'Photography',
-    description: 'Art direction, platform-specific guidelines.',
-    items: [
-      { label: 'Art Direction', to: '/photography/art-direction', description: 'Photography style and composition.' },
-    ],
-  },
-  {
-    title: 'Iconography',
-    description: 'Product symbols and functional icon library.',
-    items: [
-      { label: 'Product Symbols', to: '/iconography/product-symbols', description: 'App and feature iconography.' },
-      { label: 'Functional Icons', to: '/iconography/functional-icons', description: 'UI and interaction icons.' },
-    ],
-  },
-  {
-    title: 'Language & Style',
-    description: 'Writing guidelines, product names, and content standards.',
-    items: [
-      { label: 'Voice Principles', to: '/language/voice-principles', description: 'Tone and messaging guidelines.' },
-      { label: 'Product Names', to: '/language/product-names', description: 'Naming conventions and usage.' },
-    ],
-  },
+  { title: 'Strategy', description: 'Brand idea, voice principles, and writing guidelines.', to: '/strategy/brand-idea', count: 4 },
+  { title: 'Logo', description: 'Logo usage, lockups, scale, and placement guidelines.', to: '/logo/introduction', count: 6 },
+  { title: 'Typography', description: 'Typeface selection, usage, and formatting rules.', to: '/typography/introduction', count: 3 },
+  { title: 'Color', description: 'Primitive scales, semantic tokens, and color usage.', to: '/color/introduction', count: 4 },
+  { title: 'Photography', description: 'Art direction and platform-specific photo guidelines.', to: '/photography/art-direction', count: 4 },
+  { title: 'Iconography', description: 'Product symbols and functional icon library.', to: '/iconography/introduction', count: 3 },
+  { title: 'Language & Style', description: 'Writing guidelines, product names, and content standards.', to: '/language/voice-principles', count: 5 },
+  { title: 'Gallery', description: 'Visual examples and brand application showcase.', to: '/gallery/introduction', count: 3 },
 ]
 </script>
 
 <template>
-  <div class="p-8 max-w-4xl">
-    <header class="mb-12">
-      <h1 class="text-3xl font-bold text-text-primary">
-        Auterion Design System
+  <div>
+    <section class="px-8 lg:px-16 pt-24 pb-20">
+      <h1 class="text-7xl font-semibold text-zinc-900 dark:text-white leading-none">
+        Auterion<br>Design System
       </h1>
-      <p class="text-text-secondary mt-2 text-lg">
-        Design tokens, components, and patterns for Auterion products.
+      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-8 max-w-md leading-relaxed">
+        Design tokens, components, and patterns for Auterion products. Dark-mode-first. Built for aerospace interfaces.
       </p>
-      <p class="text-text-tertiary mt-1 text-sm">
-        Dark mode primary. Built for aerospace interfaces.
-      </p>
-    </header>
+    </section>
 
-    <div v-for="section in sections" :key="section.title" class="mb-10">
-      <h2 class="text-lg font-semibold text-text-primary mb-1">{{ section.title }}</h2>
-      <p class="text-sm text-text-tertiary mb-4">{{ section.description }}</p>
+    <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
 
-      <div class="grid gap-3 sm:grid-cols-2">
+    <section class="px-8 lg:px-16 py-16">
+      <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <router-link
-          v-for="item in section.items"
-          :key="item.label"
-          :to="item.to"
-          class="block p-4 rounded-lg border border-border-subtle bg-surface-1
-                 hover:border-border-default hover:bg-surface-2 transition-colors group"
+          v-for="section in sections"
+          :key="section.title"
+          :to="section.to"
+          class="group block p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-150"
         >
-          <h3 class="text-sm font-medium text-text-primary group-hover:text-primary-text">
-            {{ item.label }}
+          <h3 class="text-sm font-semibold text-zinc-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-150">
+            {{ section.title }}
           </h3>
-          <p class="text-xs text-text-tertiary mt-1">{{ item.description }}</p>
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2 leading-relaxed">{{ section.description }}</p>
+          <p class="text-[11px] text-zinc-400 dark:text-zinc-500 mt-4 font-medium">{{ section.count }} {{ section.count === 1 ? 'page' : 'pages' }}</p>
         </router-link>
       </div>
-    </div>
+    </section>
   </div>
 </template>

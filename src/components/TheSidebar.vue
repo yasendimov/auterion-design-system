@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import ThemeToggle from '@/components/ThemeToggle.vue'
 
 const route = useRoute()
+const router = useRouter()
 
-interface NavItem {
-  label: string
-  to?: string
-  children?: NavItem[]
-}
-
-const navigation: NavItem[] = [
-  { label: 'Home', to: '/' },
+const sections = [
   {
-    label: 'Strategy',
-    children: [
+    title: 'Strategy',
+    items: [
       { label: 'Brand Idea', to: '/strategy/brand-idea' },
       { label: 'Voice Principles', to: '/strategy/voice-principles' },
       { label: 'Writing Auterion', to: '/strategy/writing' },
@@ -23,8 +17,16 @@ const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Logo',
-    children: [
+    title: 'Gallery',
+    items: [
+      { label: 'Introduction', to: '/gallery/introduction' },
+      { label: 'Marketing', to: '/gallery/marketing' },
+      { label: 'Applications', to: '/gallery/applications' },
+    ],
+  },
+  {
+    title: 'Logo',
+    items: [
       { label: 'Introduction', to: '/logo/introduction' },
       { label: 'The Basics', to: '/logo/the-basics' },
       { label: 'Lockup', to: '/logo/lockup' },
@@ -34,16 +36,16 @@ const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Typography',
-    children: [
+    title: 'Typography',
+    items: [
       { label: 'Introduction', to: '/typography/introduction' },
       { label: 'Using Type', to: '/typography/using-type' },
-      { label: 'Formatting & Structure', to: '/typography/formatting' },
+      { label: 'Formatting', to: '/typography/formatting' },
     ],
   },
   {
-    label: 'Color',
-    children: [
+    title: 'Color',
+    items: [
       { label: 'Introduction', to: '/color/introduction' },
       { label: 'Primitives', to: '/color/primitives' },
       { label: 'Semantic Tokens', to: '/color/semantic' },
@@ -51,8 +53,8 @@ const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Photography',
-    children: [
+    title: 'Photography',
+    items: [
       { label: 'Art Direction', to: '/photography/art-direction' },
       { label: 'YouTube Guide', to: '/photography/youtube' },
       { label: 'Social Media', to: '/photography/social-media' },
@@ -60,16 +62,16 @@ const navigation: NavItem[] = [
     ],
   },
   {
-    label: 'Iconography',
-    children: [
+    title: 'Iconography',
+    items: [
       { label: 'Introduction', to: '/iconography/introduction' },
       { label: 'Product Symbols', to: '/iconography/product-symbols' },
       { label: 'Functional Icons', to: '/iconography/functional-icons' },
     ],
   },
   {
-    label: 'Language & Style',
-    children: [
+    title: 'Language & Style',
+    items: [
       { label: 'Voice Principles', to: '/language/voice-principles' },
       { label: 'Writing Auterion', to: '/language/writing' },
       { label: 'Product Names', to: '/language/product-names' },
@@ -77,102 +79,102 @@ const navigation: NavItem[] = [
       { label: 'Social Media', to: '/language/social-media' },
     ],
   },
-  { label: 'Gallery', to: '/gallery' },
 ]
-
-const expandedSections = ref<Set<string>>(new Set())
-
-function toggleSection(label: string) {
-  if (expandedSections.value.has(label)) {
-    expandedSections.value.delete(label)
-  } else {
-    expandedSections.value.add(label)
-  }
-}
 
 function isActive(path: string): boolean {
   return route.path === path
 }
 
-// Auto-expand section containing the active route
-watchEffect(() => {
-  for (const item of navigation) {
-    if (item.children?.some(child => child.to === route.path)) {
-      expandedSections.value.add(item.label)
+function sectionHasActiveItem(section: typeof sections[number]): boolean {
+  return section.items.some(item => isActive(item.to))
+}
+
+// Initialize: open the section that contains the current route
+const openSections = ref<Set<string>>(new Set(
+  sections.filter(s => sectionHasActiveItem(s)).map(s => s.title)
+))
+
+function toggleSection(section: typeof sections[number]) {
+  if (openSections.value.has(section.title)) {
+    openSections.value.delete(section.title)
+  } else {
+    openSections.value.clear()
+    openSections.value.add(section.title)
+    router.push(section.items[0].to)
+  }
+}
+
+// Auto-open the section when navigating into it (exclusive)
+watch(() => route.path, () => {
+  for (const section of sections) {
+    if (sectionHasActiveItem(section) && !openSections.value.has(section.title)) {
+      openSections.value.clear()
+      openSections.value.add(section.title)
+      break
     }
   }
 })
+
+const isSectionOpen = computed(() => (title: string) => openSections.value.has(title))
 </script>
 
 <template>
-  <aside class="h-screen sticky top-0 flex flex-col border-r border-border-subtle bg-surface-1">
-    <!-- Brand header -->
-    <div class="p-4 border-b border-border-subtle">
-      <router-link to="/" class="block">
-        <h1 class="text-sm font-bold text-text-primary">
-          Auterion Design System
-        </h1>
+  <aside class="w-64 h-screen sticky top-0 flex flex-col border-r border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 shrink-0">
+    <!-- Brand -->
+    <div class="h-14 px-5 flex items-center justify-between shrink-0 border-b border-zinc-200 dark:border-zinc-800">
+      <router-link to="/" class="flex items-center gap-2.5">
+        <svg class="w-5 h-5 shrink-0 text-zinc-900 dark:text-white" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M327.102 266.371L369 379H285.204C278.221 379 272.087 374.57 269.823 367.973L250.195 310.197L327.102 266.371ZM347.862 213.214L142.336 278.718C133.182 281.64 124.784 272.498 128.37 263.638L175.175 149.972C179.138 140.265 193.01 140.736 196.407 150.632L222.735 228.483L303.511 202.752L232.926 13.0272C230.472 6.3355 224.15 2 216.978 2H166.304C159.416 2 153.188 6.147 150.545 12.556L11.263 355.626C6.7335 366.748 14.9432 379 27.0219 379H72.2227C78.7338 379 85.245 377.304 90.9069 374.005L352.958 224.713C355.695 223.205 356.827 219.906 355.789 216.984C354.657 213.874 351.165 212.178 347.862 213.214Z" fill="currentColor"/>
+        </svg>
+        <span class="text-sm font-semibold text-zinc-900 dark:text-white tracking-tight">Design System</span>
       </router-link>
-      <ThemeToggle class="mt-3" />
+      <ThemeToggle />
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 overflow-y-auto p-3">
-      <ul class="space-y-0.5">
-        <template v-for="item in navigation" :key="item.label">
-          <!-- Leaf link -->
-          <li v-if="!item.children">
-            <router-link
-              :to="item.to!"
-              class="block px-3 py-2 rounded-lg text-sm transition-colors"
-              :class="isActive(item.to!)
-                ? 'bg-primary-subtle text-primary-text font-medium'
-                : 'text-text-secondary hover:bg-surface-2 hover:text-text-primary'"
-            >
-              {{ item.label }}
-            </router-link>
-          </li>
-
-          <!-- Collapsible section -->
-          <li v-else>
-            <button
-              @click="toggleSection(item.label)"
-              class="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-surface-2 hover:text-text-primary transition-colors"
-            >
-              <span class="font-medium">{{ item.label }}</span>
-              <svg
-                class="w-4 h-4 transition-transform"
-                :class="expandedSections.has(item.label) ? 'rotate-90' : ''"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+    <nav class="flex-1 overflow-y-auto py-2">
+      <!-- Sections -->
+      <div v-for="section in sections" :key="section.title" class="mt-1 first:mt-0">
+        <button
+          @click="toggleSection(section)"
+          class="w-full flex items-center gap-2 px-5 py-1.5 text-sm font-semibold transition-colors duration-100"
+          :class="isSectionOpen(section.title)
+            ? 'text-zinc-900 dark:text-white'
+            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'"
+        >
+          <svg
+            class="w-3 h-3 shrink-0 transition-transform duration-150"
+            :class="isSectionOpen(section.title) ? 'rotate-90' : ''"
+            fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+          {{ section.title }}
+        </button>
+        <div
+          class="grid transition-[grid-template-rows] duration-150"
+          :class="isSectionOpen(section.title) ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+        >
+          <ul class="overflow-hidden ml-7 pl-0">
+            <li v-for="item in section.items" :key="item.to">
+              <router-link
+                :to="item.to"
+                class="block px-3 py-1 text-sm rounded-md transition-colors duration-100"
+                :class="isActive(item.to)
+                  ? 'text-zinc-900 dark:text-white font-medium'
+                  : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <ul
-              v-show="expandedSections.has(item.label)"
-              class="mt-0.5 ml-3 pl-3 border-l border-border-subtle space-y-0.5"
-            >
-              <li v-for="child in item.children" :key="child.label">
-                <router-link
-                  :to="child.to!"
-                  class="block px-3 py-1.5 rounded-lg text-sm transition-colors"
-                  :class="isActive(child.to!)
-                    ? 'bg-primary-subtle text-primary-text font-medium'
-                    : 'text-text-tertiary hover:bg-surface-2 hover:text-text-primary'"
-                >
-                  {{ child.label }}
-                </router-link>
-              </li>
-            </ul>
-          </li>
-        </template>
-      </ul>
+                {{ item.label }}
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Footer -->
-    <div class="p-4 border-t border-border-subtle">
-      <p class="text-xs text-text-tertiary">v0.1.0</p>
+    <div class="px-6 py-3 border-t border-zinc-200 dark:border-zinc-800 shrink-0">
+      <span class="text-xs text-zinc-400 dark:text-zinc-500">v0.1.0</span>
     </div>
   </aside>
 </template>
