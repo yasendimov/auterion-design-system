@@ -157,7 +157,7 @@ const sizeRoles = [
 
       <div class="grid gap-4 sm:grid-cols-2">
         <!-- Do -->
-        <div class="p-6 border-2 border-green-500/30">
+        <div class="p-6 border-2 border-ok/30">
           <p class="text-[11px] uppercase tracking-widest font-medium mb-4" :style="{ color: 'var(--color-ok)' }">Do</p>
           <div class="space-y-4">
             <div>
@@ -178,7 +178,7 @@ const sizeRoles = [
         </div>
 
         <!-- Don't -->
-        <div class="p-6 border-2 border-red-500/30">
+        <div class="p-6 border-2 border-alarm/30">
           <p class="text-[11px] uppercase tracking-widest font-medium mb-4" :style="{ color: 'var(--color-alarm)' }">Don't</p>
           <div class="space-y-4">
             <div>

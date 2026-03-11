@@ -162,7 +162,7 @@ const aerospaceUnits = [
       </div>
 
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border-2 border-green-500/30">
+        <div class="p-6 border-2 border-ok/30">
           <p class="text-[11px] uppercase tracking-widest font-medium mb-3" :style="{ color: 'var(--color-ok)' }">Do</p>
           <div class="space-y-2 font-mono text-sm text-high">
             <p>1,240 m AGL</p>
@@ -171,7 +171,7 @@ const aerospaceUnits = [
             <p>247&deg;</p>
           </div>
         </div>
-        <div class="p-6 border-2 border-red-500/30">
+        <div class="p-6 border-2 border-alarm/30">
           <p class="text-[11px] uppercase tracking-widest font-medium mb-3" :style="{ color: 'var(--color-alarm)' }">Don't</p>
           <div class="space-y-2 font-mono text-sm text-dim line-through">
             <p>1240m AGL</p>

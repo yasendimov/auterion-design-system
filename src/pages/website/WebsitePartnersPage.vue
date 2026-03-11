@@ -66,24 +66,24 @@ const stats = [
 <template>
   <!-- HERO -->
   <section class="mx-auto max-w-full px-6 lg:px-8 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:pt-48 lg:pb-40">
-    <p class="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-8">Partners</p>
-    <h1 class="text-[clamp(2rem,0.77rem+5.26vw,5.5rem)] font-medium tracking-[-0.03em] leading-[1.06] text-zinc-900 dark:text-white max-w-4xl">
+    <p class="text-xs uppercase tracking-[0.2em] text-dim mb-8">Partners</p>
+    <h1 class="text-[clamp(2rem,0.77rem+5.26vw,5.5rem)] font-medium tracking-[-0.03em] leading-[1.06] text-high max-w-4xl">
       Trusted by those who protect democracies.
     </h1>
     <div class="mt-12 lg:mt-16 lg:grid lg:grid-cols-12 lg:gap-8">
-      <p class="lg:col-span-5 lg:col-start-7 text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed">
+      <p class="lg:col-span-5 lg:col-start-7 text-lg text-low leading-relaxed">
         From the Pentagon to the frontlines of Ukraine, Auterion technology is deployed by organizations that demand mission-critical reliability.
       </p>
     </div>
   </section>
 
   <!-- STATS -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8 py-16 lg:py-20">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
         <div v-for="stat in stats" :key="stat.label">
-          <p class="text-[clamp(2rem,1.65rem+1.5vw,3rem)] font-medium tracking-[-0.025em] leading-[1.1] text-zinc-900 dark:text-white">{{ stat.value }}</p>
-          <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-500">{{ stat.label }}</p>
+          <p class="text-[clamp(2rem,1.65rem+1.5vw,3rem)] font-medium tracking-[-0.025em] leading-[1.1] text-high">{{ stat.value }}</p>
+          <p class="mt-2 text-sm text-low">{{ stat.label }}</p>
         </div>
       </div>
     </div>
@@ -93,69 +93,69 @@ const stats = [
   <section
     v-for="tier in partnerTiers"
     :key="tier.tier"
-    class="border-t border-zinc-200 dark:border-zinc-800"
+    class="border-t border-line"
   >
     <div class="mx-auto max-w-full px-6 lg:px-8 py-24 lg:py-32">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-16">
         <div class="lg:col-span-5">
-          <p class="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-6">{{ tier.tier }}</p>
-          <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ tier.description }}</p>
+          <p class="text-xs uppercase tracking-[0.2em] text-dim mb-6">{{ tier.tier }}</p>
+          <p class="text-base text-low leading-relaxed">{{ tier.description }}</p>
         </div>
       </div>
-      <div class="divide-y divide-zinc-100 dark:divide-zinc-900">
+      <div class="divide-y divide-line">
         <div
           v-for="partner in tier.partners"
           :key="partner.name"
           class="py-6 lg:grid lg:grid-cols-12 lg:gap-8 group"
         >
-          <h3 class="lg:col-span-4 text-base font-medium text-zinc-900 dark:text-white">{{ partner.name }}</h3>
-          <p class="lg:col-span-7 lg:col-start-6 mt-2 lg:mt-0 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ partner.detail }}</p>
+          <h3 class="lg:col-span-4 text-base font-medium text-high">{{ partner.name }}</h3>
+          <p class="lg:col-span-7 lg:col-start-6 mt-2 lg:mt-0 text-sm text-low leading-relaxed">{{ partner.detail }}</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PARTNER PROGRAM -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8 py-24 lg:py-32">
       <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-20">
         <div class="lg:col-span-5">
-          <p class="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-6">Partner Program</p>
-          <h2 class="text-[clamp(1.5rem,1.1rem+1.69vw,2.625rem)] font-medium tracking-[-0.015em] leading-[1.12] text-zinc-900 dark:text-white">
+          <p class="text-xs uppercase tracking-[0.2em] text-dim mb-6">Partner Program</p>
+          <h2 class="text-[clamp(1.5rem,1.1rem+1.69vw,2.625rem)] font-medium tracking-[-0.015em] leading-[1.12] text-high">
             Build on the world's most deployed open drone platform.
           </h2>
         </div>
         <div class="lg:col-span-5 lg:col-start-7 mt-6 lg:mt-2">
-          <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          <p class="text-base text-low leading-relaxed">
             Join the ecosystem of manufacturers, integrators, and developers building the next generation of autonomous systems on Auterion.
           </p>
         </div>
       </div>
-      <div class="grid gap-px bg-zinc-200 dark:bg-zinc-800 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-4">
         <div
           v-for="benefit in programBenefits"
           :key="benefit.title"
-          class="bg-white dark:bg-zinc-950 p-8 lg:p-10"
+          class="bg-page p-8 lg:p-10"
         >
-          <h3 class="text-base font-medium text-zinc-900 dark:text-white mb-4">{{ benefit.title }}</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">{{ benefit.description }}</p>
+          <h3 class="text-base font-medium text-high mb-4">{{ benefit.title }}</h3>
+          <p class="text-sm text-low leading-relaxed">{{ benefit.description }}</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8 py-24 lg:py-32 text-center">
-      <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-zinc-900 dark:text-white mb-6">
+      <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-high mb-6">
         Become a partner.
       </h2>
-      <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto mb-10">
+      <p class="text-base text-low leading-relaxed max-w-lg mx-auto mb-10">
         Whether you build platforms, integrate payloads, or develop applications, there is a place for you in the Auterion ecosystem.
       </p>
       <RouterLink
         to="/gallery/website/company"
-        class="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 dark:text-white border-b border-zinc-900 dark:border-white pb-0.5 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors duration-200"
+        class="inline-flex items-center gap-2 text-sm font-medium text-high border-b border-line-active pb-0.5 hover:border-line-hover transition-colors duration-200"
       >
         Get in touch
         <ArrowRightIcon class="h-3.5 w-3.5" />

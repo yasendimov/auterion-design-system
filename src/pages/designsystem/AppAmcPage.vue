@@ -173,17 +173,17 @@ const dronePos = { x: 42, y: 42 }
             <div class="absolute inset-1 rounded-full" :style="{ transform: compassRotation }">
               <!-- Cardinal directions -->
               <span class="absolute top-0 left-1/2 -translate-x-1/2 text-[8px] font-bold text-[--color-alarm]" style="line-height: 1;">N</span>
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[8px] font-medium text-[--color-gray-6]" style="line-height: 1;">S</span>
-              <span class="absolute left-0 top-1/2 -translate-y-1/2 text-[8px] font-medium text-[--color-gray-6]" style="line-height: 1;">W</span>
-              <span class="absolute right-0 top-1/2 -translate-y-1/2 text-[8px] font-medium text-[--color-gray-6]" style="line-height: 1;">E</span>
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 text-[8px] font-medium text-[--color-low]" style="line-height: 1;">S</span>
+              <span class="absolute left-0 top-1/2 -translate-y-1/2 text-[8px] font-medium text-[--color-low]" style="line-height: 1;">W</span>
+              <span class="absolute right-0 top-1/2 -translate-y-1/2 text-[8px] font-medium text-[--color-low]" style="line-height: 1;">E</span>
               <!-- Tick marks -->
               <div class="absolute top-1 left-1/2 -translate-x-1/2 w-px h-1 bg-[--color-alarm]"></div>
-              <div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-px h-1 bg-[--color-gray-6]"></div>
-              <div class="absolute left-1 top-1/2 -translate-y-1/2 h-px w-1 bg-[--color-gray-6]"></div>
-              <div class="absolute right-1 top-1/2 -translate-y-1/2 h-px w-1 bg-[--color-gray-6]"></div>
+              <div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-px h-1 bg-[--color-line-active]"></div>
+              <div class="absolute left-1 top-1/2 -translate-y-1/2 h-px w-1 bg-[--color-line-active]"></div>
+              <div class="absolute right-1 top-1/2 -translate-y-1/2 h-px w-1 bg-[--color-line-active]"></div>
             </div>
             <!-- Fixed heading indicator (top triangle) -->
-            <div class="absolute -top-0.5 left-1/2 -translate-x-1/2 size-0 border-l-[3px] border-r-[3px] border-t-[5px] border-l-transparent border-r-transparent border-t-white"></div>
+            <div class="absolute -top-0.5 left-1/2 -translate-x-1/2 size-0 border-l-[3px] border-r-[3px] border-t-[5px] border-l-transparent border-r-transparent border-t-fg-inverse"></div>
           </div>
           <!-- Altitude readout below compass -->
           <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-mono text-[--color-low] tabular-nums">
@@ -298,7 +298,7 @@ const dronePos = { x: 42, y: 42 }
             class="absolute z-10"
             :style="{ left: wp.x + '%', top: wp.y + '%', transform: 'translate(-50%, -50%)' }"
           >
-            <div class="size-5 rounded-full border border-[--color-gray-5]/50 bg-[--color-gray-5]/5 flex items-center justify-center">
+            <div class="size-5 rounded-full border border-line/50 bg-surface-1/30 flex items-center justify-center">
               <span class="text-[9px] text-[--color-gray-6]">{{ wp.label }}</span>
             </div>
           </div>
@@ -321,12 +321,12 @@ const dronePos = { x: 42, y: 42 }
               <!-- Simulated camera feed -->
               <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] opacity-80"></div>
               <!-- Horizon line -->
-              <div class="absolute inset-x-0 top-[45%] h-px bg-white/10"></div>
+              <div class="absolute inset-x-0 top-[45%] h-px bg-neutral-a3"></div>
               <!-- Crosshair -->
               <div class="relative z-10">
-                <div class="w-px h-8 bg-white/30 absolute left-1/2 -top-4 -translate-x-1/2"></div>
-                <div class="h-px w-8 bg-white/30 absolute top-1/2 -left-4 -translate-y-1/2"></div>
-                <div class="size-4 border border-white/30 rounded-full"></div>
+                <div class="w-px h-8 bg-neutral-a7 absolute left-1/2 -top-4 -translate-x-1/2"></div>
+                <div class="h-px w-8 bg-neutral-a7 absolute top-1/2 -left-4 -translate-y-1/2"></div>
+                <div class="size-4 border border-neutral-a7 rounded-full"></div>
               </div>
               <!-- Camera info -->
               <div class="absolute top-1.5 left-2 flex items-center gap-1">
@@ -425,8 +425,8 @@ const dronePos = { x: 42, y: 42 }
         </div>
 
         <!-- Map scale -->
-        <div class="absolute bottom-3 right-[290px] z-10 text-[9px] font-mono text-[--color-gray-6] flex items-center gap-1.5">
-          <div class="w-10 h-px bg-[--color-gray-6]/50"></div>
+        <div class="absolute bottom-3 right-[290px] z-10 text-[9px] font-mono text-[--color-low] flex items-center gap-1.5">
+          <div class="w-10 h-px bg-line-active/50"></div>
           <span>200m</span>
         </div>
       </div>

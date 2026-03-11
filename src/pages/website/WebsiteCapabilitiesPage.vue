@@ -67,12 +67,12 @@ const useCases = [
 <template>
   <!-- HERO -->
   <section class="mx-auto max-w-full px-6 lg:px-8 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:pt-48 lg:pb-40">
-    <p class="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-8">Capabilities</p>
-    <h1 class="text-[clamp(2rem,0.77rem+5.26vw,5.5rem)] font-medium tracking-[-0.03em] leading-[1.06] text-zinc-900 dark:text-white max-w-4xl">
+    <p class="text-xs uppercase tracking-[0.2em] text-dim mb-8">Capabilities</p>
+    <h1 class="text-[clamp(2rem,0.77rem+5.26vw,5.5rem)] font-medium tracking-[-0.03em] leading-[1.06] text-high max-w-4xl">
       Built for the demands of autonomous operations.
     </h1>
     <div class="mt-12 lg:mt-16 lg:grid lg:grid-cols-12 lg:gap-8">
-      <p class="lg:col-span-5 lg:col-start-7 text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed">
+      <p class="lg:col-span-5 lg:col-start-7 text-lg text-low leading-relaxed">
         Six core technology pillars that enable everything from single-vehicle reconnaissance to coordinated multi-domain swarm operations.
       </p>
     </div>
@@ -80,44 +80,44 @@ const useCases = [
 
   <!-- Capabilities overview image -->
   <section class="pb-16 lg:pb-24 px-6 lg:px-8">
-    <div class="relative aspect-21/9 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800">
+    <div class="relative aspect-21/9 w-full overflow-hidden bg-surface-1  border border-line">
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="text-center">
-          <svg class="mx-auto h-10 w-10 text-zinc-300 dark:text-zinc-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.75" stroke="currentColor">
+          <svg class="mx-auto h-10 w-10 text-dim" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.75" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
           </svg>
-          <p class="mt-3 text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">System architecture diagram</p>
+          <p class="mt-3 text-xs uppercase tracking-[0.2em] text-dim">System architecture diagram</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CAPABILITIES DEEP DIVE -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8">
       <div
         v-for="cap in capabilities"
         :key="cap.number"
-        class="border-b border-zinc-200 dark:border-zinc-800 last:border-b-0 py-20 lg:py-28"
+        class="border-b border-line last:border-b-0 py-20 lg:py-28"
       >
         <div class="lg:grid lg:grid-cols-12 lg:gap-16">
           <div class="lg:col-span-5">
-            <p class="text-xs font-mono text-zinc-300 dark:text-zinc-600 mb-6">{{ cap.number }}</p>
-            <h2 class="text-[clamp(1.5rem,1.1rem+1.69vw,2.625rem)] font-medium tracking-[-0.015em] leading-[1.12] text-zinc-900 dark:text-white mb-6">
+            <p class="text-xs font-mono text-dim mb-6">{{ cap.number }}</p>
+            <h2 class="text-[clamp(1.5rem,1.1rem+1.69vw,2.625rem)] font-medium tracking-[-0.015em] leading-[1.12] text-high mb-6">
               {{ cap.title }}
             </h2>
-            <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            <p class="text-base text-low leading-relaxed">
               {{ cap.description }}
             </p>
           </div>
           <div class="lg:col-span-6 lg:col-start-7 mt-12 lg:mt-0">
-            <div class="relative aspect-4/3 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800">
+            <div class="relative aspect-4/3 w-full overflow-hidden bg-surface-1  border border-line">
               <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center">
-                  <svg class="mx-auto h-10 w-10 text-zinc-300 dark:text-zinc-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.75" stroke="currentColor">
+                  <svg class="mx-auto h-10 w-10 text-dim" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.75" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
                   </svg>
-                  <p class="mt-3 text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500">{{ cap.title }} — illustration</p>
+                  <p class="mt-3 text-xs uppercase tracking-[0.2em] text-dim">{{ cap.title }} — illustration</p>
                 </div>
               </div>
             </div>
@@ -128,40 +128,40 @@ const useCases = [
   </section>
 
   <!-- USE CASES -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8 py-24 lg:py-32">
       <div class="mb-20">
-        <p class="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-6">Mission Profiles</p>
-        <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-zinc-900 dark:text-white max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.2em] text-dim mb-6">Mission Profiles</p>
+        <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-high max-w-3xl">
           From concept to completion
         </h2>
       </div>
-      <div class="grid gap-px bg-zinc-200 dark:bg-zinc-800 sm:grid-cols-2">
+      <div class="grid gap-px bg-line sm:grid-cols-2">
         <div
           v-for="uc in useCases"
           :key="uc.title"
-          class="bg-white dark:bg-zinc-950 p-8 lg:p-12"
+          class="bg-page p-8 lg:p-12"
         >
-          <h3 class="text-[clamp(1.125rem,1.08rem+0.19vw,1.25rem)] font-medium tracking-[-0.01em] leading-[1.2] text-zinc-900 dark:text-white mb-4">{{ uc.title }}</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">{{ uc.description }}</p>
-          <p class="text-xs uppercase tracking-[0.15em] text-zinc-400 dark:text-zinc-500">{{ uc.metrics }}</p>
+          <h3 class="text-[clamp(1.125rem,1.08rem+0.19vw,1.25rem)] font-medium tracking-[-0.01em] leading-[1.2] text-high mb-4">{{ uc.title }}</h3>
+          <p class="text-sm text-low leading-relaxed mb-8">{{ uc.description }}</p>
+          <p class="text-xs uppercase tracking-[0.15em] text-dim">{{ uc.metrics }}</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="border-t border-zinc-200 dark:border-zinc-800">
+  <section class="border-t border-line">
     <div class="mx-auto max-w-full px-6 lg:px-8 py-24 lg:py-32 text-center">
-      <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-zinc-900 dark:text-white mb-6">
+      <h2 class="text-[clamp(1.5rem,0.8rem+3vw,3.5rem)] font-medium tracking-[-0.02em] leading-[1.12] text-high mb-6">
         See it in action.
       </h2>
-      <p class="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto mb-10">
+      <p class="text-base text-low leading-relaxed max-w-lg mx-auto mb-10">
         Schedule a demonstration tailored to your operational requirements.
       </p>
       <RouterLink
         to="/gallery/website/company"
-        class="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 dark:text-white border-b border-zinc-900 dark:border-white pb-0.5 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors duration-200"
+        class="inline-flex items-center gap-2 text-sm font-medium text-high border-b border-line-active pb-0.5 hover:border-line-hover transition-colors duration-200"
       >
         Request a demo
         <ArrowRightIcon class="h-3.5 w-3.5" />

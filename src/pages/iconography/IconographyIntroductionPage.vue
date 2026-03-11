@@ -176,7 +176,7 @@ const principles = [
           <p class="text-[11px] font-medium text-dim uppercase tracking-widest mb-4">Incorrect</p>
           <div class="flex gap-4 items-center">
             <div class="w-10 h-10 bg-surface-1 flex items-center justify-center">
-              <span class="text-xs text-red-400">Ic</span>
+              <span class="text-xs text-alarm-text">Ic</span>
             </div>
             <p class="text-sm text-low">Never hardcode colors or use multiple colors within a single icon. Semantic color should come from the container, not the icon itself.</p>
           </div>

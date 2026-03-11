@@ -985,9 +985,9 @@
   /* Text (steps 11–12) */
   --color-high:             var(--color-base-12);
   --color-low:              var(--color-base-11);
-  --color-dim:              var(--color-base-9);
+  --color-dim:              var(--color-base-10);
   --color-inverse:          var(--color-base-1);
-  --color-link:             var(--color-blue-9);
+  --color-link:             var(--color-blue-11);
 
   /* Borders (steps 6–8) */
   --color-line:             var(--color-base-6);
@@ -1000,7 +1000,7 @@
   --color-surface-3:        var(--color-base-5);
 
   /* Primary (Auterion Blue) */
-  --color-primary-subtle:   var(--color-blue-1);
+  --color-primary-subtle:   var(--color-blue-2);
   --color-primary-muted:    var(--color-blue-3);
   --color-primary-border:   var(--color-blue-7);
   --color-primary:          var(--color-blue-9);
@@ -1009,7 +1009,7 @@
   --color-on-primary:       #ffffff;
 
   /* Alarm / danger (Radix Red) */
-  --color-alarm-subtle:     var(--color-red-1);
+  --color-alarm-subtle:     var(--color-red-2);
   --color-alarm-muted:      var(--color-red-3);
   --color-alarm-border:     var(--color-red-7);
   --color-alarm:            var(--color-red-9);
@@ -1018,7 +1018,7 @@
   --color-on-alarm:         #ffffff;
 
   /* Warning (Radix Orange) */
-  --color-warning-subtle:   var(--color-orange-1);
+  --color-warning-subtle:   var(--color-orange-2);
   --color-warning-muted:    var(--color-orange-3);
   --color-warning-border:   var(--color-orange-7);
   --color-warning:          var(--color-orange-9);
@@ -1027,7 +1027,7 @@
   --color-on-warning:       #ffffff;
 
   /* Caution (Radix Amber) */
-  --color-caution-subtle:   var(--color-amber-1);
+  --color-caution-subtle:   var(--color-amber-2);
   --color-caution-muted:    var(--color-amber-3);
   --color-caution-border:   var(--color-amber-7);
   --color-caution:          var(--color-amber-9);
@@ -1036,7 +1036,7 @@
   --color-on-caution:       #3d3200;
 
   /* Ok / running (Radix Green) */
-  --color-ok-subtle:        var(--color-green-1);
+  --color-ok-subtle:        var(--color-green-2);
   --color-ok-muted:         var(--color-green-3);
   --color-ok-border:        var(--color-green-7);
   --color-ok:               var(--color-green-9);
@@ -1045,13 +1045,117 @@
   --color-on-ok:            #ffffff;
 
   /* Data / accent (Radix Teal) */
-  --color-accent-subtle:    var(--color-teal-1);
+  --color-accent-subtle:    var(--color-teal-2);
   --color-accent-muted:     var(--color-teal-3);
   --color-accent-border:    var(--color-teal-7);
   --color-accent:           var(--color-teal-9);
   --color-accent-hover:     var(--color-teal-10);
   --color-accent-text:      var(--color-teal-11);
   --color-on-accent:        #ffffff;
+
+  /* -------------------------------------------------------------- */
+  /* Theme token layer (Radix-aligned semantics)                    */
+  /* Foundation + stateful intent aliases for Tailwind consumption. */
+  /* Keep existing aliases above for backward compatibility.         */
+  /* -------------------------------------------------------------- */
+
+  /* Foundation: background */
+  --color-bg-app:                 var(--color-neutral-1);
+  --color-bg-subtle:              var(--color-neutral-2);
+  --color-bg-ui:                  var(--color-neutral-3);
+  --color-bg-ui-hover:            var(--color-neutral-4);
+  --color-bg-ui-active:           var(--color-neutral-5);
+
+  /* Foundation: foreground */
+  --color-fg-default:             var(--color-neutral-12);
+  --color-fg-muted:               var(--color-neutral-11);
+  --color-fg-subtle:              var(--color-neutral-10);
+  --color-fg-inverse:             var(--color-neutral-1);
+  --color-fg-link:                var(--color-primary-11);
+
+  /* Foundation: borders & focus */
+  --color-border-subtle:          var(--color-neutral-6);
+  --color-border-ui:              var(--color-neutral-7);
+  --color-border-strong:          var(--color-neutral-8);
+  --color-focus-ring:             var(--color-neutral-8);
+
+  /* Intent: primary */
+  --color-primary-solid:          var(--color-primary-9);
+  --color-primary-solid-hover:    var(--color-primary-10);
+  --color-primary-fg:             var(--color-primary-11);
+  --color-primary-contrast:       var(--color-on-primary);
+  --color-primary-bg-subtle:      var(--color-primary-2);
+  --color-primary-bg-ui:          var(--color-primary-3);
+  --color-primary-bg-ui-hover:    var(--color-primary-4);
+  --color-primary-bg-ui-active:   var(--color-primary-5);
+  --color-primary-border-subtle:  var(--color-primary-6);
+  --color-primary-border-ui:      var(--color-primary-7);
+  --color-primary-border-strong:  var(--color-primary-8);
+
+  /* Intent: alarm */
+  --color-alarm-solid:            var(--color-alarm-9);
+  --color-alarm-solid-hover:      var(--color-alarm-10);
+  --color-alarm-fg:               var(--color-alarm-11);
+  --color-alarm-contrast:         var(--color-on-alarm);
+  --color-alarm-bg-subtle:        var(--color-alarm-2);
+  --color-alarm-bg-ui:            var(--color-alarm-3);
+  --color-alarm-bg-ui-hover:      var(--color-alarm-4);
+  --color-alarm-bg-ui-active:     var(--color-alarm-5);
+  --color-alarm-border-subtle:    var(--color-alarm-6);
+  --color-alarm-border-ui:        var(--color-alarm-7);
+  --color-alarm-border-strong:    var(--color-alarm-8);
+
+  /* Intent: warning */
+  --color-warning-solid:          var(--color-warning-9);
+  --color-warning-solid-hover:    var(--color-warning-10);
+  --color-warning-fg:             var(--color-warning-11);
+  --color-warning-contrast:       var(--color-on-warning);
+  --color-warning-bg-subtle:      var(--color-warning-2);
+  --color-warning-bg-ui:          var(--color-warning-3);
+  --color-warning-bg-ui-hover:    var(--color-warning-4);
+  --color-warning-bg-ui-active:   var(--color-warning-5);
+  --color-warning-border-subtle:  var(--color-warning-6);
+  --color-warning-border-ui:      var(--color-warning-7);
+  --color-warning-border-strong:  var(--color-warning-8);
+
+  /* Intent: caution */
+  --color-caution-solid:          var(--color-caution-9);
+  --color-caution-solid-hover:    var(--color-caution-10);
+  --color-caution-fg:             var(--color-caution-11);
+  --color-caution-contrast:       var(--color-on-caution);
+  --color-caution-bg-subtle:      var(--color-caution-2);
+  --color-caution-bg-ui:          var(--color-caution-3);
+  --color-caution-bg-ui-hover:    var(--color-caution-4);
+  --color-caution-bg-ui-active:   var(--color-caution-5);
+  --color-caution-border-subtle:  var(--color-caution-6);
+  --color-caution-border-ui:      var(--color-caution-7);
+  --color-caution-border-strong:  var(--color-caution-8);
+
+  /* Intent: ok */
+  --color-ok-solid:               var(--color-ok-9);
+  --color-ok-solid-hover:         var(--color-ok-10);
+  --color-ok-fg:                  var(--color-ok-11);
+  --color-ok-contrast:            var(--color-on-ok);
+  --color-ok-bg-subtle:           var(--color-ok-2);
+  --color-ok-bg-ui:               var(--color-ok-3);
+  --color-ok-bg-ui-hover:         var(--color-ok-4);
+  --color-ok-bg-ui-active:        var(--color-ok-5);
+  --color-ok-border-subtle:       var(--color-ok-6);
+  --color-ok-border-ui:           var(--color-ok-7);
+  --color-ok-border-strong:       var(--color-ok-8);
+
+  /* Intent: accent */
+  --color-accent-solid:           var(--color-accent-9);
+  --color-accent-solid-hover:     var(--color-accent-10);
+  --color-accent-fg:              var(--color-accent-11);
+  --color-accent-contrast:        var(--color-on-accent);
+  --color-accent-bg-subtle:       var(--color-accent-2);
+  --color-accent-bg-ui:           var(--color-accent-3);
+  --color-accent-bg-ui-hover:     var(--color-accent-4);
+  --color-accent-bg-ui-active:    var(--color-accent-5);
+  --color-accent-border-subtle:   var(--color-accent-6);
+  --color-accent-border-ui:       var(--color-accent-7);
+  --color-accent-border-strong:   var(--color-accent-8);
 
   /* -------------------------------------------------------------- */
   /* Radix-style semantic ramps                                     */
