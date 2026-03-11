@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Users/yasendimov/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.0/lib/brainstorm-server/start-server.sh --project-dir /Users/yasendimov/auterion-design-system/auterion-design-system)",
+      "Read(//Users/yasendimov/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.0/lib/brainstorm-server/**)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

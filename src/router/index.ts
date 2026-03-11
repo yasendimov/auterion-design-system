@@ -1,86 +1,68 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
-import ColorsPage from '@/pages/ColorsPage.vue'
-import TypographyPage from '@/pages/TypographyPage.vue'
-import PlaceholderPage from '@/pages/PlaceholderPage.vue'
-import BrandIdeaPage from '@/pages/BrandIdeaPage.vue'
-import VoicePrinciplesPage from '@/pages/VoicePrinciplesPage.vue'
-import WritingAuterionPage from '@/pages/WritingAuterionPage.vue'
-import FormattingPage from '@/pages/FormattingPage.vue'
-
-function placeholder(section: string, title: string) {
-  return {
-    component: PlaceholderPage,
-    meta: { section, title },
-  }
-}
+import StrategyPage from '@/pages/StrategyPage.vue'
+import LogoPage from '@/pages/LogoPage.vue'
+import TypographyCombinedPage from '@/pages/TypographyCombinedPage.vue'
+import ColorCombinedPage from '@/pages/ColorCombinedPage.vue'
+import PhotographyCombinedPage from '@/pages/PhotographyCombinedPage.vue'
+import IconographyCombinedPage from '@/pages/IconographyCombinedPage.vue'
+import LanguageCombinedPage from '@/pages/LanguageCombinedPage.vue'
+import GalleryCombinedPage from '@/pages/GalleryCombinedPage.vue'
+import DesignSystemMarketingPage from '@/pages/designsystem/MarketingPage.vue'
+import DesignSystemApplicationsPage from '@/pages/designsystem/ApplicationsPage.vue'
+import AppHomeScreenPage from '@/pages/designsystem/AppHomeScreenPage.vue'
+import AppAmcPage from '@/pages/designsystem/AppAmcPage.vue'
+import DesignSystemWebsitePage from '@/pages/designsystem/WebsitePage.vue'
+import WebsiteLayout from '@/pages/website/WebsiteLayout.vue'
+import WebsiteHomePage from '@/pages/website/WebsiteHomePage.vue'
+import WebsiteProductPage from '@/pages/website/WebsiteProductPage.vue'
+import WebsiteCapabilitiesPage from '@/pages/website/WebsiteCapabilitiesPage.vue'
+import WebsitePartnersPage from '@/pages/website/WebsitePartnersPage.vue'
+import WebsiteCareersPage from '@/pages/website/WebsiteCareersPage.vue'
+import WebsiteCompanyPage from '@/pages/website/WebsiteCompanyPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to) {
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    }
+    return { top: 0 }
+  },
   routes: [
+    { path: '/', name: 'home', component: HomePage },
+
+    // Content sections — single page per section, anchors for sub-sections
+    { path: '/strategy', component: StrategyPage, meta: { section: 'Strategy' } },
+    { path: '/logo', component: LogoPage, meta: { section: 'Logo' } },
+    { path: '/typography', component: TypographyCombinedPage, meta: { section: 'Typography' } },
+    { path: '/color', component: ColorCombinedPage, meta: { section: 'Color' } },
+    { path: '/photography', component: PhotographyCombinedPage, meta: { section: 'Photography' } },
+    { path: '/iconography', component: IconographyCombinedPage, meta: { section: 'Iconography' } },
+    { path: '/language', component: LanguageCombinedPage, meta: { section: 'Language & Style' } },
+    { path: '/gallery', component: GalleryCombinedPage, meta: { section: 'Gallery' } },
+
+    // Gallery sub-pages
+    { path: '/gallery/marketing', component: DesignSystemMarketingPage, meta: { section: 'Gallery', title: 'Marketing' } },
+    { path: '/gallery/applications', component: DesignSystemApplicationsPage, meta: { section: 'Gallery', title: 'Applications' } },
+    { path: '/gallery/applications/home-screen', component: AppHomeScreenPage, meta: { section: 'Gallery', title: 'Applications', standalone: true } },
+    { path: '/gallery/applications/amc', component: AppAmcPage, meta: { section: 'Gallery', title: 'Applications', standalone: true } },
+    { path: '/gallery/website-overview', component: DesignSystemWebsitePage, meta: { section: 'Gallery', title: 'Website' } },
+
+    // Website (nested routes with shared layout)
     {
-      path: '/',
-      name: 'home',
-      component: HomePage,
+      path: '/gallery/website',
+      component: WebsiteLayout,
+      meta: { section: 'Design System', title: 'Website', standalone: true },
+      children: [
+        { path: '', component: WebsiteHomePage },
+        { path: 'product', component: WebsiteProductPage },
+        { path: 'capabilities', component: WebsiteCapabilitiesPage },
+        { path: 'partners', component: WebsitePartnersPage },
+        { path: 'careers', component: WebsiteCareersPage },
+        { path: 'company', component: WebsiteCompanyPage },
+      ],
     },
-
-    // Strategy
-    { path: '/strategy/brand-idea', component: BrandIdeaPage, meta: { section: 'Strategy', title: 'Brand Idea' } },
-    { path: '/strategy/voice-principles', component: VoicePrinciplesPage, meta: { section: 'Strategy', title: 'Voice Principles' } },
-    { path: '/strategy/writing', component: WritingAuterionPage, meta: { section: 'Strategy', title: 'Writing Auterion' } },
-    { path: '/strategy/formatting', component: FormattingPage, meta: { section: 'Strategy', title: 'Formatting & Structure' } },
-
-    // Logo
-    { path: '/logo/introduction', ...placeholder('Logo', 'Introduction') },
-    { path: '/logo/the-basics', ...placeholder('Logo', 'The Basics') },
-    { path: '/logo/lockup', ...placeholder('Logo', 'Lockup') },
-    { path: '/logo/scale', ...placeholder('Logo', 'Scale') },
-    { path: '/logo/black-and-white', ...placeholder('Logo', 'Black & White') },
-    { path: '/logo/placement', ...placeholder('Logo', 'Placement') },
-
-    // Typography
-    {
-      path: '/typography/introduction',
-      name: 'typography',
-      component: TypographyPage,
-      meta: { section: 'Typography', title: 'Introduction' },
-    },
-    { path: '/typography/using-type', ...placeholder('Typography', 'Using Type') },
-    { path: '/typography/formatting', ...placeholder('Typography', 'Formatting & Structure') },
-
-    // Color
-    { path: '/color/introduction', ...placeholder('Color', 'Introduction') },
-    {
-      path: '/color/primitives',
-      name: 'color-primitives',
-      component: ColorsPage,
-      meta: { section: 'Color', title: 'Primitives' },
-    },
-    { path: '/color/semantic', ...placeholder('Color', 'Semantic Tokens') },
-    { path: '/color/black-and-white', ...placeholder('Color', 'Black & White') },
-
-    // Photography
-    { path: '/photography/art-direction', ...placeholder('Photography', 'Art Direction') },
-    { path: '/photography/youtube', ...placeholder('Photography', 'YouTube Guide') },
-    { path: '/photography/social-media', ...placeholder('Photography', 'Social Media') },
-    { path: '/photography/blog', ...placeholder('Photography', 'Blog Guidelines') },
-
-    // Iconography
-    { path: '/iconography/introduction', ...placeholder('Iconography', 'Introduction') },
-    { path: '/iconography/product-symbols', ...placeholder('Iconography', 'Product Symbols') },
-    { path: '/iconography/functional-icons', ...placeholder('Iconography', 'Functional Icons') },
-
-    // Language & Style
-    { path: '/language/voice-principles', ...placeholder('Language & Style', 'Voice Principles') },
-    { path: '/language/writing', ...placeholder('Language & Style', 'Writing Auterion') },
-    { path: '/language/product-names', ...placeholder('Language & Style', 'Product Names') },
-    { path: '/language/blog', ...placeholder('Language & Style', 'Blog Guidelines') },
-    { path: '/language/social-media', ...placeholder('Language & Style', 'Social Media') },
-
-    // Gallery
-    { path: '/gallery/introduction', ...placeholder('Gallery', 'Introduction') },
-    { path: '/gallery/marketing', ...placeholder('Gallery', 'Marketing') },
-    { path: '/gallery/applications', ...placeholder('Gallery', 'Applications') },
   ],
 })
 

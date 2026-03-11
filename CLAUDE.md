@@ -1,10 +1,14 @@
-# Auterion Design System
+# CLAUDE.md
 
-Aerospace-focused design system documentation site. Dark-mode-first.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Overview
+
+Aerospace-focused design system documentation site built as a Vue SPA. Dark-mode-first. No test suite.
 
 ## Commands
 
-- `pnpm dev` — Start dev server (http://localhost:5173)
+- `pnpm dev` — Start dev server (http://localhost:5174)
 - `pnpm build` — Type-check and build (`vue-tsc -b && vite build`)
 - `pnpm preview` — Preview production build
 
@@ -13,6 +17,8 @@ Aerospace-focused design system documentation site. Dark-mode-first.
 - **Vue 3** + **Vue Router 5** (SPA, client-side history)
 - **Vite 6** with `@vitejs/plugin-vue` and `@tailwindcss/vite`
 - **Tailwind CSS v4** — CSS-first config via `@theme` in `src/assets/main.css`
+- **Headless UI** (`@headlessui/vue`) for accessible interactive components
+- **Heroicons** (`@heroicons/vue`) for icons
 - **TypeScript** — Strict mode, `noUnusedLocals`, `noUnusedParameters`
 - **pnpm** as package manager
 - **Inter Variable** — Self-hosted official woff2 (not @fontsource)
@@ -36,10 +42,10 @@ src/
 ## Design Token Architecture
 
 **Two-layer system:**
-1. **Primitives** — Defined in `tokens/colors.css` at `:root` (light) and `[data-theme="dark"]` (dark). 17 chromatic scales + 5 neutrals, 10 steps each (Radix-aligned).
+1. **Primitives** — Defined in `tokens/colors.css` at `:root` (light) and `[data-theme="dark"]` (dark). 12 chromatic scales (blue, indigo, violet, pink, red, orange, amber, green, lime, teal, cyan, bronze) + 5 neutrals (gray, slate, mauve, sage, sand), 10 steps each (Radix-aligned).
 2. **Semantic aliases** — Defined once at `:root` using `var()` references to primitives. They auto-resolve when primitives change per theme. Do NOT redefine semantic aliases in `[data-theme="dark"]`.
 
-**Tailwind bridge** — `@theme` block in `main.css` exposes all tokens to Tailwind utilities (e.g., `bg-primary`, `text-text-secondary`).
+**Tailwind bridge** — The `@theme` block in `main.css` bridges typography tokens only. Color tokens (CSS custom properties) are auto-discovered by Tailwind v4, so `bg-[--color-primary]` or semantic classes like `bg-primary` work without explicit `@theme` entries.
 
 ### Semantic color groups
 

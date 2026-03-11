@@ -58,17 +58,17 @@
   /* ── Line Heights ─────────────────────────────────────────── */
   --line-height-xs:    1.4;
   --line-height-sm:    1.4;
-  --line-height-base:  1.4;
+  --line-height-base:  1.5;
   --line-height-lg:    1.4;
-  --line-height-xl:    1.4;
-  --line-height-2xl:   1.25;
-  --line-height-3xl:   1.25;
-  --line-height-4xl:   1.15;
-  --line-height-5xl:   1.15;
-  --line-height-6xl:   1.1;
-  --line-height-7xl:   1;
-  --line-height-8xl:   1;
-  --line-height-9xl:   1;
+  --line-height-xl:    1.35;
+  --line-height-2xl:   1.2;
+  --line-height-3xl:   1.15;
+  --line-height-4xl:   1.1;
+  --line-height-5xl:   1.05;
+  --line-height-6xl:   1;
+  --line-height-7xl:   0.95;
+  --line-height-8xl:   0.92;
+  --line-height-9xl:   0.9;
 
   /* ── Letter Spacing (SemiBold / Medium default) ───────────── */
   --tracking-xs:    -0.24px;

@@ -31,8 +31,8 @@ const features = [
   <div>
     <header class="px-8 lg:px-16 pt-16 pb-12">
       <p class="text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium mb-3">Typography</p>
-      <h1 class="text-4xl font-semibold text-zinc-900 dark:text-white">Typography</h1>
-      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-4">Inter Variable — type scale, weights, and OpenType features.</p>
+      <h1 class="text-5xl font-medium text-zinc-900 dark:text-white">Type Scale</h1>
+      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-4">Inter Variable — 13-step scale from 12px to 128px with weight-aware tracking.</p>
     </header>
 
     <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
@@ -64,7 +64,7 @@ const features = [
           class="min-w-0 overflow-hidden"
         >
           <p
-            class="truncate text-zinc-800 dark:text-zinc-100"
+            class="truncate text-zinc-900 dark:text-white"
             :style="{
               fontSize: `var(--font-size-${step.token})`,
               fontWeight: w.value,
@@ -115,7 +115,7 @@ const features = [
       <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">Three weights available across the entire scale.</p>
 
       <div class="grid gap-4 sm:grid-cols-3">
-        <div v-for="w in weights" :key="w.label" class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
+        <div v-for="w in weights" :key="w.label" class="p-6 border border-zinc-200 dark:border-zinc-800">
           <p
             class="text-2xl text-zinc-900 dark:text-white mb-3"
             :style="{ fontWeight: w.value, letterSpacing: 'var(--tracking-2xl)' }"
@@ -137,20 +137,20 @@ const features = [
       <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-8">Enabled by default via <code class="font-mono text-zinc-500 dark:text-zinc-400">--font-features-sans</code>.</p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
+        <div class="p-6 border border-zinc-200 dark:border-zinc-800">
           <p class="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-3">Features enabled</p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="f in features"
               :key="f"
-              class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-xs font-mono text-zinc-600 dark:text-zinc-300"
+              class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-xs font-mono text-zinc-500 dark:text-zinc-400"
             >
               {{ f }}
             </span>
           </div>
         </div>
 
-        <div class="p-6 rounded-lg border border-zinc-200 dark:border-zinc-800">
+        <div class="p-6 border border-zinc-200 dark:border-zinc-800">
           <p class="text-[11px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mb-3">Sample comparison</p>
           <div class="space-y-2">
             <div>

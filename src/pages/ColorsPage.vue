@@ -40,8 +40,8 @@ function semanticVarName(group: string, variant: string): string {
   <div>
     <header class="px-8 lg:px-16 pt-16 pb-12">
       <p class="text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-medium mb-3">Color</p>
-      <h1 class="text-4xl font-semibold text-zinc-900 dark:text-white">Color Tokens</h1>
-      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-4">Primitive scales, semantic aliases, and foundation tokens.</p>
+      <h1 class="text-5xl font-medium text-zinc-900 dark:text-white">Primitives</h1>
+      <p class="text-base text-zinc-500 dark:text-zinc-400 mt-4">17 chromatic scales, 10 steps each. The raw values that semantic tokens reference.</p>
     </header>
 
     <div class="border-t border-zinc-200 dark:border-zinc-800"></div>
@@ -101,7 +101,7 @@ function semanticVarName(group: string, variant: string): string {
       <div class="mt-4">
         <p class="text-xs text-zinc-400 dark:text-zinc-500 mb-2">On patterned background:</p>
         <div
-          class="grid gap-1 p-4 rounded-lg"
+          class="grid gap-1 p-4"
           style="grid-template-columns: repeat(10, 1fr); background-image: repeating-conic-gradient(#d4d4d8 0% 25%, #e4e4e7 0% 50%); background-size: 16px 16px;"
         >
           <div

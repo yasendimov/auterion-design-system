@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const isDark = ref(true)
+const isDark = ref(false)
 
 export function useTheme() {
   function initialize() {
