@@ -15,7 +15,87 @@
 }
 
 @theme {
-  /* ── Typography only ───────────────────────────────────────────── */
+  /* ── Semantic color tokens ───────────────────────────────────── */
+  /* Registered here so Tailwind v4 generates utility classes       */
+  /* (bg-page, text-high, border-line, etc.). Values come from     */
+  /* CSS custom properties defined in tokens/colors.css.            */
+
+  /* Foundation: page */
+  --color-page:          var(--color-page);
+  --color-page-subtle:   var(--color-page-subtle);
+
+  /* Foundation: text */
+  --color-high:          var(--color-high);
+  --color-low:           var(--color-low);
+  --color-dim:           var(--color-dim);
+  --color-inverse:       var(--color-inverse);
+  --color-link:          var(--color-link);
+
+  /* Foundation: borders */
+  --color-line:          var(--color-line);
+  --color-line-hover:    var(--color-line-hover);
+  --color-line-active:   var(--color-line-active);
+
+  /* Foundation: surfaces */
+  --color-surface-1:     var(--color-surface-1);
+  --color-surface-2:     var(--color-surface-2);
+  --color-surface-3:     var(--color-surface-3);
+
+  /* Primary */
+  --color-primary:         var(--color-primary);
+  --color-primary-subtle:  var(--color-primary-subtle);
+  --color-primary-muted:   var(--color-primary-muted);
+  --color-primary-border:  var(--color-primary-border);
+  --color-primary-text:    var(--color-primary-text);
+  --color-primary-hover:   var(--color-primary-hover);
+  --color-on-primary:      var(--color-on-primary);
+
+  /* Alarm */
+  --color-alarm:         var(--color-alarm);
+  --color-alarm-subtle:  var(--color-alarm-subtle);
+  --color-alarm-muted:   var(--color-alarm-muted);
+  --color-alarm-border:  var(--color-alarm-border);
+  --color-alarm-text:    var(--color-alarm-text);
+  --color-alarm-hover:   var(--color-alarm-hover);
+  --color-on-alarm:      var(--color-on-alarm);
+
+  /* Warning */
+  --color-warning:         var(--color-warning);
+  --color-warning-subtle:  var(--color-warning-subtle);
+  --color-warning-muted:   var(--color-warning-muted);
+  --color-warning-border:  var(--color-warning-border);
+  --color-warning-text:    var(--color-warning-text);
+  --color-warning-hover:   var(--color-warning-hover);
+  --color-on-warning:      var(--color-on-warning);
+
+  /* Caution */
+  --color-caution:         var(--color-caution);
+  --color-caution-subtle:  var(--color-caution-subtle);
+  --color-caution-muted:   var(--color-caution-muted);
+  --color-caution-border:  var(--color-caution-border);
+  --color-caution-text:    var(--color-caution-text);
+  --color-caution-hover:   var(--color-caution-hover);
+  --color-on-caution:      var(--color-on-caution);
+
+  /* Ok */
+  --color-ok:         var(--color-ok);
+  --color-ok-subtle:  var(--color-ok-subtle);
+  --color-ok-muted:   var(--color-ok-muted);
+  --color-ok-border:  var(--color-ok-border);
+  --color-ok-text:    var(--color-ok-text);
+  --color-ok-hover:   var(--color-ok-hover);
+  --color-on-ok:      var(--color-on-ok);
+
+  /* Accent */
+  --color-accent:         var(--color-accent);
+  --color-accent-subtle:  var(--color-accent-subtle);
+  --color-accent-muted:   var(--color-accent-muted);
+  --color-accent-border:  var(--color-accent-border);
+  --color-accent-text:    var(--color-accent-text);
+  --color-accent-hover:   var(--color-accent-hover);
+  --color-on-accent:      var(--color-on-accent);
+
+  /* ── Typography ──────────────────────────────────────────────── */
   --font-sans: var(--font-family-sans);
   --font-mono: var(--font-family-mono);
 
