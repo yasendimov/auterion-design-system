@@ -2,6 +2,7 @@
 import ColorIntroductionPage from '@/pages/color/ColorIntroductionPage.vue'
 import ColorsPage from '@/pages/ColorsPage.vue'
 import ColorSemanticPage from '@/pages/color/ColorSemanticPage.vue'
+import ColorThemePage from '@/pages/color/ColorThemePage.vue'
 import ColorBlackWhitePage from '@/pages/color/ColorBlackWhitePage.vue'
 </script>
 
@@ -15,6 +16,9 @@ import ColorBlackWhitePage from '@/pages/color/ColorBlackWhitePage.vue'
     </section>
     <section id="semantic-tokens">
       <ColorSemanticPage />
+    </section>
+    <section id="theme">
+      <ColorThemePage />
     </section>
     <section id="black-and-white">
       <ColorBlackWhitePage />

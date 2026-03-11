@@ -42,10 +42,27 @@ src/
 ## Design Token Architecture
 
 **Two-layer system:**
-1. **Primitives** — Defined in `tokens/colors.css` at `:root` (light) and `[data-theme="dark"]` (dark). 12 chromatic scales (blue, indigo, violet, pink, red, orange, amber, green, lime, teal, cyan, bronze) + 5 neutrals (gray, slate, mauve, sage, sand), 10 steps each (Radix-aligned).
+1. **Primitives** — Defined in `tokens/colors.css` at `:root` (light) and `[data-theme="dark"]` (dark). Radix 12-step model. Custom scales: base (Auterion neutral) + blue (Auterion Blue #1475ff). Stock Radix: red, orange, amber, green, teal.
 2. **Semantic aliases** — Defined once at `:root` using `var()` references to primitives. They auto-resolve when primitives change per theme. Do NOT redefine semantic aliases in `[data-theme="dark"]`.
 
 **Tailwind bridge** — The `@theme` block in `main.css` bridges typography tokens only. Color tokens (CSS custom properties) are auto-discovered by Tailwind v4, so `bg-[--color-primary]` or semantic classes like `bg-primary` work without explicit `@theme` entries.
+
+### Radix 12-step scale zones
+
+| Step | Purpose                          |
+|------|----------------------------------|
+| 1    | App background                   |
+| 2    | Subtle background                |
+| 3    | UI element background            |
+| 4    | Hovered UI element background    |
+| 5    | Active / selected UI element bg  |
+| 6    | Subtle border / separator        |
+| 7    | UI element border / focus ring   |
+| 8    | Hovered border / stronger border |
+| 9    | Solid fill (accent)              |
+| 10   | Hovered solid fill               |
+| 11   | Low-contrast text                |
+| 12   | High-contrast text               |
 
 ### Semantic color groups
 
@@ -62,10 +79,10 @@ Each group has 7 variants: `-subtle`, `-muted`, `-border`, base, `-hover`, `-tex
 
 ### Foundation tokens
 
-- **Page:** `--color-page-bg`, `--color-page-bg-subtle`
-- **Text:** `--color-text-{primary,secondary,tertiary,disabled,inverse,link}`
-- **Borders:** `--color-border-{subtle,default,strong}`
-- **Surfaces:** `--color-surface-{1,2,3}` (layered depth)
+- **Page:** `--color-page`, `--color-page-subtle` (base steps 1–2)
+- **Text:** `--color-high`, `--color-low`, `--color-dim`, `--color-inverse`, `--color-link` (base steps 12, 11, 9 + blue 9)
+- **Borders:** `--color-line`, `--color-line-hover`, `--color-line-active` (base steps 6–8)
+- **Surfaces:** `--color-surface-{1,2,3}` (base steps 3–5)
 
 ## Conventions
 
@@ -73,6 +90,6 @@ Each group has 7 variants: `-subtle`, `-muted`, `-border`, base, `-hover`, `-tex
 - **Component naming** — `The` prefix for singleton layout components (TheSidebar, ThemeToggle). Page components use `*Page.vue`.
 - **Path alias** — `@/` maps to `src/`.
 - **Placeholder routes** — Use the `placeholder()` helper in `router/index.ts` with `section` and `title` meta. Don't create new page files for placeholder content.
-- **Tailwind usage** — Use semantic token classes (`bg-surface-1`, `text-text-primary`, `border-border-subtle`) over raw primitive classes. Keep styles in templates with utility classes; avoid `<style>` blocks unless necessary.
+- **Tailwind usage** — Use semantic token classes (`bg-surface-1`, `text-high`, `text-low`, `border-line`, `bg-page`) over raw primitive classes. Keep styles in templates with utility classes; avoid `<style>` blocks unless necessary.
 - **No external CSS frameworks** — Everything is built on Tailwind + custom tokens.
 - **OpenType features** — Enabled globally via `--default-font-feature-settings` in `typography.css`. Don't override unless intentional.

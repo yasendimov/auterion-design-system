@@ -12,7 +12,7 @@ onMounted(() => {
 <template>
   <button
     @click="toggle"
-    class="p-1.5 rounded-md text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors duration-100"
+    class="p-1.5 rounded-md text-low hover:text-high hover:bg-surface-1 transition-colors duration-100"
     :title="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
   >
     <svg v-if="isDark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
