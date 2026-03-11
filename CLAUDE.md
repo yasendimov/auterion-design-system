@@ -45,7 +45,7 @@ src/
 1. **Primitives** — Defined in `tokens/colors.css` at `:root` (light) and `[data-theme="dark"]` (dark). Radix 12-step model. Custom scales: base (Auterion neutral) + blue (Auterion Blue #1475ff). Stock Radix: red, orange, amber, green, teal.
 2. **Semantic aliases** — Defined once at `:root` using `var()` references to primitives. They auto-resolve when primitives change per theme. Do NOT redefine semantic aliases in `[data-theme="dark"]`.
 
-**Tailwind bridge** — The `@theme` block in `main.css` bridges typography tokens only. Color tokens (CSS custom properties) are auto-discovered by Tailwind v4, so `bg-[--color-primary]` or semantic classes like `bg-primary` work without explicit `@theme` entries.
+**Tailwind bridge** — The `@theme` block in `main.css` registers both typography and semantic color tokens. All semantic color tokens (page, text, border, surface, and intent groups) are registered in `@theme` so Tailwind v4 generates utility classes like `bg-page`, `text-high`, `border-line`, `bg-primary-subtle`, etc. Arbitrary value syntax like `bg-[--color-primary]` also works for any CSS custom property.
 
 ### Radix 12-step scale zones
 
