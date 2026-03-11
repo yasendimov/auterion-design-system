@@ -136,9 +136,9 @@
 /* Hairline rule utility */
 .rule {
   border-top: 1px solid;
-  border-color: var(--color-border-subtle, rgb(228 228 231));
+  border-color: var(--color-line, rgb(228 228 231));
 }
 
 [data-theme="dark"] .rule {
-  border-color: var(--color-border-subtle, rgb(39 39 42));
+  border-color: var(--color-line, rgb(39 39 42));
 }

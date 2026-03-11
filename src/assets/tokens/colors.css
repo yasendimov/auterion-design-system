@@ -1052,4 +1052,137 @@
   --color-accent-hover:     var(--color-teal-10);
   --color-accent-text:      var(--color-teal-11);
   --color-on-accent:        #ffffff;
+
+  /* -------------------------------------------------------------- */
+  /* Radix-style semantic ramps                                     */
+  /* Lets components use color roles with 1-12 steps (e.g.         */
+  /* bg-primary-3, text-warning-11, border-ok-7) while keeping      */
+  /* existing aliases like --color-primary / --color-high.          */
+  /* -------------------------------------------------------------- */
+
+  /* Neutral ramp (maps to base) */
+  --color-neutral-1:        var(--color-base-1);
+  --color-neutral-2:        var(--color-base-2);
+  --color-neutral-3:        var(--color-base-3);
+  --color-neutral-4:        var(--color-base-4);
+  --color-neutral-5:        var(--color-base-5);
+  --color-neutral-6:        var(--color-base-6);
+  --color-neutral-7:        var(--color-base-7);
+  --color-neutral-8:        var(--color-base-8);
+  --color-neutral-9:        var(--color-base-9);
+  --color-neutral-10:       var(--color-base-10);
+  --color-neutral-11:       var(--color-base-11);
+  --color-neutral-12:       var(--color-base-12);
+
+  /* Primary ramp (maps to blue) */
+  --color-primary-1:        var(--color-blue-1);
+  --color-primary-2:        var(--color-blue-2);
+  --color-primary-3:        var(--color-blue-3);
+  --color-primary-4:        var(--color-blue-4);
+  --color-primary-5:        var(--color-blue-5);
+  --color-primary-6:        var(--color-blue-6);
+  --color-primary-7:        var(--color-blue-7);
+  --color-primary-8:        var(--color-blue-8);
+  --color-primary-9:        var(--color-blue-9);
+  --color-primary-10:       var(--color-blue-10);
+  --color-primary-11:       var(--color-blue-11);
+  --color-primary-12:       var(--color-blue-12);
+
+  /* Alarm ramp (maps to red) */
+  --color-alarm-1:          var(--color-red-1);
+  --color-alarm-2:          var(--color-red-2);
+  --color-alarm-3:          var(--color-red-3);
+  --color-alarm-4:          var(--color-red-4);
+  --color-alarm-5:          var(--color-red-5);
+  --color-alarm-6:          var(--color-red-6);
+  --color-alarm-7:          var(--color-red-7);
+  --color-alarm-8:          var(--color-red-8);
+  --color-alarm-9:          var(--color-red-9);
+  --color-alarm-10:         var(--color-red-10);
+  --color-alarm-11:         var(--color-red-11);
+  --color-alarm-12:         var(--color-red-12);
+
+  /* Warning ramp (maps to orange) */
+  --color-warning-1:        var(--color-orange-1);
+  --color-warning-2:        var(--color-orange-2);
+  --color-warning-3:        var(--color-orange-3);
+  --color-warning-4:        var(--color-orange-4);
+  --color-warning-5:        var(--color-orange-5);
+  --color-warning-6:        var(--color-orange-6);
+  --color-warning-7:        var(--color-orange-7);
+  --color-warning-8:        var(--color-orange-8);
+  --color-warning-9:        var(--color-orange-9);
+  --color-warning-10:       var(--color-orange-10);
+  --color-warning-11:       var(--color-orange-11);
+  --color-warning-12:       var(--color-orange-12);
+
+  /* Caution ramp (maps to amber) */
+  --color-caution-1:        var(--color-amber-1);
+  --color-caution-2:        var(--color-amber-2);
+  --color-caution-3:        var(--color-amber-3);
+  --color-caution-4:        var(--color-amber-4);
+  --color-caution-5:        var(--color-amber-5);
+  --color-caution-6:        var(--color-amber-6);
+  --color-caution-7:        var(--color-amber-7);
+  --color-caution-8:        var(--color-amber-8);
+  --color-caution-9:        var(--color-amber-9);
+  --color-caution-10:       var(--color-amber-10);
+  --color-caution-11:       var(--color-amber-11);
+  --color-caution-12:       var(--color-amber-12);
+
+  /* Ok ramp (maps to green) */
+  --color-ok-1:             var(--color-green-1);
+  --color-ok-2:             var(--color-green-2);
+  --color-ok-3:             var(--color-green-3);
+  --color-ok-4:             var(--color-green-4);
+  --color-ok-5:             var(--color-green-5);
+  --color-ok-6:             var(--color-green-6);
+  --color-ok-7:             var(--color-green-7);
+  --color-ok-8:             var(--color-green-8);
+  --color-ok-9:             var(--color-green-9);
+  --color-ok-10:            var(--color-green-10);
+  --color-ok-11:            var(--color-green-11);
+  --color-ok-12:            var(--color-green-12);
+
+  /* Accent ramp (maps to teal) */
+  --color-accent-1:         var(--color-teal-1);
+  --color-accent-2:         var(--color-teal-2);
+  --color-accent-3:         var(--color-teal-3);
+  --color-accent-4:         var(--color-teal-4);
+  --color-accent-5:         var(--color-teal-5);
+  --color-accent-6:         var(--color-teal-6);
+  --color-accent-7:         var(--color-teal-7);
+  --color-accent-8:         var(--color-teal-8);
+  --color-accent-9:         var(--color-teal-9);
+  --color-accent-10:        var(--color-teal-10);
+  --color-accent-11:        var(--color-teal-11);
+  --color-accent-12:        var(--color-teal-12);
+
+  /* Primary alpha ramp (Radix-like A scale) */
+  --color-primary-a1:       color-mix(in srgb, var(--color-primary-9) 4%, transparent);
+  --color-primary-a2:       color-mix(in srgb, var(--color-primary-9) 8%, transparent);
+  --color-primary-a3:       color-mix(in srgb, var(--color-primary-9) 12%, transparent);
+  --color-primary-a4:       color-mix(in srgb, var(--color-primary-9) 16%, transparent);
+  --color-primary-a5:       color-mix(in srgb, var(--color-primary-9) 20%, transparent);
+  --color-primary-a6:       color-mix(in srgb, var(--color-primary-9) 28%, transparent);
+  --color-primary-a7:       color-mix(in srgb, var(--color-primary-9) 36%, transparent);
+  --color-primary-a8:       color-mix(in srgb, var(--color-primary-9) 44%, transparent);
+  --color-primary-a9:       color-mix(in srgb, var(--color-primary-9) 52%, transparent);
+  --color-primary-a10:      color-mix(in srgb, var(--color-primary-10) 56%, transparent);
+  --color-primary-a11:      color-mix(in srgb, var(--color-primary-11) 64%, transparent);
+  --color-primary-a12:      color-mix(in srgb, var(--color-primary-12) 72%, transparent);
+
+  /* Neutral alpha ramp for overlays, separators, and states */
+  --color-neutral-a1:       color-mix(in srgb, var(--color-neutral-12) 3%, transparent);
+  --color-neutral-a2:       color-mix(in srgb, var(--color-neutral-12) 6%, transparent);
+  --color-neutral-a3:       color-mix(in srgb, var(--color-neutral-12) 10%, transparent);
+  --color-neutral-a4:       color-mix(in srgb, var(--color-neutral-12) 14%, transparent);
+  --color-neutral-a5:       color-mix(in srgb, var(--color-neutral-12) 18%, transparent);
+  --color-neutral-a6:       color-mix(in srgb, var(--color-neutral-12) 22%, transparent);
+  --color-neutral-a7:       color-mix(in srgb, var(--color-neutral-12) 28%, transparent);
+  --color-neutral-a8:       color-mix(in srgb, var(--color-neutral-12) 36%, transparent);
+  --color-neutral-a9:       color-mix(in srgb, var(--color-neutral-12) 44%, transparent);
+  --color-neutral-a10:      color-mix(in srgb, var(--color-neutral-12) 52%, transparent);
+  --color-neutral-a11:      color-mix(in srgb, var(--color-neutral-12) 62%, transparent);
+  --color-neutral-a12:      color-mix(in srgb, var(--color-neutral-12) 74%, transparent);
 }
