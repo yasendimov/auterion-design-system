@@ -18,13 +18,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line ">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line ">
             <span class="text-sm text-dim">Primary logo, dark background</span>
           </div>
           <p class="text-xs text-dim mt-2">On dark backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line ">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line ">
             <span class="text-sm text-dim">Primary logo, light background</span>
           </div>
           <p class="text-xs text-dim mt-2">On light backgrounds</p>
@@ -92,13 +92,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div class="aspect-[4/1] bg-surface-1 flex items-center justify-center border border-line ">
+          <div class="aspect-4/1 bg-surface-1 flex items-center justify-center border border-line ">
             <span class="text-sm text-dim">Wordmark, dark background</span>
           </div>
           <p class="text-xs text-dim mt-2">On dark backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[4/1] bg-surface-1 flex items-center justify-center border border-line ">
+          <div class="aspect-4/1 bg-surface-1 flex items-center justify-center border border-line ">
             <span class="text-sm text-dim">Wordmark, light background</span>
           </div>
           <p class="text-xs text-dim mt-2">On light backgrounds</p>

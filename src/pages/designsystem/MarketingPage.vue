@@ -156,7 +156,7 @@
           <p class="text-sm text-low leading-relaxed">Minimal dark-on-dark design. Symbol mark on front, wordmark on back. Type hierarchy uses weight contrast only (Semibold name, Regular title). No color accents -- pure dark mono palette.</p>
         </div>
         <div class="sm:col-span-2">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Wide-format event banner</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2">Event Banner</h3>

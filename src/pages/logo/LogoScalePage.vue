@@ -18,7 +18,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 border border-line">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-4">
             <span class="text-sm text-dim">Primary logo at minimum size</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1">Primary Logo</h3>
@@ -40,7 +40,7 @@
           <p class="text-xs text-low mt-1">6mm wide for print at 300 DPI</p>
         </div>
         <div class="p-6 border border-line">
-          <div class="aspect-[4/1] bg-surface-1 flex items-center justify-center border border-line  mb-4">
+          <div class="aspect-4/1 bg-surface-1 flex items-center justify-center border border-line  mb-4">
             <span class="text-sm text-dim">Wordmark at minimum size</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1">Wordmark Only</h3>
@@ -67,7 +67,7 @@
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="p-6 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Primary Logo Clear Space</h3>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line ">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line ">
             <span class="text-sm text-dim">Primary logo with 1x clear space overlay</span>
           </div>
           <p class="text-sm text-low mt-3">1x symbol height minimum on all sides. In hero layouts, increase to 2x for greater visual breathing room.</p>

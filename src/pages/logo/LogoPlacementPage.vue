@@ -103,21 +103,21 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Integrated Partner</h3>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-3">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-3">
             <span class="text-xs text-dim">Side-by-side, equal size</span>
           </div>
           <p class="text-sm text-low">Hardware manufacturers and deep integration partners. Logos appear side-by-side at equal optical height.</p>
         </div>
         <div class="p-6 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Powered By</h3>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-3">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-3">
             <span class="text-xs text-dim">"Powered by Auterion" badge</span>
           </div>
           <p class="text-sm text-low">When Auterion technology runs inside another product. Use the "Powered by" lockup with the Auterion logo at a smaller scale.</p>
         </div>
         <div class="p-6 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Ecosystem</h3>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-3">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-3">
             <span class="text-xs text-dim">Logo grid / wall</span>
           </div>
           <p class="text-sm text-low">For partner ecosystem pages and event materials. Logos appear in a grid with consistent sizing and spacing across all partners.</p>

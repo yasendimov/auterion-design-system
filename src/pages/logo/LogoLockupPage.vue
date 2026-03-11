@@ -16,7 +16,7 @@
       <h2 class="text-xl font-semibold text-high mb-1">Horizontal Lockup</h2>
       <p class="text-sm text-low mb-8">The default lockup arrangement. The symbol sits to the left of the wordmark with a fixed gap equal to 50% of the symbol width. Use this in most applications, especially wide formats like website headers, presentation title slides, and signage.</p>
 
-      <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line ">
+      <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line ">
         <span class="text-sm text-dim">Horizontal lockup with spacing annotations</span>
       </div>
 
@@ -72,7 +72,7 @@
       <h2 class="text-xl font-semibold text-high mb-1">Tagline Lockup</h2>
       <p class="text-sm text-low mb-8">The tagline "Platform for Autonomous Mass" can be included below the horizontal lockup. The tagline is set in a lighter weight and smaller size, separated by a thin horizontal rule. Use this only in hero contexts where there is ample space and the brand message needs reinforcement.</p>
 
-      <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line ">
+      <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line ">
         <span class="text-sm text-dim">Tagline lockup: "Platform for Autonomous Mass"</span>
       </div>
 

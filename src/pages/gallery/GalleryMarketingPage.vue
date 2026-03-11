@@ -71,7 +71,7 @@
 
     <section class="px-8 lg:px-16 py-16">
       <h2 class="text-xl font-semibold text-high mb-8">Event Banners</h2>
-      <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center mb-4">
+      <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
         <span class="text-sm text-dim">Wide-format event banner</span>
       </div>
       <div class="grid gap-4 sm:grid-cols-3 mt-6">

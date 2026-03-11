@@ -94,7 +94,7 @@ import { RouterLink } from 'vue-router'
 
         <!-- Mission Timeline Strip -->
         <div class="p-6 border border-line sm:col-span-2">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Mission timeline strip</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2">Mission Timeline Strip</h3>
@@ -190,7 +190,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <!-- Map area -->
                 <div class="flex-1 relative">
-                  <svg class="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="absolute inset-0 w-full h-full opacity-6" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <pattern id="amc-prev-grid" width="16" height="16" patternUnits="userSpaceOnUse">
                         <path d="M 16 0 L 0 0 0 16" fill="none" stroke="white" stroke-width="0.3"/>
@@ -207,7 +207,7 @@ import { RouterLink } from 'vue-router'
                   </svg>
                   <!-- Drone -->
                   <div class="absolute" style="top: 28%; left: 56%;">
-                    <div class="size-0 border-l-[2.5px] border-r-[2.5px] border-b-[4px] border-l-transparent border-r-transparent border-b-primary drop-shadow-[0_0_3px_rgba(59,130,246,0.5)]" style="transform: rotate(47deg);"></div>
+                    <div class="size-0 border-l-[2.5px] border-r-[2.5px] border-b-4 border-l-transparent border-r-transparent border-b-primary drop-shadow-[0_0_3px_rgba(59,130,246,0.5)]" style="transform: rotate(47deg);"></div>
                   </div>
                   <!-- Video switcher -->
                   <div class="absolute bottom-1 left-1.5 w-10 h-6 bg-black/80 border border-line-active/50 rounded-sm flex items-center justify-center">

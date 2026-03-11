@@ -79,21 +79,21 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 border border-line">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-4">
             <span class="text-sm text-dim">Original mark (2017)</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1">2017 -- Foundation</h3>
           <p class="text-sm text-low">The original mark established the brand identity as Auterion launched from the PX4 open-source ecosystem.</p>
         </div>
         <div class="p-6 border border-line">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-4">
             <span class="text-sm text-dim">Refined mark (2021)</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1">2021 -- Refinement</h3>
           <p class="text-sm text-low">Geometry was tightened and the wordmark redrawn for improved legibility across digital and physical applications.</p>
         </div>
         <div class="p-6 border border-line">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line  mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line  mb-4">
             <span class="text-sm text-dim">Current mark (2024)</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1">2024 -- Current</h3>

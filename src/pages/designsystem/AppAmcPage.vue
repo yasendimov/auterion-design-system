@@ -79,7 +79,7 @@ const dronePos = { x: 42, y: 42 }
       </div>
       <!-- RTL marker on the bar -->
       <div class="absolute bottom-0 h-[2px] pointer-events-none" style="left: 25%;">
-        <div class="absolute -top-1.5 left-0 size-0 border-l-[3px] border-r-[3px] border-b-[4px] border-l-transparent border-r-transparent border-b-[--color-warning]"></div>
+        <div class="absolute -top-1.5 left-0 size-0 border-l-[3px] border-r-[3px] border-b-4 border-l-transparent border-r-transparent border-b-[--color-warning]"></div>
       </div>
 
       <!-- Left: vehicle selector -->
@@ -197,7 +197,7 @@ const dronePos = { x: 42, y: 42 }
         <!-- Dark map background -->
         <div class="absolute inset-0 bg-[#0c1218]">
           <!-- Grid -->
-          <svg class="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
+          <svg class="absolute inset-0 w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="amc-grid" width="60" height="60" patternUnits="userSpaceOnUse">
                 <path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5"/>
@@ -216,7 +216,7 @@ const dronePos = { x: 42, y: 42 }
           <div class="absolute top-[20%] left-[55%] w-[25%] h-[25%] rounded-[50%] bg-[#162029] opacity-50 blur-xl"></div>
 
           <!-- Survey area box -->
-          <div class="absolute border border-dashed border-[--color-primary]/25 bg-[--color-primary]/[0.02]" style="top: 28%; left: 30%; width: 38%; height: 35%;">
+          <div class="absolute border border-dashed border-[--color-primary]/25 bg-[--color-primary]/2" style="top: 28%; left: 30%; width: 38%; height: 35%;">
             <div class="absolute -top-5 left-1 text-[9px] font-mono text-[--color-primary]/50 uppercase tracking-widest">Survey Area A</div>
           </div>
 
@@ -307,9 +307,9 @@ const dronePos = { x: 42, y: 42 }
           <div class="absolute z-20" :style="{ left: dronePos.x + '%', top: dronePos.y + '%', transform: 'translate(-50%, -50%)' }">
             <div class="relative" :style="{ transform: `rotate(${telemetry.heading}deg)` }">
               <!-- Heading line -->
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 w-[2px] h-6 bg-gradient-to-t from-[--color-primary] to-transparent"></div>
+              <div class="absolute bottom-full left-1/2 -translate-x-1/2 w-[2px] h-6 bg-linear-to-t from-[--color-primary] to-transparent"></div>
               <!-- Vehicle triangle -->
-              <div class="size-0 border-l-[8px] border-r-[8px] border-b-[14px] border-l-transparent border-r-transparent border-b-[--color-primary] drop-shadow-[0_0_8px_var(--color-primary)]"></div>
+              <div class="size-0 border-l-8 border-r-8 border-b-14 border-l-transparent border-r-transparent border-b-[--color-primary] drop-shadow-[0_0_8px_var(--color-primary)]"></div>
             </div>
           </div>
         </div>
@@ -319,7 +319,7 @@ const dronePos = { x: 42, y: 42 }
           <div class="bg-black/90 border border-[--color-line] rounded overflow-hidden shadow-xl cursor-pointer" @click="videoExpanded = !videoExpanded">
             <div :class="videoExpanded ? 'aspect-video' : 'aspect-video'" class="relative flex items-center justify-center">
               <!-- Simulated camera feed -->
-              <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] opacity-80"></div>
+              <div class="absolute inset-0 bg-linear-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] opacity-80"></div>
               <!-- Horizon line -->
               <div class="absolute inset-x-0 top-[45%] h-px bg-neutral-a3"></div>
               <!-- Crosshair -->

@@ -37,7 +37,7 @@
       <div class="grid gap-8 sm:grid-cols-2">
         <!-- Hero Section -->
         <div class="p-6 border border-line sm:col-span-2">
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center mb-4">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Hero section -- full-bleed with text overlay</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2">Hero Section</h3>
@@ -107,7 +107,7 @@
 
         <!-- Footer -->
         <div class="p-6 border border-line sm:col-span-2">
-          <div class="aspect-[4/1] bg-surface-1 flex items-center justify-center mb-4">
+          <div class="aspect-4/1 bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Footer layout</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2">Footer</h3>

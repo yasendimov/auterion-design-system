@@ -18,13 +18,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div class="aspect-[3/1] bg-surface-3 flex items-center justify-center border border-line-active">
+          <div class="aspect-3/1 bg-surface-3 flex items-center justify-center border border-line-active">
             <span class="text-sm text-low">White logo on dark background</span>
           </div>
           <p class="text-xs text-dim mt-2">On dark neutrals (#000 -- #333)</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-primary flex items-center justify-center border border-primary">
+          <div class="aspect-3/1 bg-primary flex items-center justify-center border border-primary">
             <span class="text-sm text-on-primary">White logo on brand blue</span>
           </div>
           <p class="text-xs text-dim mt-2">On saturated brand colors</p>
@@ -52,13 +52,13 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div class="aspect-[3/1] bg-white flex items-center justify-center border border-line">
+          <div class="aspect-3/1 bg-white flex items-center justify-center border border-line">
             <span class="text-sm text-dim">Black logo on white background</span>
           </div>
           <p class="text-xs text-dim mt-2">On white (#fff)</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border border-line">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border border-line">
             <span class="text-sm text-dim">Black logo on light gray</span>
           </div>
           <p class="text-xs text-dim mt-2">On light neutrals (#eee -- #fff)</p>
@@ -86,37 +86,37 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <div class="aspect-[3/1] bg-surface-3 flex items-center justify-center border-2 border-ok/40">
+          <div class="aspect-3/1 bg-surface-3 flex items-center justify-center border-2 border-ok/40">
             <span class="text-sm text-low">White logo on dark background</span>
           </div>
           <p class="text-sm font-medium text-ok-text mt-2">Do: Use white logo on dark backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-1 flex items-center justify-center border-2 border-alarm/40">
+          <div class="aspect-3/1 bg-surface-1 flex items-center justify-center border-2 border-alarm/40">
             <span class="text-sm text-dim">White logo on light background (wrong)</span>
           </div>
           <p class="text-sm font-medium text-alarm-text mt-2">Don't: Use white logo on light backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-white flex items-center justify-center border-2 border-ok/40">
+          <div class="aspect-3/1 bg-white flex items-center justify-center border-2 border-ok/40">
             <span class="text-sm text-dim">Black logo on white background</span>
           </div>
           <p class="text-sm font-medium text-ok-text mt-2">Do: Use black logo on light backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-3 flex items-center justify-center border-2 border-alarm/40">
+          <div class="aspect-3/1 bg-surface-3 flex items-center justify-center border-2 border-alarm/40">
             <span class="text-sm text-low">Black logo on dark background (wrong)</span>
           </div>
           <p class="text-sm font-medium text-alarm-text mt-2">Don't: Use black logo on dark backgrounds</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-3 flex items-center justify-center border-2 border-ok/40">
+          <div class="aspect-3/1 bg-surface-3 flex items-center justify-center border-2 border-ok/40">
             <span class="text-sm text-low">Full-color logo on neutral background</span>
           </div>
           <p class="text-sm font-medium text-ok-text mt-2">Do: Prefer the full-color logo when color is available</p>
         </div>
         <div>
-          <div class="aspect-[3/1] bg-surface-2 flex items-center justify-center border-2 border-alarm/40">
+          <div class="aspect-3/1 bg-surface-2 flex items-center justify-center border-2 border-alarm/40">
             <span class="text-sm text-low">Grayscale conversion of color logo (wrong)</span>
           </div>
           <p class="text-sm font-medium text-alarm-text mt-2">Don't: Convert the color logo to grayscale -- use the purpose-built B&W versions</p>
