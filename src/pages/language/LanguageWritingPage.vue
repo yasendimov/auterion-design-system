@@ -3,20 +3,20 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Language & Style</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Language & Style</p>
       <h1 class="text-5xl font-medium text-high">Writing Auterion</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Capitalization, punctuation, sentence structure, and formatting conventions for all Auterion communications.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Capitalization</h2>
       <div class="space-y-4 max-w-3xl">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Sentence Case for Product UI</h3>
           <p class="text-sm text-low leading-relaxed mb-3">All buttons, labels, menu items, tooltips, and error messages use sentence case. Only the first word and proper nouns are capitalized.</p>
           <div class="space-y-2">
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Title Case for Marketing</h3>
           <p class="text-sm text-low leading-relaxed mb-3">Headlines, page titles, and marketing materials use title case. Capitalize all words except articles (a, an, the), conjunctions (and, but, or), and short prepositions (in, on, at, for, to) unless they start the title.</p>
           <div class="space-y-2">
@@ -49,7 +49,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Punctuation</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
@@ -93,7 +93,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Abbreviations & Acronyms</h2>
       <div class="space-y-6 max-w-3xl">
         <div class="border-l-2 border-primary pl-5">
@@ -113,10 +113,10 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Sentence Structure</h2>
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Active Voice</h3>
           <p class="text-sm text-low leading-relaxed mb-3">Default to active voice. The subject performs the action.</p>
           <div class="space-y-2">
@@ -128,7 +128,7 @@
             </div>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Sentence Length</h3>
           <p class="text-sm text-low leading-relaxed mb-3">Aim for 15-25 words per sentence. Mix short and medium sentences for rhythm. Break any sentence over 30 words into two.</p>
           <div class="space-y-2">

@@ -3,32 +3,32 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Strategy</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Strategy</p>
       <h1 class="text-5xl font-medium text-high">Voice Principles</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         How Auterion sounds — technical authority, transparency, and mission-driven purpose across every channel.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Brand Voice</h2>
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Technical Authority</h3>
           <p class="text-sm text-low leading-relaxed">Communicate with clarity about autonomy, AI, open standards, and security. Avoid jargon when addressing non-technical audiences.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Transparent & Collaborative</h3>
           <p class="text-sm text-low leading-relaxed">Emphasize that Auterion works with partners and the open-source community, and that its technology is open to inspection and improvement.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Mission-Driven & Ethical</h3>
           <p class="text-sm text-low leading-relaxed">Reinforce the moral imperative to support democracies and the responsible use of AI. Highlight that human operators remain in control.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Innovative Yet Accessible</h3>
           <p class="text-sm text-low leading-relaxed">Show that cutting-edge technology can be affordable and easy to use. Operators can tap on a screen to target instead of flying manually, reducing training requirements.</p>
         </div>
@@ -37,7 +37,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Core Values</h2>
       <div class="space-y-6 max-w-3xl">
         <div class="border-l-2 border-primary pl-5">

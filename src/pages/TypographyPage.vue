@@ -29,15 +29,15 @@ const features = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Typography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Typography</p>
       <h1 class="text-5xl font-medium text-high">Type Scale</h1>
       <p class="text-base text-low mt-4">Inter Variable — 13-step scale from 12px to 128px with weight-aware tracking.</p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Type Scale</h2>
       <p class="text-sm text-low mb-8">13 steps from xs (12px) to 9xl (128px). Three weight columns: SemiBold, Medium, Regular.</p>
 
@@ -80,7 +80,7 @@ const features = [
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Token Reference</h2>
       <p class="text-sm text-low mb-8">CSS custom properties and their values.</p>
 
@@ -110,12 +110,12 @@ const features = [
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Weights</h2>
       <p class="text-sm text-low mb-8">Three weights available across the entire scale.</p>
 
       <div class="grid gap-4 sm:grid-cols-3">
-        <div v-for="w in weights" :key="w.label" class="p-6 border border-line">
+        <div v-for="w in weights" :key="w.label" class="p-8 border border-line">
           <p
             class="text-2xl text-high mb-3"
             :style="{ fontWeight: w.value, letterSpacing: 'var(--tracking-2xl)' }"
@@ -132,12 +132,12 @@ const features = [
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">OpenType Features</h2>
       <p class="text-sm text-low mb-8">Enabled by default via <code class="font-mono text-low">--font-features-sans</code>.</p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] font-medium text-dim uppercase tracking-widest mb-3">Features enabled</p>
           <div class="flex flex-wrap gap-2">
             <span
@@ -150,7 +150,7 @@ const features = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] font-medium text-dim uppercase tracking-widest mb-3">Sample comparison</p>
           <div class="space-y-2">
             <div>

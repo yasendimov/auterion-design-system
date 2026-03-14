@@ -3,42 +3,42 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Language & Style</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Language & Style</p>
       <h1 class="text-5xl font-medium text-high">Blog</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Post structure, headline patterns, and editorial conventions for the Auterion blog.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-2">Post Structure</h2>
       <p class="text-sm text-low mb-8">Every blog post follows a four-part arc. This structure works for product announcements, technical deep-dives, and thought leadership alike.</p>
       <div class="space-y-4 max-w-3xl">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex items-baseline gap-3 mb-2">
             <span class="text-xs font-mono text-dim">01</span>
             <h3 class="text-sm font-semibold text-high">Hook</h3>
           </div>
           <p class="text-sm text-low leading-relaxed">Open with a concrete fact, statistic, or scenario that creates tension. No "In today's rapidly evolving landscape" openings. State the problem or stakes in one to two sentences.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex items-baseline gap-3 mb-2">
             <span class="text-xs font-mono text-dim">02</span>
             <h3 class="text-sm font-semibold text-high">Context</h3>
           </div>
           <p class="text-sm text-low leading-relaxed">Expand on why this matters. Provide background the reader needs to understand the detail section. Keep this to two or three paragraphs. Reference real deployments, partnerships, or technical constraints.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex items-baseline gap-3 mb-2">
             <span class="text-xs font-mono text-dim">03</span>
             <h3 class="text-sm font-semibold text-high">Detail</h3>
           </div>
           <p class="text-sm text-low leading-relaxed">The substance of the post. For product announcements: features, specs, what it enables. For thought leadership: analysis, evidence, implications. Use subheadings, bullet lists, and images to break up long sections.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex items-baseline gap-3 mb-2">
             <span class="text-xs font-mono text-dim">04</span>
             <h3 class="text-sm font-semibold text-high">Call to Action</h3>
@@ -50,7 +50,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Headline Patterns</h2>
       <div class="space-y-4 max-w-3xl">
         <div class="border-l-2 border-ok pl-5">
@@ -78,7 +78,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Meta & Formatting</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">

@@ -3,10 +3,10 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Color</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Color</p>
       <h1 class="text-5xl font-medium text-high">Black &amp; White</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         When and how to use pure black, pure white, and neutral overlays. Clarity under all lighting conditions &mdash; from sunlit tarmacs to blacked-out operations centers.
       </p>
     </header>
@@ -14,14 +14,14 @@
     <div class="border-t border-line"></div>
 
     <!-- Pure Black vs Dark Gray -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Pure Black vs Dark Gray</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Pure black (<code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">#000000</code>) is the Auterion Black dark mode app background. For most UI surfaces, use base scale steps instead to maintain visual depth.
       </p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Use pure black for</h3>
           <ul class="space-y-2 text-xs text-low">
             <li class="flex items-start gap-2">
@@ -42,7 +42,7 @@
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Use dark gray for</h3>
           <ul class="space-y-2 text-xs text-low">
             <li class="flex items-start gap-2">
@@ -76,14 +76,14 @@
     <div class="border-t border-line"></div>
 
     <!-- Pure White vs Off-White -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Pure White vs Off-White</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Pure white (<code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">#ffffff</code>) is the light mode page background and the text color on solid fills. Off-white tones create visual layering without the harshness of pure white on every surface.
       </p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Use pure white for</h3>
           <ul class="space-y-2 text-xs text-low">
             <li class="flex items-start gap-2">
@@ -104,7 +104,7 @@
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-3">Use off-white for</h3>
           <ul class="space-y-2 text-xs text-low">
             <li class="flex items-start gap-2">
@@ -135,7 +135,7 @@
     <div class="border-t border-line"></div>
 
     <!-- Text on Backgrounds -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Text on Backgrounds</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Maintain readable contrast ratios in all environments. Aerospace UIs must remain legible under direct sunlight, low-light conditions, and night vision mode.
@@ -185,7 +185,7 @@
     <div class="border-t border-line"></div>
 
     <!-- Contrast Rules -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Contrast Rules</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Minimum contrast ratios for aerospace applications. WCAG AA compliance is the baseline; critical flight data should exceed it.

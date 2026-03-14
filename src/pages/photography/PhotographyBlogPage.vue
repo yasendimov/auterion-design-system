@@ -3,17 +3,17 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Photography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Photography</p>
       <h1 class="text-5xl font-medium text-high">Blog</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Hero images, inline photography, caption formatting, and editorial image standards for the Auterion blog.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Hero Image Specifications</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Every blog post opens with a full-width hero image that sets the visual tone. The hero is the first thing readers see and the image used in social sharing previews.
@@ -22,22 +22,22 @@
         <span class="text-sm text-dim">Hero image — 1440 x 600, full-width, edge-to-edge</span>
       </div>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Dimensions</p>
           <p class="text-lg font-semibold text-high">1440 x 600</p>
           <p class="text-xs text-low mt-1">2.4:1 aspect ratio, full-width</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">File Format</p>
           <p class="text-lg font-semibold text-high">WebP / JPG</p>
           <p class="text-xs text-low mt-1">WebP preferred, JPEG fallback, under 300 KB</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Focal Point</p>
           <p class="text-lg font-semibold text-high">Center</p>
           <p class="text-xs text-low mt-1">Subject centered vertically — image crops from edges on smaller viewports</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Text Overlay</p>
           <p class="text-lg font-semibold text-high">None</p>
           <p class="text-xs text-low mt-1">Post title is rendered in HTML below the hero, never burned into the image</p>
@@ -47,7 +47,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Inline Image Sizing</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Images within blog post body content use three standard widths. Choose based on the image content and its role in the narrative.
@@ -84,7 +84,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Caption Formatting</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Captions provide essential context and attribution. Every image in a blog post should have a caption unless it is purely decorative.
@@ -96,19 +96,19 @@
         <p class="text-xs text-low mt-2 italic">Skynode S mounted on a custom FPV frame during integration testing at Auterion's Zurich R&D facility. Photo: Auterion / J. Mueller</p>
       </div>
       <div class="grid gap-4 sm:grid-cols-2 mt-8 max-w-3xl">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Style</h3>
           <p class="text-xs text-low leading-relaxed">12px (text-xs), italic, zinc-500/400 color. Left-aligned beneath the image. Maximum two sentences.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Content</h3>
           <p class="text-xs text-low leading-relaxed">Describe what the image shows in factual terms. Avoid marketing language in captions. Include location and context when available.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Credit Format</h3>
           <p class="text-xs text-low leading-relaxed">Append credit after the description: "Photo: Auterion / Photographer Name" or "Photo: Partner Org". Always credit third-party photographers.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Spacing</h3>
           <p class="text-xs text-low leading-relaxed">8px gap between image bottom and caption (mt-2). 32px gap between caption and next content block.</p>
         </div>
@@ -117,7 +117,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Alt Text Guidelines</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Every image requires meaningful alt text for accessibility and SEO. Alt text should describe what the image shows, not what it means or how it should make the reader feel.
@@ -144,7 +144,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Image Credits Format</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Proper attribution protects Auterion legally and maintains professional relationships with photographers and partners.
@@ -185,13 +185,13 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Layout Examples</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Two standard blog post layouts demonstrate how hero and inline images work together within the content flow.
       </p>
       <div class="grid gap-8 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-4">Standard Post</h3>
           <div class="space-y-3">
             <div class="rounded bg-surface-1 h-16 flex items-center justify-center">
@@ -209,7 +209,7 @@
           </div>
           <p class="text-xs text-low mt-4">Hero followed by text, then a full-width inline image breaking up long content blocks.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-4">Visual Feature Post</h3>
           <div class="space-y-3">
             <div class="rounded bg-surface-1 h-16 flex items-center justify-center">

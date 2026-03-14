@@ -22,10 +22,10 @@ const scaleInversion = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Color</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Color</p>
       <h1 class="text-5xl font-medium text-high">Theme</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         How light and dark modes are implemented using the two-layer token architecture. Dark mode is primary.
       </p>
     </header>
@@ -33,7 +33,7 @@ const scaleInversion = [
     <div class="border-t border-line"></div>
 
     <!-- Current Theme -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Current Theme</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         The active theme is controlled by the <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">data-theme</code> attribute on the <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">&lt;html&gt;</code> element. Toggle the theme using the switch in the sidebar header to see tokens update live.
@@ -49,7 +49,7 @@ const scaleInversion = [
     <div class="border-t border-line"></div>
 
     <!-- How Inversion Works -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Scale Inversion</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         In dark mode, primitive scales invert &mdash; step 1 becomes the darkest value and step 12 becomes the lightest. The purpose of each step stays the same: step 1 is always the background, step 12 is always text. Only the luminance flips.
@@ -79,7 +79,7 @@ const scaleInversion = [
     <div class="border-t border-line"></div>
 
     <!-- Side-by-Side Comparison -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Token Comparison</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Key tokens and their resolved values across both themes. Note how <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">blue-9</code> stays constant &mdash; the accent fill is stable across themes.
@@ -111,14 +111,14 @@ const scaleInversion = [
     <div class="border-t border-line"></div>
 
     <!-- Theme Implementation -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Implementation</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Theming is handled entirely through CSS custom properties. No JavaScript runtime cost for color resolution.
       </p>
 
       <div class="grid gap-4 sm:grid-cols-3">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">1. Primitives Per Theme</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">:root</code> defines light mode primitives. <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">[data-theme="dark"]</code> overrides them with dark values.
@@ -133,7 +133,7 @@ const scaleInversion = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">2. Aliases Defined Once</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Semantic aliases use <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">var()</code> references. They resolve automatically when primitives change per theme. Never redefine aliases in the dark theme block.
@@ -146,7 +146,7 @@ const scaleInversion = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">3. Toggle via Attribute</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Theme switching sets <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">data-theme</code> on <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">&lt;html&gt;</code>. All tokens cascade instantly. No class list manipulation.
@@ -164,7 +164,7 @@ const scaleInversion = [
     <div class="border-t border-line"></div>
 
     <!-- Live Preview -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Live Preview</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Toggle the theme to see all tokens update in real time. The blue accent strip stays constant across themes.
@@ -172,7 +172,7 @@ const scaleInversion = [
 
       <div class="grid gap-4 sm:grid-cols-2">
         <!-- Surfaces preview -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-4">Surfaces &amp; Text</h3>
           <div class="space-y-2">
             <div class="p-4 rounded" :style="{ backgroundColor: 'var(--color-page)' }">
@@ -188,7 +188,7 @@ const scaleInversion = [
         </div>
 
         <!-- Status colors preview -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-4">Status Colors</h3>
           <div class="space-y-2">
             <div class="flex gap-2">

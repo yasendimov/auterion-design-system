@@ -1,0 +1,266 @@
+================================================================================
+AUTERION DESIGN SYSTEM — COLORS & THEME SETUP
+================================================================================
+
+
+--- PAGE: Color > Introduction ---
+
+Color
+Introduction
+The two-layer color architecture that powers every surface, border, and text element across Auterion products — from ground control stations to swarm telemetry dashboards.
+
+Two-Layer Architecture
+Colors are organized into two layers. The first layer, primitives, defines the raw chromatic scales — 32 scales with 12 steps each (2 custom Auterion, 6 Radix grays, 24 Radix chromatic). The second layer, semantic aliases, maps intent-based names to those primitives. Components always consume semantic tokens, never raw scale values.
+
+Layer 1 — Primitives
+Raw scale values defined as CSS custom properties. Each hue has 12 steps going from lightest backgrounds to darkest text. In dark mode, these steps invert — light values become dark, dark values become light.
+Example: --color-blue-1 … --color-blue-12
+
+Layer 2 — Semantic Aliases
+Named tokens that reference primitives via var(). Defined once at :root. When dark mode overrides the primitives, all aliases resolve automatically. No duplication needed.
+Example: --color-primary-subtle … --color-primary-text
+
+Token Flow
+Colors flow from raw primitives through semantic aliases to the components that render them. This indirection lets us change an entire theme by swapping primitives alone.
+Primitive → Semantic → Component
+
+How Themes Work
+Dark mode is the primary theme. Light mode is secondary. Theme switching uses the data-theme attribute on <html>.
+
+- Primitives Invert: In dark mode, light steps become dark and dark steps become light. Step 1 in light mode is near-white; in dark mode it is near-black.
+- Step 9 Is Stable: The accent fill (step 9) remains the same hex value across both themes. This ensures brand colors like #1475ff stay recognizable.
+- Aliases Auto-Resolve: Semantic tokens are defined once using var() references. When dark mode swaps the primitives, every alias updates automatically. Never redefine semantic aliases per theme.
+
+12-Step Scale
+Every chromatic scale follows the same 12-step structure. Each step has a defined purpose, ensuring consistent usage across every hue.
+- Steps 1–2: Backgrounds
+- Steps 3–5: Surfaces
+- Steps 6–8: Borders
+- Steps 9–10: Fills
+- Steps 11–12: Text
+
+Brand Character
+Auterion's color identity is built on a monochrome foundation with focused chromatic accents. The palette reflects the precision and clarity demanded by aerospace systems.
+
+- Monochrome Foundation: Pure achromatic base (no hue tint) serves as the primary neutral, providing a clean backdrop for chromatic accents and status colors.
+- Primary Accent: Blue is the primary accent color, used for interactive elements, links, and focus states. Status colors (red, orange, amber, green) are reserved for alerts following the OpenBridge aviation standard.
+
+
+--- PAGE: Color > Primitives ---
+
+Color
+Primitives
+Full Radix 12-step palette. 2 custom Auterion scales, 6 gray scales, and 24 chromatic scales.
+
+Custom Scales
+Auterion-specific scales designed in Figma. Base is pure achromatic, Blue uses #1475ff at step 9.
+
+Gray Scales
+6 Radix gray variants, each with a different hue tint. Use these for neutral backgrounds, text, and borders.
+
+Chromatic Scales
+24 stock Radix color scales. Steps 1-12 go from lightest to darkest (light mode) or darkest to lightest (dark mode).
+
+Semantic Aliases
+Status and intent tokens. Components should use these, not raw primitives.
+Variants: subtle · muted · border · default · hover · text
+
+Foundation Tokens
+Page backgrounds, text colors, borders, and surfaces.
+
+Page: page, page-subtle
+Text: high, low, link
+Borders: line, line-hover, line-active
+Surfaces: surface-1, surface-2, surface-3
+
+
+--- PAGE: Color > Semantic Tokens ---
+
+Color
+Semantic Tokens
+Named aliases for intent. Components consume these tokens — never raw primitives. Each group provides 7 variants covering backgrounds, borders, fills, and text.
+
+Variant Pattern
+Every semantic group follows the same 7-variant structure. This consistency means learning one group teaches you all of them.
+Variants: subtle, muted, border, (base), hover, text, on-{name}
+
+Semantic Groups
+Six groups covering primary interaction, four alert levels (aligned with OpenBridge / aviation standards), and data visualization.
+
+| Group    | Primitive | Description                              |
+|----------|-----------|------------------------------------------|
+| primary  | blue      | Interactive elements                     |
+| alarm    | red       | Immediate action required                |
+| warning  | orange    | Prompt action required                   |
+| caution  | amber     | Awareness required                       |
+| ok       | green     | Nominal / running                        |
+| accent   | teal      | Data visualization                       |
+
+Button states demonstrated: Button, Outlined, Subtle
+
+Foundation Tokens
+Page backgrounds, text hierarchy, border states, and layered surfaces. These tokens form the structural backbone of every layout.
+
+Page Backgrounds: page, page-subtle
+Text Colors: high, low, link
+Borders: line, line-hover, line-active
+Surfaces: surface-1, surface-2, surface-3
+
+
+--- PAGE: Color > Theme ---
+
+Color
+Theme
+How light and dark modes are implemented using the two-layer token architecture. Dark mode is primary.
+
+Current Theme
+The active theme is controlled by the data-theme attribute on the <html> element. Toggle the theme using the switch in the sidebar header to see tokens update live.
+
+Scale Inversion
+In dark mode, primitive scales invert — step 1 becomes the darkest value and step 12 becomes the lightest. The purpose of each step stays the same: step 1 is always the background, step 12 is always text. Only the luminance flips.
+
+Token Comparison
+Key tokens and their resolved values across both themes. Note how blue-9 stays constant — the accent fill is stable across themes.
+
+Implementation
+Theming is handled entirely through CSS custom properties. No JavaScript runtime cost for color resolution.
+
+1. Primitives Per Theme
+:root defines light mode primitives. [data-theme="dark"] overrides them with dark values.
+  :root {
+    --color-blue-1: #fcfdff;
+  }
+  [data-theme="dark"] {
+    --color-blue-1: #03060b;
+  }
+
+2. Aliases Defined Once
+Semantic aliases use var() references. They resolve automatically when primitives change per theme. Never redefine aliases in the dark theme block.
+  :root {
+    --color-primary: var(--color-blue-9);
+  }
+
+3. Toggle via Attribute
+Theme switching sets data-theme on <html>. All tokens cascade instantly. No class list manipulation.
+  document.documentElement.setAttribute('data-theme', 'dark');
+
+Live Preview
+Toggle the theme to see all tokens update in real time. The blue accent strip stays constant across themes.
+
+Surfaces & Text:
+- Page background + high text
+- Subtle background + low text
+- Surface-1 + dim text
+
+Status Colors: Primary, Alarm, Warning, Caution, Ok, Accent
+
+
+--- PAGE: Color > Black & White ---
+
+Color
+Black & White
+When and how to use pure black, pure white, and neutral overlays. Clarity under all lighting conditions — from sunlit tarmacs to blacked-out operations centers.
+
+Pure Black vs Dark Gray
+Pure black (#000000) is the Auterion Black dark mode app background. For most UI surfaces, use base scale steps instead to maintain visual depth.
+
+Use pure black for:
+- Page background in dark mode (--color-page)
+- Maximum contrast text in light mode (--color-base-12)
+- Logo reproduction when color is not available
+
+Use dark gray for:
+- Elevated surfaces in dark mode (--color-surface-1 through surface-3)
+- Card backgrounds, sidebars, and panels
+- Input field backgrounds and dropdown menus
+
+Pure White vs Off-White
+Pure white (#ffffff) is the light mode page background and the text color on solid fills. Off-white tones create visual layering without the harshness of pure white on every surface.
+
+Use pure white for:
+- Page background in light mode
+- Text on solid color fills (--color-on-primary)
+- High-contrast text in dark mode (--color-base-12 resolves to white in dark mode)
+
+Use off-white for:
+- Subtle page background (--color-page-subtle)
+- Card and surface backgrounds in light mode
+- Alternating row stripes and zebra patterns
+
+Text on Backgrounds
+Maintain readable contrast ratios in all environments. Aerospace UIs must remain legible under direct sunlight, low-light conditions, and night vision mode.
+
+Do:
+- White text on black
+- Near-black text on white
+- White text on accent fills
+- Semantic text on subtle bg
+
+Don't:
+- Low-contrast gray on gray
+- White text on amber
+- Yellow text on white
+- Blue text on pure black
+
+Contrast Rules
+Minimum contrast ratios for aerospace applications. WCAG AA compliance is the baseline; critical flight data should exceed it.
+
+| Ratio   | Context        | Details                                                            |
+|---------|----------------|--------------------------------------------------------------------|
+| 4.5 : 1 | Normal text    | Body copy, labels, descriptions. Use --color-high or --color-low.  |
+| 3 : 1   | Large text     | Headings at 18px+ semibold or 24px+ regular.                      |
+| 3 : 1   | UI components  | Borders, icons, and form controls.                                 |
+| 7 : 1   | Critical data  | Altitude readouts, speed indicators, warning text.                 |
+
+
+================================================================================
+TOKEN ARCHITECTURE REFERENCE (from colors.css header)
+================================================================================
+
+Architecture:
+- Layer 1: Primitive scales (12-step Radix model)
+- Layer 2: Semantic aliases (mapped to primitives)
+
+Scale zones (Radix 12-step model):
+  step  1  → App background
+  step  2  → Subtle background
+  step  3  → UI element background
+  step  4  → Hovered UI element background
+  step  5  → Active / selected UI element background
+  step  6  → Subtle border / separator
+  step  7  → UI element border / focus ring
+  step  8  → Hovered border / stronger border
+  step  9  → Solid fill (accent)
+  step 10  → Hovered solid fill
+  step 11  → Low-contrast text
+  step 12  → High-contrast text
+
+How theming works:
+  Semantic aliases (Layer 2) are defined once in :root using
+  var() references to primitives. When [data-theme="dark"]
+  overrides those primitives, all aliases resolve to the new
+  values automatically — no need to redefine them per theme.
+  Only hardcoded values (e.g. --color-on-primary: #fff) are
+  truly static.
+
+Brand character:
+  Auterion Black (#000) as app background in dark mode.
+  Auterion Blue (#1475ff) as primary accent (step 9).
+  Pure achromatic neutral base. Dark mode is primary.
+
+Custom scales (from Figma):
+  base — Auterion neutral (achromatic, custom values)
+  blue — Auterion Blue accent (custom, #1475ff at step 9)
+
+Stock Radix scales:
+  Grays: gray · mauve · slate · sage · olive · sand
+  Colors: tomato · red · ruby · crimson · pink · plum ·
+          purple · violet · iris · indigo · cyan · teal ·
+          jade · green · grass · bronze · gold · brown ·
+          orange · amber · yellow · lime · mint · sky
+
+Alert hierarchy (OpenBridge / aviation standard):
+  alarm   → red    (immediate action required)
+  warning → orange (prompt action required)
+  caution → amber  (awareness required)
+  ok      → green  (nominal / running)

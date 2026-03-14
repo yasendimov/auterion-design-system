@@ -3,22 +3,22 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Language & Style</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Language & Style</p>
       <h1 class="text-5xl font-medium text-high">Social Media</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Platform-specific copy guidelines for LinkedIn, X/Twitter, and YouTube.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-2">LinkedIn</h2>
       <p class="text-sm text-low mb-8">Professional audience. Thought leadership, product launches, partnerships, and hiring.</p>
       <div class="grid gap-4 sm:grid-cols-2">
         <div class="space-y-4">
-          <div class="p-6 border border-line">
+          <div class="p-8 border border-line">
             <h3 class="text-sm font-semibold text-high mb-2">Format Rules</h3>
             <ul class="space-y-2 text-sm text-low">
               <li class="flex gap-2"><span class="text-dim">--</span>Max 1,300 characters per post</li>
@@ -28,12 +28,12 @@
               <li class="flex gap-2"><span class="text-dim">--</span>2-4 hashtags max, placed at the end</li>
             </ul>
           </div>
-          <div class="p-6 border border-line">
+          <div class="p-8 border border-line">
             <h3 class="text-sm font-semibold text-high mb-2">Tone</h3>
             <p class="text-sm text-low leading-relaxed">Professional but not corporate. Share substance, not slogans. Data points, milestones, and technical insights perform best. Avoid "excited to announce" and "thrilled to share."</p>
           </div>
         </div>
-        <div class="p-6 border border-line h-fit">
+        <div class="p-8 border border-line h-fit">
           <h3 class="text-sm font-semibold text-high mb-3">Example Post</h3>
           <div class="p-4 rounded bg-page-subtle/50 text-sm text-high leading-relaxed font-mono space-y-3">
             <p>33,000 AI strike kits. One contract. That's the scale the Pentagon just ordered from Auterion.</p>
@@ -47,12 +47,12 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-2">X / Twitter</h2>
       <p class="text-sm text-low mb-8">Fast, technical, news-driven. Reach developers, defense analysts, and aerospace press.</p>
       <div class="grid gap-4 sm:grid-cols-2">
         <div class="space-y-4">
-          <div class="p-6 border border-line">
+          <div class="p-8 border border-line">
             <h3 class="text-sm font-semibold text-high mb-2">Format Rules</h3>
             <ul class="space-y-2 text-sm text-low">
               <li class="flex gap-2"><span class="text-dim">--</span>280 characters per tweet (aim for under 240 for retweet room)</li>
@@ -61,12 +61,12 @@
               <li class="flex gap-2"><span class="text-dim">--</span>Tag partners and relevant accounts when appropriate</li>
             </ul>
           </div>
-          <div class="p-6 border border-line">
+          <div class="p-8 border border-line">
             <h3 class="text-sm font-semibold text-high mb-2">Tone</h3>
             <p class="text-sm text-low leading-relaxed">Concise and direct. Technical facts over marketing language. Short declarative sentences. Numbers and specifics always outperform abstractions.</p>
           </div>
         </div>
-        <div class="p-6 border border-line h-fit">
+        <div class="p-8 border border-line h-fit">
           <h3 class="text-sm font-semibold text-high mb-3">Example Posts</h3>
           <div class="space-y-4">
             <div class="p-4 rounded bg-page-subtle/50 text-sm text-high leading-relaxed font-mono">
@@ -82,11 +82,11 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-2">YouTube</h2>
       <p class="text-sm text-low mb-8">Long-form content: product demos, conference talks, field footage, technical explainers.</p>
       <div class="space-y-4 max-w-3xl">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Description Template</h3>
           <div class="p-4 rounded bg-page-subtle/50 text-sm text-high leading-relaxed font-mono space-y-3">
             <p>[One-sentence summary of the video content]</p>
@@ -97,11 +97,11 @@
             <p>Product page: [URL]<br>Documentation: [URL]<br>Blog post: [URL]</p>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Chapter Markers</h3>
           <p class="text-sm text-low leading-relaxed">Always include chapter markers for videos over 3 minutes. Start with "0:00 Introduction." Use descriptive labels, not generic ones ("Skynode S Field Test" not "Demo").</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Title Conventions</h3>
           <p class="text-sm text-low leading-relaxed">Title case. Lead with the product or topic name. Include a descriptor after a colon or dash. Keep under 60 characters to avoid truncation.</p>
           <div class="mt-3 space-y-2">
@@ -118,7 +118,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Hashtag Reference</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">

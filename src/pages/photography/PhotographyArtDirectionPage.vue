@@ -3,17 +3,17 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Photography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Photography</p>
       <h1 class="text-5xl font-medium text-high">Art Direction</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Photographic style, mood, lighting, and composition principles for Auterion imagery — technical precision meets human purpose.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Visual Mood</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Auterion photography bridges the gap between cutting-edge technology and meaningful human impact. Every image should convey quiet confidence, operational clarity, and the scale of autonomous systems working in concert. Avoid overly dramatic or cinematic looks — the technology speaks for itself.
@@ -36,21 +36,21 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Lighting</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Natural light is strongly preferred. Golden hour and overcast conditions produce the most authentic results. Avoid heavy studio setups, artificial color gels, or over-processed HDR. When shooting indoors (labs, control rooms), use available ambient light supplemented with soft fill only where necessary.
       </p>
       <div class="grid gap-4 sm:grid-cols-3">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Golden Hour</h3>
           <p class="text-xs text-low leading-relaxed">Warm, directional light that adds depth to outdoor drone operations. Preferred for hero and marketing imagery.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Overcast / Diffused</h3>
           <p class="text-xs text-low leading-relaxed">Even, soft light ideal for product detail shots and documentation photography. Reduces harsh shadows on hardware.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Ambient Indoor</h3>
           <p class="text-xs text-low leading-relaxed">Screen glow and workspace lighting for control room and lab environments. Keep it authentic, not staged.</p>
         </div>
@@ -59,7 +59,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Composition Principles</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Strong compositions create visual hierarchy and leave room for typography and brand elements. Every image should feel intentional and structured.
@@ -86,17 +86,17 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Color Grading</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Desaturated base with selective color emphasis. The environment should feel grounded and real while Auterion's brand blue and product accents naturally stand out. Let the product and brand colors pop against a muted backdrop.
       </p>
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Base Treatment</h3>
           <p class="text-xs text-low leading-relaxed">Slightly desaturated, with lifted blacks and a cool-neutral tone. Reduce vibrancy of greens and browns in landscapes by 15-20%. Preserve skin tones.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Selective Color</h3>
           <p class="text-xs text-low leading-relaxed">Keep blues and teals at full saturation. LED indicators, UI screens, and brand elements should retain their original vibrancy against the muted background.</p>
         </div>
@@ -105,13 +105,13 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Subject Matter Hierarchy</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Not all subjects carry equal weight. This hierarchy guides what to prioritize when planning shoots and selecting imagery for campaigns.
       </p>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Priority 1</p>
           <h3 class="text-sm font-semibold text-high mb-2">Drones in Operation</h3>
           <p class="text-xs text-low leading-relaxed">Swarms in flight, autonomous missions, coordinated formations. The core of what Auterion enables.</p>
@@ -119,7 +119,7 @@
             <span class="text-sm text-dim">Swarm formation flight</span>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Priority 2</p>
           <h3 class="text-sm font-semibold text-high mb-2">Operators & People</h3>
           <p class="text-xs text-low leading-relaxed">Ground control operators, field teams, engineers. Humans in control of autonomous systems.</p>
@@ -127,7 +127,7 @@
             <span class="text-sm text-dim">Operator with ground station</span>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Priority 3</p>
           <h3 class="text-sm font-semibold text-high mb-2">Landscapes & Environments</h3>
           <p class="text-xs text-low leading-relaxed">Operational theaters — deserts, coastlines, urban, industrial. Establishes scale and context.</p>
@@ -135,7 +135,7 @@
             <span class="text-sm text-dim">Desert terrain from altitude</span>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Priority 4</p>
           <h3 class="text-sm font-semibold text-high mb-2">Close-Up Hardware</h3>
           <p class="text-xs text-low leading-relaxed">Skynode boards, connectors, sensors, propulsion details. Conveys engineering precision.</p>
@@ -148,7 +148,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Do / Don't</h2>
       <div class="grid gap-6 sm:grid-cols-2">
         <div>

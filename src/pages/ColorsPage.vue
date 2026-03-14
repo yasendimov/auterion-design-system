@@ -59,8 +59,8 @@ function semanticVarName(group: string, variant: string): string {
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Color</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Color</p>
       <h1 class="text-5xl font-medium text-high">Primitives</h1>
       <p class="text-base text-low mt-4">Full Radix 12-step palette. 2 custom Auterion scales, 6 gray scales, and 24 chromatic scales.</p>
     </header>
@@ -68,7 +68,7 @@ function semanticVarName(group: string, variant: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Custom Scales (Auterion) -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Custom Scales</h2>
       <p class="text-sm text-low mb-8">Auterion-specific scales designed in Figma. Base is pure achromatic, Blue uses #1475ff at step 9.</p>
 
@@ -100,7 +100,7 @@ function semanticVarName(group: string, variant: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Gray Scales -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Gray Scales</h2>
       <p class="text-sm text-low mb-8">6 Radix gray variants, each with a different hue tint. Use these for neutral backgrounds, text, and borders.</p>
 
@@ -132,7 +132,7 @@ function semanticVarName(group: string, variant: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Chromatic Scales -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Chromatic Scales</h2>
       <p class="text-sm text-low mb-8">24 stock Radix color scales. Steps 1-12 go from lightest to darkest (light mode) or darkest to lightest (dark mode).</p>
 
@@ -164,7 +164,7 @@ function semanticVarName(group: string, variant: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Semantic Aliases -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Semantic Aliases</h2>
       <p class="text-sm text-low mb-8">Status and intent tokens. Components should use these, not raw primitives.</p>
 
@@ -201,7 +201,7 @@ function semanticVarName(group: string, variant: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Foundation Tokens -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Foundation Tokens</h2>
       <p class="text-sm text-low mb-8">Page backgrounds, text colors, borders, and surfaces.</p>
 

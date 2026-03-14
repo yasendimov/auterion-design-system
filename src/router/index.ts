@@ -10,7 +10,7 @@ import LanguageCombinedPage from '@/pages/LanguageCombinedPage.vue'
 import GalleryCombinedPage from '@/pages/GalleryCombinedPage.vue'
 import DesignSystemMarketingPage from '@/pages/designsystem/MarketingPage.vue'
 import DesignSystemApplicationsPage from '@/pages/designsystem/ApplicationsPage.vue'
-import AppHomeScreenPage from '@/pages/designsystem/AppHomeScreenPage.vue'
+import AppSuitePage from '@/pages/designsystem/AppSuitePage.vue'
 import AppAmcPage from '@/pages/designsystem/AppAmcPage.vue'
 import DesignSystemWebsitePage from '@/pages/designsystem/WebsitePage.vue'
 import WebsiteLayout from '@/pages/website/WebsiteLayout.vue'
@@ -45,7 +45,7 @@ const router = createRouter({
     // Gallery sub-pages
     { path: '/gallery/marketing', component: DesignSystemMarketingPage, meta: { section: 'Gallery', title: 'Marketing' } },
     { path: '/gallery/applications', component: DesignSystemApplicationsPage, meta: { section: 'Gallery', title: 'Applications' } },
-    { path: '/gallery/applications/home-screen', component: AppHomeScreenPage, meta: { section: 'Gallery', title: 'Applications', standalone: true } },
+    { path: '/gallery/applications/suite', component: AppSuitePage, meta: { section: 'Gallery', title: 'Applications', standalone: true } },
     { path: '/gallery/applications/amc', component: AppAmcPage, meta: { section: 'Gallery', title: 'Applications', standalone: true } },
     { path: '/gallery/website-overview', component: DesignSystemWebsitePage, meta: { section: 'Gallery', title: 'Website' } },
 

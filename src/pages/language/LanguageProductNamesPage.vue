@@ -3,17 +3,17 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Language & Style</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Language & Style</p>
       <h1 class="text-5xl font-medium text-high">Product Names</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Correct formatting for every Auterion product name. Consistency here signals precision everywhere else.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Product Name Reference</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
@@ -81,7 +81,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Common Mistakes</h2>
       <div class="space-y-4 max-w-3xl">
         <div class="border-l-2 border-alarm pl-5">
@@ -114,7 +114,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Usage Guidelines</h2>
       <div class="space-y-6 max-w-3xl">
         <div class="border-l-2 border-primary pl-5">

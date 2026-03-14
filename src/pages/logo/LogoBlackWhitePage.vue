@@ -3,8 +3,8 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Logo</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Logo</p>
       <h1 class="text-5xl font-medium text-high">Black & White</h1>
       <p class="text-base text-low mt-4">When color reproduction is unavailable or undesirable, use the monochrome versions of the logo. These are not grayscale conversions -- they are purpose-built single-color variants.</p>
     </header>
@@ -12,7 +12,7 @@
     <div class="border-t border-line"></div>
 
     <!-- White Logo -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">White Logo</h2>
       <p class="text-sm text-low mb-8">Use the white logo on dark or saturated backgrounds. This is the most common monochrome variant since Auterion's primary brand context is dark-mode-first.</p>
 
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="mt-6 p-6 border border-line">
+      <div class="mt-6 p-8 border border-line">
         <h3 class="text-sm font-semibold text-high mb-2">When to use</h3>
         <ul class="text-sm text-low space-y-1.5 list-disc list-inside">
           <li>Dark UI backgrounds and dark-mode interfaces</li>
@@ -46,7 +46,7 @@
     <div class="border-t border-line"></div>
 
     <!-- Black Logo -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Black Logo</h2>
       <p class="text-sm text-low mb-8">Use the black logo on light backgrounds. This is the standard choice for print documents, contracts, and light-themed contexts.</p>
 
@@ -65,7 +65,7 @@
         </div>
       </div>
 
-      <div class="mt-6 p-6 border border-line">
+      <div class="mt-6 p-8 border border-line">
         <h3 class="text-sm font-semibold text-high mb-2">When to use</h3>
         <ul class="text-sm text-low space-y-1.5 list-disc list-inside">
           <li>Print documents, letterheads, and invoices</li>
@@ -80,7 +80,7 @@
     <div class="border-t border-line"></div>
 
     <!-- Do / Don't -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Do / Don't</h2>
       <p class="text-sm text-low mb-8">Follow these rules to maintain the integrity of the monochrome logo variants.</p>
 

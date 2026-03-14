@@ -3,38 +3,38 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Photography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Photography</p>
       <h1 class="text-5xl font-medium text-high">YouTube</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Thumbnail templates, video stills, title cards, and motion graphics guidelines for Auterion's YouTube presence.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Thumbnail Specifications</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Thumbnails are the single most important visual for video discovery. They must be readable at mobile size (approximately 168x94px rendered) and convey the video topic in under two seconds.
       </p>
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Resolution</p>
           <p class="text-lg font-semibold text-high">1280 x 720</p>
           <p class="text-xs text-low mt-1">16:9 aspect ratio, minimum width 640px</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">File Format</p>
           <p class="text-lg font-semibold text-high">JPG / PNG</p>
           <p class="text-xs text-low mt-1">Under 2 MB file size</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Text Limit</p>
           <p class="text-lg font-semibold text-high">3-5 Words</p>
           <p class="text-xs text-low mt-1">Bold, high-contrast, readable at 168px wide</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Safe Zone</p>
           <p class="text-lg font-semibold text-high">Bottom-right</p>
           <p class="text-xs text-low mt-1">Avoid — YouTube overlays timestamp here</p>
@@ -44,7 +44,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-6">Thumbnail Templates</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Three standard thumbnail layouts cover the majority of Auterion video content. Maintain consistency by using these templates as the starting point for every video.
@@ -76,7 +76,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Title Cards</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Title cards appear in the first 2-3 seconds of a video and at chapter transitions. They set the visual tone and reinforce brand identity.
@@ -99,25 +99,25 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Video Still Guidelines</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Video stills pulled for press, social media, or documentation should meet the same art direction standards as dedicated photography.
       </p>
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Resolution</h3>
           <p class="text-xs text-low leading-relaxed">Export at 1920x1080 minimum. For print use, pull from 4K source footage when available.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Frame Selection</h3>
           <p class="text-xs text-low leading-relaxed">Choose frames with minimal motion blur. Pause on composition-strong moments — formation shots, operator interactions, product reveals.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Color Correction</h3>
           <p class="text-xs text-low leading-relaxed">Apply the standard Auterion color grade (desaturated base, selective color) to match the photography system. Do not use the raw video LUT.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Overlay Removal</h3>
           <p class="text-xs text-low leading-relaxed">Remove any on-screen UI, timestamps, or watermarks before using a video still as a standalone image.</p>
         </div>
@@ -126,7 +126,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Lower-Third Graphics</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Lower thirds identify speakers and display contextual information. They should be minimal and not compete with the video content.
@@ -139,15 +139,15 @@
         </div>
       </div>
       <div class="grid gap-4 sm:grid-cols-3 max-w-3xl">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Position</h3>
           <p class="text-xs text-low leading-relaxed">Bottom-left, 48px from edge. Never bottom-right (reserved for YouTube controls).</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Style</h3>
           <p class="text-xs text-low leading-relaxed">Semi-transparent dark background with backdrop blur. Name in semibold, title in regular weight.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Duration</h3>
           <p class="text-xs text-low leading-relaxed">Display for 4-5 seconds. Fade in 0.3s, fade out 0.3s. Show once per speaker per segment.</p>
         </div>
@@ -156,7 +156,7 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">End Screen Layout</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         The last 20 seconds of every video include a branded end screen with subscribe and next-video elements. YouTube end screen elements must fit within designated zones.

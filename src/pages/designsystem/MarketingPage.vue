@@ -3,10 +3,10 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Design System</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Design System</p>
       <h1 class="text-5xl font-medium text-high">Marketing</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         What Auterion marketing materials look like and how the design system shapes the visual language across trade shows, presentations, and print collateral.
       </p>
     </header>
@@ -14,8 +14,8 @@
     <div class="border-t border-line"></div>
 
     <!-- Introduction -->
-    <section id="introduction" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Introduction</h2>
+    <section id="introduction" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Introduction</h2>
       <div class="max-w-2xl">
         <p class="text-sm text-low leading-relaxed mb-4">
           Auterion's marketing materials extend the design system into physical and digital touchpoints. Every piece of collateral -- from a conference slide deck to a trade show banner -- uses the same token architecture, type scale, and color palette that drives the product UI.
@@ -32,11 +32,11 @@
     <div class="border-t border-line"></div>
 
     <!-- Components -->
-    <section id="components" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Components</h2>
+    <section id="components" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Components</h2>
       <div class="grid gap-8 sm:grid-cols-2">
         <!-- Title Slide Template -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Title slide template</span>
           </div>
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Content Slide Template -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Content slide template</span>
           </div>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Data Slide Template -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Data slide template</span>
           </div>
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Brochure Layout -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Tri-fold brochure layout</span>
           </div>
@@ -92,7 +92,7 @@
         </div>
 
         <!-- Business Card -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Business card front and back</span>
           </div>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Trade Show Banner -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Trade show banner specs</span>
           </div>
@@ -124,8 +124,8 @@
     <div class="border-t border-line"></div>
 
     <!-- Examples -->
-    <section id="examples" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Examples</h2>
+    <section id="examples" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Examples</h2>
       <div class="grid gap-8 sm:grid-cols-2">
         <div>
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">

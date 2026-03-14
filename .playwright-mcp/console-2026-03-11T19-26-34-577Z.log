@@ -1,0 +1,6 @@
+[ 1256945ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5174/src/pages/designsystem/AppHomeScreenPage.vue?t=1773258451518:0
+[ 1256946ms] [ERROR] [vite] Failed to reload /src/pages/designsystem/AppHomeScreenPage.vue. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://localhost:5174/@vite/client:881
+[ 1257169ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5174/src/pages/designsystem/AppHomeScreenPage.vue?t=1773258451518:0
+[ 1258663ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5174/src/pages/designsystem/AppHomeScreenPage.vue?t=1773258451518:0
+[ 1262236ms] ReferenceError: AppHomeScreenPage is not defined
+    at http://localhost:5174/src/router/index.ts?t=1773258456668:44:61

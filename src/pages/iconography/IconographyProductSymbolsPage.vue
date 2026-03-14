@@ -18,8 +18,8 @@ const payloads = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Iconography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Iconography</p>
       <h1 class="text-5xl font-medium text-high">Product Symbols</h1>
       <p class="text-base text-low mt-4">Custom-designed icons for aerospace-specific concepts. These symbols have no generic equivalent and are built from scratch to communicate operational meaning to drone operators and fleet managers.</p>
     </header>
@@ -27,7 +27,7 @@ const payloads = [
     <div class="border-t border-line"></div>
 
     <!-- Vehicle Types -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Vehicle Types</h2>
       <p class="text-sm text-low mb-8">Each vehicle class has a distinct silhouette icon. These appear in fleet lists, map overlays, and vehicle selection interfaces. The silhouette must be recognizable at 16px for map markers.</p>
 
@@ -41,7 +41,7 @@ const payloads = [
       </div>
 
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Outline Variant</h3>
           <p class="text-sm text-low">Used in lists, sidebars, and secondary contexts where the vehicle is not the primary focus. Outline variants use the standard 1.5px stroke weight.</p>
           <div class="flex gap-3 mt-4">
@@ -50,7 +50,7 @@ const payloads = [
             </div>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Filled Variant</h3>
           <p class="text-sm text-low">Used on map overlays, selected states, and primary vehicle indicators. Filled variants provide better visibility against complex map backgrounds and satellite imagery.</p>
           <div class="flex gap-3 mt-4">
@@ -65,7 +65,7 @@ const payloads = [
     <div class="border-t border-line"></div>
 
     <!-- Mission Modes -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Mission Modes</h2>
       <p class="text-sm text-low mb-8">Mission mode icons indicate what a vehicle is currently doing or what a mission plan segment requires. They appear in the mission timeline, vehicle status bars, and map waypoint markers.</p>
 
@@ -86,7 +86,7 @@ const payloads = [
     <div class="border-t border-line"></div>
 
     <!-- System States -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">System States</h2>
       <p class="text-sm text-low mb-8">State icons communicate vehicle health and readiness. They are displayed in status bars, telemetry panels, and alert notifications. These icons pair with semantic colors from the alert hierarchy (alarm, warning, caution, ok).</p>
 
@@ -100,11 +100,11 @@ const payloads = [
       </div>
 
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Armed vs Disarmed</h3>
           <p class="text-sm text-low">The armed state icon must be visually distinct and unambiguous. An armed vehicle has live motors and represents a safety hazard. The icon uses a filled shield shape; disarmed uses an outline shield with a break.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Progressive States</h3>
           <p class="text-sm text-low">Battery and signal icons use a progressive fill pattern — the same base shape with varying fill levels. This allows operators to read the state from the silhouette alone, without needing to parse numbers or percentages.</p>
         </div>
@@ -114,7 +114,7 @@ const payloads = [
     <div class="border-t border-line"></div>
 
     <!-- Payloads -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Payloads</h2>
       <p class="text-sm text-low mb-8">Payload icons identify what sensor or equipment a vehicle is carrying. They appear in vehicle configuration panels, mission planning, and live telemetry views.</p>
 
@@ -135,7 +135,7 @@ const payloads = [
     <div class="border-t border-line"></div>
 
     <!-- Usage Guidelines -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Filled vs Outline Usage</h2>
       <p class="text-sm text-low mb-8">Every product symbol ships in both outline and filled variants. The choice between them is not aesthetic — it encodes interaction state and visual hierarchy.</p>
 

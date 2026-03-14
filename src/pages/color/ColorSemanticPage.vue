@@ -93,10 +93,10 @@ function displayName(group: string, suffix: string): string {
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Color</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Color</p>
       <h1 class="text-5xl font-medium text-high">Semantic Tokens</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Named aliases for intent. Components consume these tokens &mdash; never raw primitives. Each group provides 7 variants covering backgrounds, borders, fills, and text.
       </p>
     </header>
@@ -104,7 +104,7 @@ function displayName(group: string, suffix: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Variant Reference -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Variant Pattern</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Every semantic group follows the same 7-variant structure. This consistency means learning one group teaches you all of them.
@@ -133,7 +133,7 @@ function displayName(group: string, suffix: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Semantic Groups -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Semantic Groups</h2>
       <p class="text-sm text-low mb-8">Six groups covering primary interaction, four alert levels (aligned with OpenBridge / aviation standards), and data visualization.</p>
 
@@ -141,7 +141,7 @@ function displayName(group: string, suffix: string): string {
         <div
           v-for="group in semanticGroups"
           :key="group.name"
-          class="p-6 border border-line"
+          class="p-8 border border-line"
         >
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
             <div>
@@ -190,7 +190,7 @@ function displayName(group: string, suffix: string): string {
     <div class="border-t border-line"></div>
 
     <!-- Foundation Tokens -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Foundation Tokens</h2>
       <p class="text-sm text-low mb-8">Page backgrounds, text hierarchy, border states, and layered surfaces. These tokens form the structural backbone of every layout.</p>
 

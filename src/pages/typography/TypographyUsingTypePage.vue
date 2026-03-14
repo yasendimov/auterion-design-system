@@ -15,10 +15,10 @@ const sizeRoles = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Typography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Typography</p>
       <h1 class="text-5xl font-medium text-high">Using Type</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         When to use each size, weight, and style combination. Clear typographic hierarchy keeps operators focused on mission-critical information.
       </p>
     </header>
@@ -26,7 +26,7 @@ const sizeRoles = [
     <div class="border-t border-line"></div>
 
     <!-- Size & Weight Reference -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Size &amp; Weight Reference</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Three weights &mdash; Regular (400), Medium (500), and SemiBold (600) &mdash; cover every use case. Letter spacing tightens as size increases: -2% at body sizes, -3% at heading sizes, -4% at display sizes.
@@ -58,7 +58,7 @@ const sizeRoles = [
     <div class="border-t border-line"></div>
 
     <!-- Live Examples -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Hierarchy in Practice</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         A well-structured page uses no more than 3-4 distinct type sizes. Here is how they combine in typical layouts.
@@ -66,8 +66,8 @@ const sizeRoles = [
 
       <div class="grid gap-6 sm:grid-cols-2">
         <!-- Example: Documentation Page -->
-        <div class="p-6 border border-line">
-          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Documentation Page</p>
+        <div class="p-8 border border-line">
+          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Documentation Page</p>
           <div class="space-y-3">
             <p class="text-[11px] text-dim uppercase tracking-widest font-medium">Section Label</p>
             <h3 class="text-4xl font-semibold text-high" style="letter-spacing: -1.6px">Page Title</h3>
@@ -80,8 +80,8 @@ const sizeRoles = [
         </div>
 
         <!-- Example: Dashboard Card -->
-        <div class="p-6 border border-line">
-          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Dashboard Card</p>
+        <div class="p-8 border border-line">
+          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Dashboard Card</p>
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <h3 class="text-sm font-semibold text-high">Vehicle Telemetry</h3>
@@ -106,8 +106,8 @@ const sizeRoles = [
         </div>
 
         <!-- Example: Form -->
-        <div class="p-6 border border-line">
-          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Form Pattern</p>
+        <div class="p-8 border border-line">
+          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Form Pattern</p>
           <div class="space-y-4">
             <div>
               <label class="text-xs font-medium text-high block mb-1">Mission Name</label>
@@ -126,8 +126,8 @@ const sizeRoles = [
         </div>
 
         <!-- Example: Code / Mono -->
-        <div class="p-6 border border-line">
-          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Code &amp; Monospace</p>
+        <div class="p-8 border border-line">
+          <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Code &amp; Monospace</p>
           <div class="space-y-3">
             <p class="text-sm text-low">Use monospace for token names, numeric readouts, coordinates, and code.</p>
             <div class="p-4 rounded bg-page-subtle font-mono text-sm leading-relaxed">
@@ -149,7 +149,7 @@ const sizeRoles = [
     <div class="border-t border-line"></div>
 
     <!-- Do / Don't -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Common Mistakes</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Consistent hierarchy requires discipline. Avoid these patterns that weaken scannability and increase cognitive load.
@@ -203,28 +203,28 @@ const sizeRoles = [
     <div class="border-t border-line"></div>
 
     <!-- Weight Decision Tree -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Weight Decision Guide</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Three weights are sufficient for every interface. Adding more creates visual noise that slows operator decision-making.
       </p>
 
       <div class="grid gap-4 sm:grid-cols-3">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-2xl font-semibold text-high mb-3">Aa</p>
           <h3 class="text-sm font-semibold text-high mb-1">SemiBold (600)</h3>
           <p class="text-xs text-low leading-relaxed">
             Page titles, section headings, card titles, button labels, navigation items, data values in dashboards.
           </p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-2xl font-medium text-high mb-3">Aa</p>
           <h3 class="text-sm font-semibold text-high mb-1">Medium (500)</h3>
           <p class="text-xs text-low leading-relaxed">
             Form labels, table headers, overline section labels, badge text, tabs, breadcrumbs, small interactive elements.
           </p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-2xl font-normal text-high mb-3">Aa</p>
           <h3 class="text-sm font-semibold text-high mb-1">Regular (400)</h3>
           <p class="text-xs text-low leading-relaxed">

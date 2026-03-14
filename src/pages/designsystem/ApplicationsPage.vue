@@ -4,10 +4,10 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Design System</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Design System</p>
       <h1 class="text-5xl font-medium text-high">Applications</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         How the design system manifests in Auterion product UIs. Dark-mode-first, data-dense, aerospace-grade interfaces built for mission-critical operations.
       </p>
     </header>
@@ -15,8 +15,8 @@ import { RouterLink } from 'vue-router'
     <div class="border-t border-line"></div>
 
     <!-- Introduction -->
-    <section id="introduction" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Introduction</h2>
+    <section id="introduction" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Introduction</h2>
       <div class="max-w-2xl">
         <p class="text-sm text-low leading-relaxed mb-4">
           Auterion's product interfaces are designed for operators managing autonomous systems in high-stakes environments. Every UI decision prioritizes information density, scan-ability, and situational awareness.
@@ -33,11 +33,11 @@ import { RouterLink } from 'vue-router'
     <div class="border-t border-line"></div>
 
     <!-- Components -->
-    <section id="components" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Components</h2>
+    <section id="components" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Components</h2>
       <div class="grid gap-8 sm:grid-cols-2">
         <!-- Map Overlay Panel -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Map overlay panel</span>
           </div>
@@ -51,7 +51,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <!-- Telemetry Data Card -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Telemetry data card</span>
           </div>
@@ -65,7 +65,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <!-- Status Indicator Bar -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Status indicator bar</span>
           </div>
@@ -79,7 +79,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <!-- Vehicle List Item -->
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Vehicle list item</span>
           </div>
@@ -93,7 +93,7 @@ import { RouterLink } from 'vue-router'
         </div>
 
         <!-- Mission Timeline Strip -->
-        <div class="p-6 border border-line sm:col-span-2">
+        <div class="p-8 border border-line sm:col-span-2">
           <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
             <span class="text-sm text-dim">Mission timeline strip</span>
           </div>
@@ -111,11 +111,19 @@ import { RouterLink } from 'vue-router'
     <div class="border-t border-line"></div>
 
     <!-- Examples -->
-    <section id="examples" class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Examples</h2>
+    <section id="examples" class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Examples</h2>
       <div class="grid gap-8 sm:grid-cols-2">
-        <!-- Live: Home Screen -->
-        <RouterLink to="/gallery/applications/home-screen" class="group block">
+        <div>
+          <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
+            <span class="text-sm text-dim">AuterionOS screenshot</span>
+          </div>
+          <h3 class="text-sm font-semibold text-high mb-2">AuterionOS</h3>
+          <p class="text-sm text-low leading-relaxed">On-vehicle operating system interface. Device configuration, firmware management, and system diagnostics using layered surfaces and semantic status tokens.</p>
+        </div>
+
+        <!-- Live: Suite -->
+        <RouterLink to="/gallery/applications/suite" class="group block">
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4 border border-line  group-hover:border-primary-hover transition-colors overflow-hidden relative">
             <div class="absolute inset-0 bg-page flex">
               <!-- Mini preview of the layout -->
@@ -160,7 +168,7 @@ import { RouterLink } from 'vue-router'
             </div>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2 group-hover:text-high dark:group-hover:text-white transition-colors">
-            Home Screen
+            Suite
             <span class="ml-2 inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium bg-primary-subtle text-primary-text rounded">Live</span>
           </h3>
           <p class="text-sm text-low leading-relaxed">Sidebar navigation with mission deployments list and activity feed. Uses semantic tokens for status indicators (ok, alarm, caution), layered surfaces, and the full OpenBridge alert hierarchy.</p>
@@ -229,24 +237,31 @@ import { RouterLink } from 'vue-router'
             </div>
           </div>
           <h3 class="text-sm font-semibold text-high mb-2 group-hover:text-high dark:group-hover:text-white transition-colors">
-            Auterion Mission Control
+            Mission Control
             <span class="ml-2 inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium bg-primary-subtle text-primary-text rounded">Live</span>
           </h3>
           <p class="text-sm text-low leading-relaxed">Ground control station with map overlay, HUD telemetry instruments, waypoint mission plan, and vehicle camera feed. Uses semantic tokens for flight data, mission status, and the full OpenBridge alert hierarchy for emergency actions.</p>
         </RouterLink>
         <div>
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
-            <span class="text-sm text-dim">Mission planning interface screenshot</span>
+            <span class="text-sm text-dim">Nemyx C2 screenshot</span>
           </div>
-          <h3 class="text-sm font-semibold text-high mb-2">Mission Planning Interface</h3>
+          <h3 class="text-sm font-semibold text-high mb-2">Nemyx C2</h3>
           <p class="text-sm text-low leading-relaxed">Split view: map left, waypoint editor right. Timeline strip at bottom using primary markers. Waypoint list uses vehicle list item pattern. Selected waypoint highlighted with primary-subtle background and primary-border left accent.</p>
         </div>
         <div>
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
-            <span class="text-sm text-dim">Fleet management view screenshot</span>
+            <span class="text-sm text-dim">Arsenal screenshot</span>
           </div>
-          <h3 class="text-sm font-semibold text-high mb-2">Fleet Management View</h3>
+          <h3 class="text-sm font-semibold text-high mb-2">Arsenal</h3>
           <p class="text-sm text-low leading-relaxed">Table layout on surface-1 with border-subtle row dividers. Vehicle status dots use semantic colors (ok green, warning orange, alarm red). Sortable column headers in text-secondary. Selected row uses primary-subtle background.</p>
+        </div>
+        <div>
+          <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
+            <span class="text-sm text-dim">OSINT screenshot</span>
+          </div>
+          <h3 class="text-sm font-semibold text-high mb-2">OSINT</h3>
+          <p class="text-sm text-low leading-relaxed">Open-source intelligence interface for data aggregation and analysis. Map-based visualization with layered information overlays using semantic color tokens for classification and priority.</p>
         </div>
       </div>
     </section>

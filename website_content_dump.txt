@@ -1,0 +1,2289 @@
+--- FILE: ColorCombinedPage.vue ---
+
+
+--- FILE: PhotographyCombinedPage.vue ---
+
+
+--- FILE: TypographyCombinedPage.vue ---
+
+
+--- FILE: GalleryCombinedPage.vue ---
+
+
+--- FILE: LogoPage.vue ---
+
+
+--- FILE: WritingAuterionPage.vue ---
+Strategy
+Writing Auterion
+Audience-specific messaging for defense, commercial, developer, and government stakeholders.
+Defense Customers
+Swarm scalability, resilience, compliance, and trusted supply.
+Battle-Proven Autonomy
+Skynode S enables drones to lock onto a target and complete the mission even when GPS and video links are jammed.
+Swarm Scalability
+AuterionOS allows a single operator to direct multiple drones, scaling from half a dozen today to dozens and hundreds tomorrow.
+Human in the Loop
+AI guidance reduces workload but keeps the human decision-maker in control of target selection.
+Trusted Supplier
+Auterion works with democratic governments and has deep co-production experience with Ukraine and Taiwan. Its systems meet NDAA requirements.
+Rapid Scaling
+A $50 million Pentagon contract will see 33,000 Skynode strike kits delivered to Ukraine — an unprecedented scale.
+Commercial & Industrial
+Productivity, flexibility, and a competitive alternative.
+Flexible Platform
+AuterionOS and Skynode provide a unified platform for mapping, inspection, delivery, and beyond.
+BVLOS & Reliability
+Skynode S supports beyond-visual-line-of-sight operations and maintains guidance when communications drop.
+Cost-Effective Autonomy
+The Skynode S autopilot is priced in the mid-hundreds of U.S. dollars — comparable to an Android phone.
+Developers & Ecosystem
+Open APIs, edge computing, and interoperability.
+Open Ecosystem
+The open API of AuterionOS enables developers to build customized applications for any vertical.
+Edge Computing & AI
+Deploy vertical-specific applications and AI models directly on drones.
+Interoperability
+AuterionOS provides standardized APIs and architecture to integrate multiple manufacturers.
+Governments & Policy Makers
+Sovereignty, ethical AI, and economic development.
+Sovereignty & Security
+Built in the U.S. and Europe, compliant with export regulations. Offers a secure alternative to Chinese systems.
+Ethical AI
+The company advocates human-in-the-loop control of weapons and ensures AI is used defensively.
+Economic Development
+Open-source platforms lower barriers to entry, fostering local industries and innovation.
+
+--- FILE: BrandIdeaPage.vue ---
+Strategy
+Brand Idea
+The platform for autonomous mass — transforming individual drones into coordinated swarms across air, land, and sea.
+Mission
+Build swarms, not drones.
+We transform individual drones into AI-enabled nodes of a larger network — creating resilient, coordinated swarms across air, land, and sea. Our open architecture gives democracies scalable, interoperable autonomy that resists jamming and wins at mass scale.
+Vision
+The leading platform for autonomous systems.
+We envision millions of unmanned vehicles connected by one common operating system — swarming as a decisive force across defense, industrial, and civil domains, uniting allies and manufacturers into a shared ecosystem for autonomy.
+Positioning
+Auterion occupies a unique position at the intersection of interoperable architecture, AI-driven autonomy, and defense-grade reliability. Unlike proprietary systems that lock customers into single-vendor drones, Auterion provides the operating system that knits fleets together.
+Open Architecture
+Fosters interoperability and allows customers to integrate multiple manufacturers and payloads — enabling one operator to control many drones.
+Battle-Proven
+Products like Skynode S are resilient against jamming and turn inexpensive FPV drones into networked weapons at unprecedented scale.
+Swarms, Not Drones
+Differentiates by making large-scale autonomy accessible while maintaining ethical, democratically aligned partnerships.
+Taglines
+"Build Swarms, Not Drones."
+Directly conveys the shift from individual vehicles to coordinated swarms.
+"Platform for Autonomous Mass."
+Highlights the focus on large-scale, interoperable autonomy.
+"Open Architecture. Swarm Power."
+Combines open systems with swarm capability and democracy.
+Elevator Pitch
+Auterion delivers the operating system for swarms. AuterionOS provides an open architecture that integrates fleets from multiple manufacturers into a single, interoperable fabric. Skynode avionics add AI-enabled autonomy, secure communications and edge computing so that one operator can control many drones. Our battle-proven technology lets vehicles lock onto targets and complete missions even when GPS and video links are jammed. We give democracies an affordable platform for autonomous mass while ensuring that humans remain in control.
+
+--- FILE: PlaceholderPage.vue ---
+{{ section }}
+{{ title }}
+{{ description }}
+Content coming soon.
+
+--- FILE: IconographyCombinedPage.vue ---
+
+
+--- FILE: TypographyPage.vue ---
+Typography
+Type Scale
+Inter Variable — 13-step scale from 12px to 128px with weight-aware tracking.
+Type Scale
+13 steps from xs (12px) to 9xl (128px). Three weight columns: SemiBold, Medium, Regular.
+{{ w.label }} ({{ w.value }})
+{{ step.token }}
+{{ step.size }}
+Inter {{ step.size.replace('px', '') }}
+Token Reference
+CSS custom properties and their values.
+Token
+Size
+Line Height
+Tracking
+Tracking (Regular)
+--font-size-{{ step.token }}
+{{ step.size }}
+{{ step.lineHeight }}
+{{ step.tracking }}
+{{ step.trackingLoose ?? '—' }}
+Weights
+Three weights available across the entire scale.
+Aa Bb Cc 123
+{{ w.label }}  — {{ w.value }}
+--font-weight-{{ w.label === 'SemiBold' ? 'semibold' : w.label === 'Medium' ? 'medium' : 'normal' }}
+OpenType Features
+Enabled by default via  --font-features-sans .
+Features enabled
+{{ f }}
+Sample comparison
+With features:
+0123456789 Il1 agy
+Without features:
+0123456789 Il1 agy
+
+--- FILE: ColorsPage.vue ---
+Color
+Primitives
+Full Radix 12-step palette. 2 custom Auterion scales, 6 gray scales, and 24 chromatic scales.
+Custom Scales
+Auterion-specific scales designed in Figma. Base is pure achromatic, Blue uses #1475ff at step 9.
+{{ s }}
+{{ scale.label }}
+{{ scale.description }}
+Gray Scales
+6 Radix gray variants, each with a different hue tint. Use these for neutral backgrounds, text, and borders.
+{{ s }}
+{{ scale.label }}
+{{ scale.description }}
+Chromatic Scales
+24 stock Radix color scales. Steps 1-12 go from lightest to darkest (light mode) or darkest to lightest (dark mode).
+{{ s }}
+{{ scale.label }}
+{{ scale.description }}
+Semantic Aliases
+Status and intent tokens. Components should use these, not raw primitives.
+subtle
+muted
+border
+default
+hover
+text
+{{ group.label }}
+{{ group.description }}
+Foundation Tokens
+Page backgrounds, text colors, borders, and surfaces.
+Page
+page
+page-subtle
+Text
+high
+low
+link
+Borders
+line
+line-hover
+line-active
+Surfaces
+surface-1
+surface-2
+surface-3
+
+--- FILE: FormattingPage.vue ---
+Strategy
+Formatting & Structure
+Narrative structure, product naming, and company reference for consistent communications.
+Implementation Guidelines
+Consistent Narrative
+All communications should begin by stressing that Auterion is building swarms, not drones. Highlight the interoperable platform — AuterionOS — that unifies diverse fleets and scales autonomous mass.
+Battle-Proven Credibility
+Use data points such as tens of thousands of Skynode kits contracted for Ukraine and partnerships with Taiwan and NATO countries to demonstrate real-world adoption.
+Educate on Autonomy
+Explain how Auterion's AI and edge computing reduce operator burden while keeping humans in control.
+Tailor by Audience
+Defense customers care about swarm scalability, resilience, and compliance. Commercial users value productivity. Developers want open APIs. Governments seek sovereign capabilities.
+Maintain Ethical Stance
+Reinforce that Auterion does not sell to authoritarian regimes and that its technology is intended to defend democratic societies.
+Product Naming Reference
+Product
+Description
+Audience
+AuterionOS
+Modular operating system unifying fleets across air, land, and sea
+All
+Skynode X / S / N
+Complete avionics solutions with AI-enabled autonomy and edge computing
+Defense, Commercial
+Nemyx
+Defense swarming engine and coordination platform
+Defense
+Trellys
+Commercial fleet management and swarming solutions
+Commercial
+Company Quick Reference
+Founded by
+Lorenz Meier
+Headquarters
+Arlington, VA & Munich
+R&D
+Zurich, Switzerland
+Heritage
+MAVLink, Pixhawk, PX4
+
+--- FILE: LanguageCombinedPage.vue ---
+
+
+--- FILE: WebsitePage.vue ---
+{{ item.name }}
+{{ item.name }}
+{{ isDark ? 'Light mode' : 'Dark mode' }}
+We build the platform for autonomous mass.
+Open architecture that transforms individual drones into coordinated swarms across air, land, and sea. Protecting democracies with scalable, interoperable autonomy.
+Request a demo
+Explore capabilities
+Hero image — drone swarm formation
+{{ stat.value }}
+{{ stat.label }}
+Trusted by
+{{ partner }}
+Everything you need to deploy autonomous fleets
+From silicon to software, Auterion provides the complete stack, purpose-built for swarm operations at scale.
+{{ product.tag }}
+{{ product.name }}
+{{ product.description }}
+{{ spec }}
+Learn more
+Capabilities
+Built for the demands of autonomous operations
+Capabilities overview — system diagram
+{{ cap.number }}
+{{ cap.title }}
+{{ cap.description }}
+About
+We are engineers and mission partners.
+Auterion integrates  autonomy, open architecture, and battle-proven resilience  to deliver measurable impact for defense and commercial operations.
+Our roots are in open-source development. Making PX4 freely available created the largest developer community for autonomous robots in the world. Today we turn that foundation into products that democracies can trust.
+We feel a moral obligation to support liberal democracies. Technology companies should support armed forces protecting freedom. Our systems ensure that human operators always remain in control.
+Team / office photo
+2017
+Founded in Zurich
+350+
+Team members
+PX4
+Open-source heritage
+$50M
+Pentagon contract
+Industries
+Autonomous systems for every domain
+{{ vertical }}
+Join the mission.
+We are building the future of autonomous systems. If you want to work on technology that matters, for defense, for democracies, for the world, we would love to meet you.
+View open positions
+Contact
+Let us explore how we can help.
+Whether you are scaling autonomous operations, integrating multi-vendor fleets, or building the next generation of unmanned systems, we would like to hear from you.
+Headquarters
+Zurich, Switzerland
+Arlington, Virginia
+Email
+contact@auterion.com
+First name
+Last name
+Email
+Subject
+Select a topic
+Defense inquiry
+Commercial partnership
+Developer ecosystem
+Press
+Careers
+Other
+Message
+Send message
+The platform for autonomous mass. Open architecture for coordinated swarms across air, land, and sea.
+LinkedIn
+GitHub
+Product
+{{ link.name }}
+Company
+{{ link.name }}
+Resources
+{{ link.name }}
+Legal
+{{ link.name }}
+&copy; {{ new Date().getFullYear() }} Auterion AG. All rights reserved.
+Zurich &middot; Arlington &middot; Kyiv
+
+--- FILE: StrategyPage.vue ---
+
+
+--- FILE: HomePage.vue ---
+Design System &mdash; v0.1.0
+Auterion
+The unified design language for Auterion products, interfaces, and communications. Dark-mode-first. Built for aerospace.
+{{ spec.label }}
+{{ spec.value }}
+Foundation
+{{ section.number }}
+{{ section.title }}
+{{ section.description }}
+Visual Language
+{{ section.number }}
+{{ section.title }}
+{{ section.description }}
+Communication
+{{ section.number }}
+{{ section.title }}
+{{ section.description }}
+Applied &mdash; Design System
+&mdash;
+{{ item.title }}
+{{ item.description }}
+Primary Typeface
+Inter Variable
+Primary Accent
+#1475FF
+Neutral Hue
+Slate (h=240°)
+Default Theme
+Dark
+
+--- FILE: VoicePrinciplesPage.vue ---
+Strategy
+Voice Principles
+How Auterion sounds — technical authority, transparency, and mission-driven purpose across every channel.
+Brand Voice
+Technical Authority
+Communicate with clarity about autonomy, AI, open standards, and security. Avoid jargon when addressing non-technical audiences.
+Transparent & Collaborative
+Emphasize that Auterion works with partners and the open-source community, and that its technology is open to inspection and improvement.
+Mission-Driven & Ethical
+Reinforce the moral imperative to support democracies and the responsible use of AI. Highlight that human operators remain in control.
+Innovative Yet Accessible
+Show that cutting-edge technology can be affordable and easy to use. Operators can tap on a screen to target instead of flying manually, reducing training requirements.
+Core Values
+Autonomy, AI & Swarm Scale
+Edge computing and AI-driven autonomy are central. Deploying software and AI applications on the drone itself is the next frontier. Products like Skynode S allow drones to track moving targets autonomously and complete missions when communications are jammed — scaling from a handful to hundreds.
+Interoperability & Open Architecture
+Drones will be used in large numbers and need a common operating system. AuterionOS allows customers to combine different drones and manufacturers into a single architecture, enabling swarming capabilities where a single operator controls many drones.
+Democratic Responsibility
+Auterion feels a moral obligation to support liberal democracies. Technology companies should support armed forces protecting freedom. The company does not sell to authoritarian regimes and human operators always remain in control.
+Open-Source Heritage & Collaboration
+Auterion's roots are in open-source development. Making the PX4 source code freely available allowed the ecosystem to snowball and created the world's largest developer community for autonomous robots.
+Commercial Affordability & Scale
+Advanced capabilities should be accessible. Skynode S costs roughly the price of an Android phone. The company plans to deliver tens of thousands of AI strike kits — illustrating how autonomous mass can be produced at scale.
+
+--- FILE: designsystem/AppAmcPage.vue ---
+{{ telemetry.vehicleName }}
+{{ telemetry.mode }}
+Armed
+{{ telemetry.gpsCount }}
+{{ telemetry.linkQuality }}%
+{{ telemetry.battery }}%
+N
+S
+W
+E
+{{ telemetry.altitude }}m
+Survey Area A
+HOME
+w.completed && w.id !== 0)"
+:key="'c-' + wp.id"
+class="absolute z-10"
+:style="{ left: wp.x + '%', top: wp.y + '%', transform: 'translate(-50%, -50%)' }"
+>
+{{ wp.label }}
+w.active)"
+:key="'a-' + wp.id"
+class="absolute z-10"
+:style="{ left: wp.x + '%', top: wp.y + '%', transform: 'translate(-50%, -50%)' }"
+>
+{{ wp.label }}
+WP-{{ wp.label }} &middot; 80m
+!w.completed && !w.active)"
+:key="'p-' + wp.id"
+class="absolute z-10"
+:style="{ left: wp.x + '%', top: wp.y + '%', transform: 'translate(-50%, -50%)' }"
+>
+{{ wp.label }}
+Sony ILX-LR1
+-90.0&deg;
+REC 08:42
+247 imgs
+Speed
+{{ telemetry.groundSpeed }}
+m/s
+Alt
+{{ telemetry.altitude }}
+m
+Hdg
+{{ telemetry.heading }}&deg;
+Dist Home
+{{ (telemetry.distToHome / 1000).toFixed(1) }}
+km
+Flight
+{{ telemetry.flightTime }}
+Remain
+{{ telemetry.timeRemaining }}
+WP 3 of 7
+ETA 4:32
+On Track
++
+&minus;
+200m
+
+--- FILE: designsystem/MarketingPage.vue ---
+Design System
+Marketing
+What Auterion marketing materials look like and how the design system shapes the visual language across trade shows, presentations, and print collateral.
+Introduction
+Auterion's marketing materials extend the design system into physical and digital touchpoints. Every piece of collateral -- from a conference slide deck to a trade show banner -- uses the same token architecture, type scale, and color palette that drives the product UI.
+The dark-mode-first approach carries into marketing: dark backgrounds with primary blue accents create immediate visual recognition. Inter serves as the sole typeface across all materials, with JetBrains Mono reserved for technical specifications and data callouts.
+This consistency ensures that whether someone encounters Auterion at a trade show, in a printed brochure, or on a presentation screen, the brand feels unified and aerospace-grade.
+Components
+Title slide template
+Presentation: Title Slide
+16:9 (1920x1080). Dark background using page-bg token. Headline in Inter Semibold 48pt, subtitle in Inter Regular 24pt. Auterion wordmark bottom-left with minimum clear space.
+1920 x 1080
+Font: Inter Semibold 48pt
+Color: page-bg, primary
+Content slide template
+Presentation: Content Slide
+16:9 (1920x1080). Two-column layout on surface-1 background. Heading in Inter Semibold 32pt, body in Inter Regular 18pt. Bullet points use primary blue markers. Image area right-aligned.
+1920 x 1080
+Font: Inter Regular 18pt
+Color: surface-1, text-primary
+Data slide template
+Presentation: Data Slide
+16:9 (1920x1080). Chart-focused layout with surface-2 card containers. Data labels in JetBrains Mono 14pt. Chart colors follow semantic palette: blue for primary metrics, teal for secondary, amber for caution indicators.
+1920 x 1080
+Font: JetBrains Mono 14pt
+Color: primary, accent, caution
+Tri-fold brochure layout
+Brochure Layout
+Tri-fold, 11x8.5 inches unfolded. Cover panel uses dark background with wordmark and hero image. Interior panels use light theme with slate neutrals. Specs in JetBrains Mono. CMYK-safe palette throughout.
+11 x 8.5 in (unfolded)
+Font: Inter + JetBrains Mono
+Print: CMYK-safe
+Business card front and back
+Business Card
+3.5 x 2 inches. Front: dark background, symbol mark, name in Inter Semibold 9pt, title in Inter Regular 8pt, contact in 7pt. Back: full dark with centered wordmark. No gradients or textures.
+3.5 x 2 in
+Font: Inter 7-9pt
+Color: Dark mono
+Trade show banner specs
+Trade Show Banner
+Wide-format 10x3 feet. Dark background, headline in Inter Semibold at maximum legible size for 15ft viewing distance. Primary blue accent stripe. Logo at minimum 8% of banner width.
+10 x 3 ft
+Font: Inter Display
+Color: page-bg, primary
+Examples
+Trade show booth rendering
+Trade Show Booth
+Dark background panels using page-bg token. Primary blue accent on key messaging. Inter Display for headlines at 72pt+. Full lockup logo on all panels with minimum clear space enforced.
+Conference presentation screenshot
+Conference Presentation
+Section dividers use primary blue full-bleed backgrounds. Data slides use surface-1 cards with border-subtle dividers. Chart colors follow the semantic palette: blue for primary, teal for secondary metrics.
+Printed brochure spread
+Printed Brochure
+Cover uses dark theme; interior panels switch to light theme for print readability. Slate-tinted neutrals maintain the aerospace feel. Technical specs set in JetBrains Mono for visual differentiation.
+Business card detail
+Business Cards
+Minimal dark-on-dark design. Symbol mark on front, wordmark on back. Type hierarchy uses weight contrast only (Semibold name, Regular title). No color accents -- pure dark mono palette.
+Wide-format event banner
+Event Banner
+Wide-format banner demonstrating distance-optimized typography. Primary blue accent stripe creates visual hierarchy. Headline sized for 15ft legibility. Logo placement follows the minimum 8% width rule.
+
+--- FILE: designsystem/ApplicationsPage.vue ---
+Design System
+Applications
+How the design system manifests in Auterion product UIs. Dark-mode-first, data-dense, aerospace-grade interfaces built for mission-critical operations.
+Introduction
+Auterion's product interfaces are designed for operators managing autonomous systems in high-stakes environments. Every UI decision prioritizes information density, scan-ability, and situational awareness.
+The dark theme is primary -- reducing eye strain during extended operations and maximizing contrast for status indicators. The alert hierarchy (alarm, warning, caution, OK) follows OpenBridge and aviation standards, ensuring operators instantly recognize system state.
+Semantic color tokens, layered surfaces, and consistent spacing create interfaces that feel unified across ground control stations, fleet dashboards, and mission planning tools.
+Components
+Map overlay panel
+Map Overlay Panel
+Semi-transparent surface-1 panel layered over map content. Uses border-subtle for edges, text-primary for headings, text-secondary for metadata. Collapsed and expanded states with smooth transitions.
+Surface: surface-1 (80% opacity)
+Border: border-subtle
+Text: text-primary, text-secondary
+Telemetry data card
+Telemetry Data Card
+Compact card on surface-2 showing a single metric. Value in JetBrains Mono 24pt using text-primary. Label in Inter 11pt text-tertiary. Status color band on left edge uses semantic tokens (ok, caution, warning, alarm).
+Surface: surface-2
+Font: JetBrains Mono 24pt
+Status: ok, caution, warning, alarm
+Status indicator bar
+Status Indicator Bar
+Horizontal bar spanning the top of a panel. Background uses the semantic -subtle variant (e.g., ok-subtle, alarm-subtle). Icon + label in the corresponding -text variant. Follows the OpenBridge alert hierarchy strictly.
+Color: {status}-subtle bg
+Text: {status}-text
+Pattern: OpenBridge alert hierarchy
+Vehicle list item
+Vehicle List Item
+Row component on surface-1. Vehicle name in Inter Semibold 14pt, callsign in JetBrains Mono 12pt text-tertiary. Status dot uses semantic ok/warning/alarm fill. Hover state elevates to surface-2 with border-default.
+Surface: surface-1, surface-2 (hover)
+Font: Inter 14pt + Mono 12pt
+Status: semantic dot indicator
+Mission timeline strip
+Mission Timeline Strip
+Horizontal timeline on surface-1. Waypoint markers use primary fill, completed segments use ok-muted, upcoming segments use border-subtle. Time labels in JetBrains Mono 10pt. Active waypoint pulses with primary-hover glow.
+Color: primary, ok-muted, border-subtle
+Font: JetBrains Mono 10pt
+Layout: Horizontal scroll
+Examples
+AuterionOS screenshot
+AuterionOS
+On-vehicle operating system interface. Device configuration, firmware management, and system diagnostics using layered surfaces and semantic status tokens.
+Suite
+Live
+Sidebar navigation with mission deployments list and activity feed. Uses semantic tokens for status indicators (ok, alarm, caution), layered surfaces, and the full OpenBridge alert hierarchy.
+Mission Control
+Live
+Ground control station with map overlay, HUD telemetry instruments, waypoint mission plan, and vehicle camera feed. Uses semantic tokens for flight data, mission status, and the full OpenBridge alert hierarchy for emergency actions.
+Nemyx C2 screenshot
+Nemyx C2
+Split view: map left, waypoint editor right. Timeline strip at bottom using primary markers. Waypoint list uses vehicle list item pattern. Selected waypoint highlighted with primary-subtle background and primary-border left accent.
+Arsenal screenshot
+Arsenal
+Table layout on surface-1 with border-subtle row dividers. Vehicle status dots use semantic colors (ok green, warning orange, alarm red). Sortable column headers in text-secondary. Selected row uses primary-subtle background.
+OSINT screenshot
+OSINT
+Open-source intelligence interface for data aggregation and analysis. Map-based visualization with layered information overlays using semantic color tokens for classification and priority.
+
+--- FILE: designsystem/WebsitePage.vue ---
+Design System
+Website
+The Auterion website as an expression of the design system. How brand tokens translate to web layouts, components, and page structures.
+Introduction
+The Auterion website bridges the aerospace-grade precision of the product design system with the storytelling needs of a public-facing brand. It uses the same token architecture -- primitives, semantic aliases, and themed surfaces -- ensuring visual consistency from marketing site to product UI.
+Dark mode remains the default, reinforcing the brand's technical identity. Typography follows the Inter type scale with generous whitespace for scanning. Primary blue drives all interactive elements and calls to action, while the full semantic palette appears in product feature sections and data visualizations.
+Every website component is built from the same building blocks available to product teams, creating a seamless experience when visitors transition from the marketing site into the application.
+Components
+Hero section -- full-bleed with text overlay
+Hero Section
+Full-bleed container on page-bg. Headline in Inter Semibold 56-72pt (responsive), subheadline in Inter Regular 20pt text-secondary. CTA button uses primary fill with on-primary text. Optional background image with dark gradient overlay to maintain text contrast.
+Layout: Full-bleed, max-w-7xl content
+Font: Inter 56-72pt headline
+Color: page-bg, primary CTA
+Feature card with icon
+Feature Card
+Card on surface-1 with border-subtle. 24px Heroicon in primary color, title in Inter Semibold 18pt, description in text-secondary 14pt. Hover state elevates with subtle shadow and border-default transition.
+Surface: surface-1
+Icon: 24px Heroicon, primary
+Hover: shadow + border transition
+Product specification table
+Product Spec Table
+Striped table alternating page-bg and surface-1 rows. Labels in text-secondary Inter 13pt, values in text-primary JetBrains Mono 13pt for tabular alignment. Column headers use text-tertiary uppercase 11px tracking-widest.
+Surface: alternating rows
+Font: Inter labels + Mono values
+Text: text-secondary, text-primary
+CTA button variants
+CTA Buttons
+Primary: primary fill, on-primary text,, px-6 py-3. Secondary: transparent with primary border, primary text. Hover uses primary-hover fill. Focus ring uses primary-border. Inter Semibold 14pt label.
+Color: primary, primary-hover
+Font: Inter Semibold 14pt
+Focus: primary-border ring
+Navigation bar
+Navigation Bar
+Fixed top bar on page-bg with backdrop blur. Logo left-aligned, nav links in Inter Medium 14pt text-secondary. Active link uses text-primary with primary underline. Mobile: hamburger icon triggers slide-out panel on surface-1.
+Surface: page-bg + backdrop-blur
+Font: Inter Medium 14pt
+Active: text-primary + primary underline
+Footer layout
+Footer
+Full-width on surface-1 with border-t border-subtle. Four-column link grid using text-secondary 13pt, hover to text-primary. Bottom bar with copyright in text-tertiary 12pt. Wordmark logo at top-left of footer. Social icons in text-tertiary, hover to text-secondary.
+Surface: surface-1
+Layout: 4-column grid
+Text: text-secondary links, text-tertiary meta
+Examples
+Homepage screenshot
+Homepage
+Full-bleed hero with dark gradient overlay. Stats bar using JetBrains Mono for figures. Feature card grid on surface-1. CTA sections with primary blue buttons. Footer with four-column link layout. All typography from the Inter scale.
+Product page screenshot
+Product Page
+Product hero with spec highlights in JetBrains Mono. Tabbed feature sections using primary underline for active state. Spec table with alternating surface rows. Comparison grid using border-subtle dividers and semantic status indicators.
+Capabilities page screenshot
+Capabilities Page
+Numbered capability sections with alternating image/text layout. Each section uses the feature card pattern. Data visualization callouts use accent (teal) for secondary metrics. Pull quotes in Inter Light 24pt with primary-border left accent.
+Careers page screenshot
+Careers Page
+Team photo hero with dark overlay. Values section using feature cards with primary-tinted icons. Open positions list using the vehicle list item pattern adapted for job listings. Location tags in text-tertiary with border-subtle pill styling.
+
+--- FILE: designsystem/AppSuitePage.vue ---
+Close sidebar
+Suite
+{{ item.name }}
+Your fleets
+{{ fleet.initial }}
+{{ fleet.name }}
+Your profile
+Marcus Chen
+Suite
+{{ item.name }}
+Your fleets
+{{ fleet.initial }}
+{{ fleet.name }}
+Your profile
+Marcus Chen
+Open sidebar
+Active Missions
+Sort by
+Vehicle
+Last updated
+Status
+Hardware
+{{ mission.vehicleName }}
+/
+{{ mission.missionName }}
+{{ mission.missionType }}
+{{ mission.statusText }}
+{{ mission.hardware }}
+Fleet Activity
+View all
+{{ item.operator.name }}
+{{ item.date }}
+{{ item.action }} on  {{ item.vehicleName }}  —  {{ item.detail }}
+
+--- FILE: iconography/IconographyFunctionalIconsPage.vue ---
+Iconography
+Functional Icons
+Standard UI icons for navigation, actions, status, and controls. Built on Heroicons as the base set, these cover the universal interaction patterns shared across all software interfaces.
+Heroicons Base Set
+Functional icons use Heroicons as the foundation. Heroicons provide outline (24px, 1.5px stroke) and solid (24px, filled) variants that align with our grid and stroke specifications. This avoids reinventing standard metaphors and ensures accessibility-tested iconography out of the box.
+Package
+@heroicons/vue
+Vue 3 component library
+Outline
+24/outline
+1.5px stroke, default for most UI
+Solid
+24/solid
+Filled variant for emphasis and active states
+{{ category.name }}
+{{ category.description }}
+{{ icon }}
+{{ icon }}
+
+--- FILE: iconography/IconographyIntroductionPage.vue ---
+Iconography
+Introduction
+Icons are a critical communication layer in aerospace interfaces. They must be unambiguous at a glance, legible at small sizes, and consistent across every surface of the Auterion platform.
+Design Principles
+Four rules that govern every icon in the system. These are non-negotiable — they exist to protect usability in high-stakes operational environments.
+{{ principle.title }}
+{{ principle.description }}
+24px Base Grid
+All icons are designed on a 24 x 24 pixel grid. A 2px padding zone on each edge defines the live area where icon geometry should remain. Corner radii are set to 2px for consistency.
+20 x 20 live area
+24px
+24px
+2px pad
+Grid
+24 x 24
+Base pixel grid for all icon construction
+Stroke
+1.5px
+Consistent stroke weight at the base size
+Corner Radius
+2px
+Applied to rectangular shapes and open paths
+Icon Categories
+The icon system is divided into two categories, each with distinct design considerations and usage contexts.
+UAV
+GPS
+RTL
+Product Symbols
+Domain-specific icons representing vehicle types, mission modes, system states, and payloads. These are custom-designed for aerospace contexts and have no generic equivalent. They encode operational meaning that operators must recognize instantly.
+Menu
+Edit
+Save
+Functional Icons
+Standard UI action icons for navigation, editing, status, and media controls. These use Heroicons as the base set, ensuring consistency with widely understood interaction patterns. They handle the generic tasks that every software interface needs.
+Sizing
+Four sizes cover all use cases. Icons are always rendered at these exact pixel values — never at arbitrary or interpolated sizes.
+Ic
+{{ size.label }}
+{{ size.use }}
+Color Usage
+Icons inherit the text color of their parent element. They are monochromatic by design — multi-color icons are not permitted in the system.
+Correct
+Ic
+Icon inherits  currentColor  from its parent text color. Changes automatically with theme.
+Incorrect
+Ic
+Never hardcode colors or use multiple colors within a single icon. Semantic color should come from the container, not the icon itself.
+Exception:  Status indicator icons (alarm, warning, caution, ok) receive their semantic color from their parent context — for example, a red container for alarm states. The icon SVG itself remains monochrome.
+Optical Alignment
+Mathematical centering does not equal visual centering. Icons with directional weight — arrows, play triangles, asymmetric shapes — must be optically adjusted.
+Play
+Directional Shapes
+Triangles and arrows are shifted slightly toward their point direction to appear centered.
+Circle
+Round Shapes
+Circles and rounded forms extend slightly beyond the grid to match the perceived size of square shapes.
+Text+Ic
+Inline with Text
+When placed next to text, icons are vertically centered to the cap height, not the full line height.
+
+--- FILE: iconography/IconographyProductSymbolsPage.vue ---
+Iconography
+Product Symbols
+Custom-designed icons for aerospace-specific concepts. These symbols have no generic equivalent and are built from scratch to communicate operational meaning to drone operators and fleet managers.
+Vehicle Types
+Each vehicle class has a distinct silhouette icon. These appear in fleet lists, map overlays, and vehicle selection interfaces. The silhouette must be recognizable at 16px for map markers.
+{{ icon }}
+{{ icon }}
+Outline Variant
+Used in lists, sidebars, and secondary contexts where the vehicle is not the primary focus. Outline variants use the standard 1.5px stroke weight.
+{{ icon.slice(0, 3) }}
+Filled Variant
+Used on map overlays, selected states, and primary vehicle indicators. Filled variants provide better visibility against complex map backgrounds and satellite imagery.
+{{ icon.slice(0, 3) }}
+Mission Modes
+Mission mode icons indicate what a vehicle is currently doing or what a mission plan segment requires. They appear in the mission timeline, vehicle status bars, and map waypoint markers.
+{{ icon }}
+{{ icon }}
+RTL (Return to Launch)  uses a distinct home-arrow combination. It must never be confused with a generic "home" icon. The arrow element indicates active movement toward the launch point, distinguishing it from a static home location marker.
+System States
+State icons communicate vehicle health and readiness. They are displayed in status bars, telemetry panels, and alert notifications. These icons pair with semantic colors from the alert hierarchy (alarm, warning, caution, ok).
+{{ icon }}
+{{ icon }}
+Armed vs Disarmed
+The armed state icon must be visually distinct and unambiguous. An armed vehicle has live motors and represents a safety hazard. The icon uses a filled shield shape; disarmed uses an outline shield with a break.
+Progressive States
+Battery and signal icons use a progressive fill pattern — the same base shape with varying fill levels. This allows operators to read the state from the silhouette alone, without needing to parse numbers or percentages.
+Payloads
+Payload icons identify what sensor or equipment a vehicle is carrying. They appear in vehicle configuration panels, mission planning, and live telemetry views.
+{{ icon }}
+{{ icon }}
+Thermal vs Camera:  The thermal payload icon uses a distinctive crosshair-reticle pattern to differentiate it from the standard camera icon. In mission-critical contexts, confusing a visual camera feed with a thermal feed can lead to incorrect situational assessment.
+Filled vs Outline Usage
+Every product symbol ships in both outline and filled variants. The choice between them is not aesthetic — it encodes interaction state and visual hierarchy.
+Variant
+Context
+Example
+Outline
+Default state, lists, secondary UI, inactive items
+Vehicle list sidebar, mission mode selector (unselected)
+Filled
+Selected state, map markers, primary indicators, active items
+Map vehicle overlay, active mission mode, selected payload
+
+--- FILE: gallery/GalleryApplicationsPage.vue ---
+Gallery
+Applications
+Product UI patterns for ground control, telemetry, mission planning, and fleet management — annotated with the tokens and conventions they use.
+Ground Control Station
+Ground control station interface
+Theme
+Dark-mode primary. Reduces glare in field conditions and cockpit environments. Uses page-bg and surface-1 layering.
+Alert Tokens
+Alarm (red), warning (orange), caution (amber), ok (green) following the OpenBridge aviation alert hierarchy. Status badges use the -subtle variant with -text for labels.
+Typography
+Inter for all UI text. JetBrains Mono for telemetry values, coordinates, and system codes. Tabular numbers enabled globally.
+Layout
+Map-centric with collapsible side panels. Surface-2 panels over the map canvas. Border-subtle between panel sections.
+Telemetry Dashboard
+Telemetry dashboard with live data feeds
+Data Visualization
+Charts use the semantic color palette: primary (blue) for main metric, accent (teal) for secondary, and the alert palette for threshold indicators.
+Number Display
+Large telemetry values in JetBrains Mono Semibold. Units in Inter Regular at a smaller size. Tabular figures for alignment in columns.
+Surface Depth
+Three-layer surface system: page-bg as canvas, surface-1 for widget cards, surface-2 for modal overlays. Border-subtle between sections.
+Status Patterns
+Connection status: ok-subtle bg with ok-text. Battery warning: caution-subtle bg with caution-text. System error: alarm-subtle bg with alarm-text.
+Mission Planning
+Mission planning interface with waypoints and geofence
+Interactive Elements
+Buttons use primary and primary-hover tokens. Destructive actions (delete waypoint, abort) use alarm and alarm-hover. Focus rings use primary-border.
+Map Overlays
+Waypoint paths in primary blue. Geofence boundaries in warning orange. No-fly zones in alarm red with alarm-subtle fill. Active selection ring in primary-border.
+Form Controls
+Input fields use surface-1 bg, border-default, and text-primary. Placeholder text in text-tertiary. Validation errors use alarm-text with alarm-border.
+Side Panel
+Mission parameters in a surface-2 panel. Section headers use text-secondary at the 11px uppercase label style. Editable fields inline with border-subtle dividers.
+Fleet Management
+Fleet management view with vehicle list and status overview
+Table Design
+Vehicle list uses the standard table pattern: 11px uppercase tracking-widest headers, border-subtle row dividers, text-primary for vehicle names, text-secondary for metadata.
+Status Badges
+Operational: ok-subtle bg, ok-text. Maintenance: caution-subtle bg, caution-text. Offline: surface-2 bg, text-disabled. Mission active: primary-subtle bg, primary-text.
+Multi-Select
+Selected rows use primary-subtle background. Checkbox accents use the primary token. Batch action bar appears in surface-2 with primary action buttons.
+Real-Time Updates
+Live position data in JetBrains Mono. Battery and signal indicators use the alert color ramp progressively: ok at full, caution at 30%, warning at 15%, alarm at 5%.
+
+--- FILE: gallery/GalleryMarketingPage.vue ---
+Gallery
+Marketing
+Trade show materials, presentations, print collateral, and campaign assets showing the design system in physical and digital marketing contexts.
+Collateral Examples
+Trade show booth rendering
+Trade Show Booth
+Large-format application of the brand. Dark background (page-bg dark token), primary blue accent on key messaging, Inter Display for headlines at 72pt+. Logo at minimum clear space on all panels.
+Color: page-bg, primary
+Type: Display scale
+Logo: Full lockup
+Presentation deck slide
+Presentation Deck
+16:9 slides using the dark theme. Section dividers use primary blue full-bleed backgrounds. Data slides use surface-1 cards with border-subtle dividers. Chart colors follow the semantic palette: blue for primary metrics, teal for secondary.
+Color: surface-1, primary, accent
+Type: Heading + Body scales
+Layout: 16:9 grid
+Tri-fold brochure layout
+Printed Brochure
+Tri-fold format. Cover uses dark background with the Auterion wordmark and a single product hero image. Interior panels use light theme for readability with slate-tinted neutrals. Product specs set in JetBrains Mono.
+Color: Dark cover, light interior
+Type: Inter + JetBrains Mono
+Print: CMYK-safe palette
+Business card front and back
+Business Cards
+3.5 x 2 inch standard. Front: dark background, Auterion symbol mark, name in Inter Semibold 9pt, title in Inter Regular 8pt. Back: full dark with wordmark centered. No gradient or texture effects.
+Logo: Symbol + wordmark
+Type: 8-9pt body
+Color: Dark mono
+Event Banners
+Wide-format event banner
+Typography
+Headline in Inter Semibold at maximum legible size for viewing distance. Tagline in Inter Regular, 40-50% of headline size. All text left-aligned.
+Color
+Dark background (zinc-950 / page-bg). White text for headlines. Primary blue for accent elements — a single line, bar, or highlight. No gradients.
+Layout
+Logo in top-left or bottom-left corner with minimum clear space. Product imagery (if used) on the right third. URL or QR code in bottom-right.
+
+--- FILE: gallery/GalleryIntroductionPage.vue ---
+Gallery
+Introduction
+How the Auterion design system manifests in real contexts — from marketing collateral to product interfaces.
+What the Gallery Shows
+The gallery demonstrates how color tokens, typography, layout patterns, and voice principles come together in production. Each category shows annotated examples with references back to the design system foundations they use.
+Marketing collateral preview
+Marketing
+Trade show booths, presentation decks, printed brochures, business cards, and event banners. See how the brand system scales from digital to physical.
+Application UI preview
+Applications
+Ground control stations, telemetry dashboards, mission planning interfaces, and fleet management views. See how design tokens drive product UI.
+Website design preview
+Website
+The Auterion website as a living implementation of the design system — homepage, product pages, capabilities, partners, careers, and company.
+How to Use the Gallery
+Reference, Not Templates
+Gallery items show how design decisions were applied in specific contexts. They are not rigid templates. Use them to understand the intent behind choices, then adapt for your own deliverable.
+Annotations Matter
+Each example is annotated with which tokens, type styles, color decisions, and layout patterns are being demonstrated. Read the annotations to understand why something looks the way it does.
+Cross-Reference Foundations
+Gallery pages reference back to the foundational sections (Color, Typography, Voice). If you want to understand the underlying rules, follow those links.
+
+--- FILE: color/ColorThemePage.vue ---
+Color
+Theme
+How light and dark modes are implemented using the two-layer token architecture. Dark mode is primary.
+Current Theme
+The active theme is controlled by the  data-theme  attribute on the  <html>  element. Toggle the theme using the switch in the sidebar header to see tokens update live.
+{{ isDark ? 'Dark' : 'Light' }} mode active
+data-theme="{{ isDark ? 'dark' : 'light' }}"
+Scale Inversion
+In dark mode, primitive scales invert &mdash; step 1 becomes the darkest value and step 12 becomes the lightest. The purpose of each step stays the same: step 1 is always the background, step 12 is always text. Only the luminance flips.
+Step
+Light Mode Role
+Dark Mode Role
+Preview
+{{ item.step }}
+{{ item.lightRole }}
+{{ item.darkRole }}
+Token Comparison
+Key tokens and their resolved values across both themes. Note how  blue-9  stays constant &mdash; the accent fill is stable across themes.
+Token
+Light
+Hex
+Dark
+Hex
+{{ item.token }}
+{{ item.lightHex }}
+{{ item.darkHex }}
+Implementation
+Theming is handled entirely through CSS custom properties. No JavaScript runtime cost for color resolution.
+1. Primitives Per Theme
+:root  defines light mode primitives.  [data-theme="dark"]  overrides them with dark values.
+:root {
+--color-blue-1: #fcfdff;
+}
+[data-theme="dark"] {
+--color-blue-1: #03060b;
+}
+2. Aliases Defined Once
+Semantic aliases use  var()  references. They resolve automatically when primitives change per theme. Never redefine aliases in the dark theme block.
+:root {
+--color-primary:
+var(--color-blue-9);
+}
+3. Toggle via Attribute
+Theme switching sets  data-theme  on  <html> . All tokens cascade instantly. No class list manipulation.
+document.documentElement
+.setAttribute(
+'data-theme', 'dark'
+);
+Live Preview
+Toggle the theme to see all tokens update in real time. The blue accent strip stays constant across themes.
+Surfaces & Text
+Page background + high text
+Subtle background + low text
+Surface-1 + dim text
+Status Colors
+Primary
+Alarm
+Warning
+Caution
+Ok
+Accent
+
+--- FILE: color/ColorBlackWhitePage.vue ---
+Color
+Black & White
+When and how to use pure black, pure white, and neutral overlays. Clarity under all lighting conditions &mdash; from sunlit tarmacs to blacked-out operations centers.
+Pure Black vs Dark Gray
+Pure black ( #000000 ) is the Auterion Black dark mode app background. For most UI surfaces, use base scale steps instead to maintain visual depth.
+Use pure black for
+Page background in dark mode ( --color-page )
+Maximum contrast text in light mode ( --color-base-12 )
+Logo reproduction when color is not available
+#000000
+Use dark gray for
+Elevated surfaces in dark mode ( --color-surface-1  through  surface-3 )
+Card backgrounds, sidebars, and panels
+Input field backgrounds and dropdown menus
+base-3
+base-4
+base-5
+Pure White vs Off-White
+Pure white ( #ffffff ) is the light mode page background and the text color on solid fills. Off-white tones create visual layering without the harshness of pure white on every surface.
+Use pure white for
+Page background in light mode
+Text on solid color fills ( --color-on-primary )
+High-contrast text in dark mode ( --color-base-12  resolves to white in dark mode)
+#ffffff
+Use off-white for
+Subtle page background ( --color-page-subtle )
+Card and surface backgrounds in light mode
+Alternating row stripes and zebra patterns
+base-3
+base-4
+Text on Backgrounds
+Maintain readable contrast ratios in all environments. Aerospace UIs must remain legible under direct sunlight, low-light conditions, and night vision mode.
+Do
+White text on black
+Near-black text on white
+White text on accent fills
+Semantic text on subtle bg
+Don't
+Low-contrast gray on gray
+White text on amber
+Yellow text on white
+Blue text on pure black
+Contrast Rules
+Minimum contrast ratios for aerospace applications. WCAG AA compliance is the baseline; critical flight data should exceed it.
+4.5 : 1
+Normal text
+Body copy, labels, descriptions. Use  --color-high  or  --color-low  for text on page backgrounds.
+3 : 1
+Large text
+Headings at 18px+ semibold or 24px+ regular. Semantic text tokens (step 9) meet this against their subtle backgrounds (step 1).
+3 : 1
+UI components
+Borders, icons, and form controls. Border tokens (steps 4-6) meet this threshold against adjacent surfaces.
+7 : 1
+Critical data
+Altitude readouts, speed indicators, warning text. Use high-contrast tokens and avoid relying on color alone to convey critical state.
+
+--- FILE: color/ColorIntroductionPage.vue ---
+Color
+Introduction
+The two-layer color architecture that powers every surface, border, and text element across Auterion products &mdash; from ground control stations to swarm telemetry dashboards.
+Two-Layer Architecture
+Colors are organized into two layers. The first layer,  primitives , defines the raw chromatic scales &mdash; 32 scales with 12 steps each (2 custom Auterion, 6 Radix grays, 24 Radix chromatic). The second layer,  semantic aliases , maps intent-based names to those primitives. Components always consume semantic tokens, never raw scale values.
+Layer 1
+Primitives
+Raw scale values defined as CSS custom properties. Each hue has 12 steps going from lightest backgrounds to darkest text. In dark mode, these steps invert &mdash; light values become dark, dark values become light.
+--color-blue-1 &hellip; --color-blue-12
+Layer 2
+Semantic Aliases
+Named tokens that reference primitives via  var() . Defined once at  :root . When dark mode overrides the primitives, all aliases resolve automatically. No duplication needed.
+--color-primary-subtle &hellip; --color-primary-text
+Token Flow
+Colors flow from raw primitives through semantic aliases to the components that render them. This indirection lets us change an entire theme by swapping primitives alone.
+{{ i + 1 }}
+{{ step.layer }}
+{{ step.token }}
+{{ step.description }}
+Primitive
+&rarr;
+Semantic
+&rarr;
+Component
+How Themes Work
+Dark mode is the primary theme. Light mode is secondary. Theme switching uses the  data-theme  attribute on  <html> .
+Primitives Invert
+In dark mode, light steps become dark and dark steps become light. Step 1 in light mode is near-white; in dark mode it is near-black.
+Step 9 Is Stable
+The accent fill (step 9) remains the same hex value across both themes. This ensures brand colors like  #1475ff  stay recognizable.
+Aliases Auto-Resolve
+Semantic tokens are defined once using  var()  references. When dark mode swaps the primitives, every alias updates automatically. Never redefine semantic aliases per theme.
+12-Step Scale
+Every chromatic scale follows the same 12-step structure. Each step has a defined purpose, ensuring consistent usage across every hue.
+{{ s }}
+Backgrounds
+Surfaces
+Borders
+Fills
+Text
+{{ zone.steps }}
+{{ zone.purpose }}
+{{ zone.detail }}
+{{ zone.example }}
+Brand Character
+Auterion's color identity is built on a monochrome foundation with focused chromatic accents. The palette reflects the precision and clarity demanded by aerospace systems.
+Monochrome Foundation
+Pure achromatic base (no hue tint) serves as the primary neutral, providing a clean backdrop for chromatic accents and status colors.
+base
+Primary Accent
+Blue is the primary accent color, used for interactive elements, links, and focus states. Status colors (red, orange, amber, green) are reserved for alerts following the OpenBridge aviation standard.
+blue
+
+--- FILE: color/ColorSemanticPage.vue ---
+Color
+Semantic Tokens
+Named aliases for intent. Components consume these tokens &mdash; never raw primitives. Each group provides 7 variants covering backgrounds, borders, fills, and text.
+Variant Pattern
+Every semantic group follows the same 7-variant structure. This consistency means learning one group teaches you all of them.
+Variant
+Step
+Purpose
+{{ v.suffix || '(base)' }}
+{{ v.step }}
+{{ v.purpose }}
+Semantic Groups
+Six groups covering primary interaction, four alert levels (aligned with OpenBridge / aviation standards), and data visualization.
+{{ group.label }}
+{{ group.primitive }}
+{{ group.description }}
+{{ group.alertLevel }}
+{{ displayName(group.name, v.suffix) }}
+Button
+Outlined
+Subtle
+Foundation Tokens
+Page backgrounds, text hierarchy, border states, and layered surfaces. These tokens form the structural backbone of every layout.
+Page Backgrounds
+{{ item.token }}
+{{ item.description }}
+Text Colors
+Aa
+{{ item.token }}
+{{ item.description }}
+Borders
+{{ item.token }}
+{{ item.description }}
+Surfaces
+{{ item.token }}
+{{ item.description }}
+
+--- FILE: photography/PhotographyBlogPage.vue ---
+Photography
+Blog
+Hero images, inline photography, caption formatting, and editorial image standards for the Auterion blog.
+Hero Image Specifications
+Every blog post opens with a full-width hero image that sets the visual tone. The hero is the first thing readers see and the image used in social sharing previews.
+Hero image — 1440 x 600, full-width, edge-to-edge
+Dimensions
+1440 x 600
+2.4:1 aspect ratio, full-width
+File Format
+WebP / JPG
+WebP preferred, JPEG fallback, under 300 KB
+Focal Point
+Center
+Subject centered vertically — image crops from edges on smaller viewports
+Text Overlay
+None
+Post title is rendered in HTML below the hero, never burned into the image
+Inline Image Sizing
+Images within blog post body content use three standard widths. Choose based on the image content and its role in the narrative.
+Full-Width (100% content area)
+Full-width inline — 16:9, max 1200px rendered
+Use for hero-level imagery within the post — mission shots, aerial panoramas, and product reveal moments. Export at 2400px wide for retina displays.
+Medium (75% content area)
+Medium inline — 4:3, centered
+Product photos, team shots, event photography. Centered within the content column. Export at 1800px wide.
+Side-by-Side (50% each)
+Before / comparison A
+After / comparison B
+Before/after comparisons, product variants, or complementary views. Each image at 1200px wide. 16px gap between.
+Caption Formatting
+Captions provide essential context and attribution. Every image in a blog post should have a caption unless it is purely decorative.
+Skynode S integrated into an FPV airframe
+Skynode S mounted on a custom FPV frame during integration testing at Auterion's Zurich R&D facility. Photo: Auterion / J. Mueller
+Style
+12px (text-xs), italic, zinc-500/400 color. Left-aligned beneath the image. Maximum two sentences.
+Content
+Describe what the image shows in factual terms. Avoid marketing language in captions. Include location and context when available.
+Credit Format
+Append credit after the description: "Photo: Auterion / Photographer Name" or "Photo: Partner Org". Always credit third-party photographers.
+Spacing
+8px gap between image bottom and caption (mt-2). 32px gap between caption and next content block.
+Alt Text Guidelines
+Every image requires meaningful alt text for accessibility and SEO. Alt text should describe what the image shows, not what it means or how it should make the reader feel.
+Be Specific and Factual
+Describe the subject, action, and context. "A formation of six drones flying over a desert landscape at sunset" is better than "Auterion's amazing drone swarm."
+Include Product Names
+When hardware is visible, name it: "Skynode S autopilot board with connected GPS and telemetry modules." This aids both accessibility and search indexing.
+Length
+Keep alt text between 50 and 150 characters. Long enough to be useful, short enough that screen readers don't overwhelm the listener.
+Skip Decorative Images
+Use empty alt="" for purely decorative dividers or background textures. If the image adds meaning, it needs a description.
+Image Credits Format
+Proper attribution protects Auterion legally and maintains professional relationships with photographers and partners.
+Source
+Credit Format
+In-house photographer
+Photo: Auterion / First Last
+Freelance / contracted
+Photo: First Last for Auterion
+Partner organization
+Photo: Partner Name
+Stock / licensed
+Photo: Source Name (license type)
+Video still
+Still from: Video Title, Auterion
+Layout Examples
+Two standard blog post layouts demonstrate how hero and inline images work together within the content flow.
+Standard Post
+Hero 1440x600
+Full-width inline
+Hero followed by text, then a full-width inline image breaking up long content blocks.
+Visual Feature Post
+Hero 1440x600
+Side A
+Side B
+Medium inline
+Image-heavy layout with side-by-side comparisons and mixed sizing for visual storytelling.
+
+--- FILE: photography/PhotographyYouTubePage.vue ---
+Photography
+YouTube
+Thumbnail templates, video stills, title cards, and motion graphics guidelines for Auterion's YouTube presence.
+Thumbnail Specifications
+Thumbnails are the single most important visual for video discovery. They must be readable at mobile size (approximately 168x94px rendered) and convey the video topic in under two seconds.
+Resolution
+1280 x 720
+16:9 aspect ratio, minimum width 640px
+File Format
+JPG / PNG
+Under 2 MB file size
+Text Limit
+3-5 Words
+Bold, high-contrast, readable at 168px wide
+Safe Zone
+Bottom-right
+Avoid — YouTube overlays timestamp here
+Thumbnail Templates
+Three standard thumbnail layouts cover the majority of Auterion video content. Maintain consistency by using these templates as the starting point for every video.
+Product Demo — drone left, title right
+Product Demo
+Product on the left third, bold title text on the right. Dark gradient background. Auterion logo badge top-left.
+Mission Footage — full-bleed aerial, text overlay
+Mission Footage
+Full-bleed aerial photograph with text overlay in the upper half. Slight dark vignette for text legibility.
+Interview / Talk — speaker with name lower-third
+Interview / Talk
+Speaker portrait on right two-thirds, topic title on left. Clean background or bokeh environment.
+Title Cards
+Title cards appear in the first 2-3 seconds of a video and at chapter transitions. They set the visual tone and reinforce brand identity.
+Opening Title
+Dark background (#0a0a0a). Auterion wordmark centered, followed by video title in Inter Semibold. Duration: 2 seconds with fade.
+Chapter Cards
+Same dark background. Chapter number in small caps above the section title. Transition: 0.5s crossfade from live footage.
+Typography
+Inter Variable for all on-screen text. Titles at 48-64px, subtitles at 24-32px. White (#ffffff) on dark backgrounds. Tracking: normal to +0.02em.
+Video Still Guidelines
+Video stills pulled for press, social media, or documentation should meet the same art direction standards as dedicated photography.
+Resolution
+Export at 1920x1080 minimum. For print use, pull from 4K source footage when available.
+Frame Selection
+Choose frames with minimal motion blur. Pause on composition-strong moments — formation shots, operator interactions, product reveals.
+Color Correction
+Apply the standard Auterion color grade (desaturated base, selective color) to match the photography system. Do not use the raw video LUT.
+Overlay Removal
+Remove any on-screen UI, timestamps, or watermarks before using a video still as a standalone image.
+Lower-Third Graphics
+Lower thirds identify speakers and display contextual information. They should be minimal and not compete with the video content.
+Video frame with lower-third overlay
+Speaker Name
+Title, Auterion
+Position
+Bottom-left, 48px from edge. Never bottom-right (reserved for YouTube controls).
+Style
+Semi-transparent dark background with backdrop blur. Name in semibold, title in regular weight.
+Duration
+Display for 4-5 seconds. Fade in 0.3s, fade out 0.3s. Show once per speaker per segment.
+End Screen Layout
+The last 20 seconds of every video include a branded end screen with subscribe and next-video elements. YouTube end screen elements must fit within designated zones.
+End screen — logo center, two video slots right
+Background
+Dark gradient or slowed/frozen final video frame with 60% dark overlay. Auterion wordmark centered in the upper third.
+Element Placement
+Subscribe button centered below the logo. Two video/playlist slots stacked on the right third. Keep elements within YouTube's designated safe zone grid.
+Duration
+Minimum 5 seconds, maximum 20 seconds. Elements appear 1 second into the end screen sequence.
+
+--- FILE: photography/PhotographyArtDirectionPage.vue ---
+Photography
+Art Direction
+Photographic style, mood, lighting, and composition principles for Auterion imagery — technical precision meets human purpose.
+Visual Mood
+Auterion photography bridges the gap between cutting-edge technology and meaningful human impact. Every image should convey quiet confidence, operational clarity, and the scale of autonomous systems working in concert. Avoid overly dramatic or cinematic looks — the technology speaks for itself.
+Swarm in formation over terrain — calm, controlled, precise
+Conveys operational confidence and technological mastery.
+Operator reviewing fleet data at sunrise
+Human element grounds the technology in purpose and context.
+Lighting
+Natural light is strongly preferred. Golden hour and overcast conditions produce the most authentic results. Avoid heavy studio setups, artificial color gels, or over-processed HDR. When shooting indoors (labs, control rooms), use available ambient light supplemented with soft fill only where necessary.
+Golden Hour
+Warm, directional light that adds depth to outdoor drone operations. Preferred for hero and marketing imagery.
+Overcast / Diffused
+Even, soft light ideal for product detail shots and documentation photography. Reduces harsh shadows on hardware.
+Ambient Indoor
+Screen glow and workspace lighting for control room and lab environments. Keep it authentic, not staged.
+Composition Principles
+Strong compositions create visual hierarchy and leave room for typography and brand elements. Every image should feel intentional and structured.
+Rule of Thirds
+Place primary subjects at intersection points. Drones and operators should rarely be dead center unless conveying direct confrontation or symmetry.
+Negative Space for Text Overlay
+When shooting for marketing use, ensure at least one third of the frame is clean sky, ground, or blurred background suitable for headline placement.
+Depth and Layers
+Use foreground elements (terrain, equipment, people) to create depth. Swarms in the mid-ground with landscape beyond conveys scale.
+Leading Lines
+Runways, roads, flight paths, and formation lines naturally guide the viewer's eye toward the subject.
+Color Grading
+Desaturated base with selective color emphasis. The environment should feel grounded and real while Auterion's brand blue and product accents naturally stand out. Let the product and brand colors pop against a muted backdrop.
+Base Treatment
+Slightly desaturated, with lifted blacks and a cool-neutral tone. Reduce vibrancy of greens and browns in landscapes by 15-20%. Preserve skin tones.
+Selective Color
+Keep blues and teals at full saturation. LED indicators, UI screens, and brand elements should retain their original vibrancy against the muted background.
+Subject Matter Hierarchy
+Not all subjects carry equal weight. This hierarchy guides what to prioritize when planning shoots and selecting imagery for campaigns.
+Priority 1
+Drones in Operation
+Swarms in flight, autonomous missions, coordinated formations. The core of what Auterion enables.
+Swarm formation flight
+Priority 2
+Operators & People
+Ground control operators, field teams, engineers. Humans in control of autonomous systems.
+Operator with ground station
+Priority 3
+Landscapes & Environments
+Operational theaters — deserts, coastlines, urban, industrial. Establishes scale and context.
+Desert terrain from altitude
+Priority 4
+Close-Up Hardware
+Skynode boards, connectors, sensors, propulsion details. Conveys engineering precision.
+Skynode PCB macro detail
+Do / Don't
+Natural light, real environment, muted grade
+&#10003;
+Do: Authentic field conditions
+Real operational environments with natural lighting. Desaturated backgrounds that let brand colors stand out.
+Heavy HDR, neon color grading, stock photo look
+&#10007;
+Don't: Over-processed imagery
+Avoid heavy HDR, dramatic color grading, artificial lens flares, or generic stock photography aesthetics.
+Clear negative space, rule-of-thirds subject
+&#10003;
+Do: Intentional composition
+Structured framing with clear focal points, breathing room for text overlays, and layered depth.
+Cluttered frame, no clear subject, dutch angle
+&#10007;
+Don't: Chaotic framing
+Avoid cluttered compositions, tilted angles, or images where the primary subject is unclear or competing with background elements.
+
+--- FILE: photography/PhotographySocialMediaPage.vue ---
+Photography
+Social Media
+Platform-specific image specs, text overlay rules, and visual standards for Auterion's social media presence.
+Platform Specifications
+Each platform has distinct image dimensions and viewing contexts. Always export at the exact recommended resolution to avoid compression artifacts and cropping issues.
+Platform
+Dimensions
+Aspect Ratio
+Format
+LinkedIn
+1200 x 627
+1.91:1
+JPG or PNG, under 5 MB
+X / Twitter
+1600 x 900
+16:9
+JPG or PNG, under 5 MB
+Instagram
+1080 x 1080
+1:1
+JPG or PNG, under 8 MB
+Instagram Stories
+1080 x 1920
+9:16
+JPG or PNG, under 8 MB
+Platform Examples
+LinkedIn (1200 x 627)
+Swarm deployment with headline overlay
+Best for thought leadership, product announcements, and company milestones. Text overlays should be minimal and positioned in the upper-left quadrant.
+X / Twitter (1600 x 900)
+Drone flight test with Auterion logo badge
+High-impact visuals for engagement. Keep text to a bold headline only — the post copy provides context. Logo badge in top-left corner.
+Instagram (1080 x 1080)
+Hardware close-up, centered subject
+Square crop favors centered compositions. Best for hardware detail shots, team photos, and behind-the-scenes content.
+Text Overlay Rules
+Text on social images must be immediately legible at mobile viewport widths. Less is always more — let the image do the work.
+Maximum Word Count
+No more than 6-8 words on any social image. If you need more context, put it in the post copy.
+Font Size
+Headlines: minimum 48px on the 1200px canvas. Subheadings: minimum 24px. Inter Semibold for all text.
+Contrast
+White text over a dark gradient overlay, or dark text on light image areas. Never place text directly on complex imagery without a backing gradient or solid bar.
+Alignment
+Left-aligned for LinkedIn and X. Centered for Instagram square posts. Never right-aligned or justified.
+Safe Margins
+Keep all text at least 60px from any edge. Account for platform UI overlaps (like/share buttons, profile pics in previews).
+No Hashtags on Image
+Hashtags belong in the post copy only. Never render hashtags as text overlays on the image itself.
+Brand Element Placement
+The Auterion logo and brand elements should be present but never dominant. They serve as a signature, not a watermark.
+Logo Badge
+Small Auterion symbol (not wordmark) in the top-left corner. White on dark images, dark on light images. Size: approximately 5% of image width. 24px margin from edges.
+URL / CTA Bar
+For campaign images only. Thin strip at bottom with auterion.com or a short CTA. Height: 40-48px. Background: brand blue (#1475ff) or semi-transparent dark.
+Co-Branding
+When partner logos appear, Auterion logo goes first (left or top). Equal sizing. Minimum 32px spacing between logos. Separate with a thin vertical or horizontal rule if needed.
+Image Filter & Treatment
+Social media images follow the same color grading principles as all Auterion photography, with minor platform-specific adjustments.
+Standard Treatment
+Desaturated base with selective color preservation (blues and teals). Slightly lifted blacks for a modern, editorial feel. Apply consistently across all posts.
+High-Engagement Posts
+For product launches or milestones, slightly boost contrast and saturation (10-15%) to stand out in feeds. Keep the desaturated background principle but let the subject pop more.
+Avoid
+No Instagram-style filters, no heavy vignettes, no artificial bokeh, no AI-generated imagery presented as photography. Keep it authentic.
+Dark Mode Awareness
+Many users browse in dark mode. Avoid images with large pure-white areas that create visual glare. Test images against both light and dark app backgrounds.
+
+--- FILE: website/WebsiteCompanyPage.vue ---
+Company
+We are engineers and mission partners.
+Auterion integrates autonomy, open architecture, and battle-proven resilience to deliver measurable impact for defense and commercial operations.
+Team / office photo
+About
+From open source to open skies.
+Our roots are in open-source development. Making  PX4 freely available  created the largest developer community for autonomous robots in the world. Over one million drones fly on software our founders wrote.
+Today we turn that foundation into products that democracies can trust. We feel a  moral obligation to support liberal democracies . Technology companies should support armed forces protecting freedom.
+Our systems ensure that human operators always remain in control. Autonomy is a tool that amplifies human judgment, not a replacement for it.
+2017
+Founded in Zurich
+350+
+Team members
+PX4
+Open-source heritage
+$50M
+Pentagon contract
+Timeline
+From garage to global defense partner.
+{{ item.year }}
+{{ item.event }}
+Leadership
+The team behind the mission
+{{ person.name }}
+{{ person.role }}
+{{ person.bio }}
+In the Press
+What they are saying
+{{ item.outlet }}
+{{ item.headline }}
+{{ item.date }}
+Contact
+Let us explore how we can help.
+Whether you are scaling autonomous operations, integrating multi-vendor fleets, or building the next generation of unmanned systems, we would like to hear from you.
+Headquarters
+Zurich, Switzerland
+Arlington, Virginia
+Email
+contact@auterion.com
+First name
+Last name
+Email
+Subject
+Select a topic
+Defense inquiry
+Commercial partnership
+Developer ecosystem
+Press
+Careers
+Other
+Message
+Send message
+
+--- FILE: website/WebsiteCareersPage.vue ---
+Build technology that protects freedom.
+We are engineers, operators, and mission partners building the autonomous systems that democracies need. If you want your work to matter, you belong here.
+Team photo — office or offsite
+Our Values
+What we believe
+{{ value.title }}
+{{ value.description }}
+Open Positions
+Find your role.
+We are always looking for exceptional people. If you do not see a perfect fit, reach out anyway. We hire for talent and drive.
+{{ dept.name }}
+{{ role.title }}
+{{ role.location }}
+{{ role.type }}
+Benefits
+We take care of our people.
+{{ benefit }}
+Locations
+Where we work
+{{ loc.city }}
+{{ loc.country }}
+{{ loc.description }}
+Do not see your role?
+Send us your resume. We are always looking for talented people who share our mission.
+Send open application
+
+--- FILE: website/WebsiteCapabilitiesPage.vue ---
+Capabilities
+Built for the demands of autonomous operations.
+Six core technology pillars that enable everything from single-vehicle reconnaissance to coordinated multi-domain swarm operations.
+System architecture diagram
+{{ cap.number }}
+{{ cap.title }}
+{{ cap.description }}
+{{ cap.title }} — illustration
+Mission Profiles
+From concept to completion
+{{ uc.title }}
+{{ uc.description }}
+{{ uc.metrics }}
+See it in action.
+Schedule a demonstration tailored to your operational requirements.
+Request a demo
+
+--- FILE: website/WebsiteProductPage.vue ---
+Product
+The complete stack for autonomous operations.
+From silicon to software, Auterion delivers everything you need to deploy, manage, and scale autonomous fleets. One architecture, any vehicle, any mission.
+Product ecosystem overview
+{{ product.tag }}
+{{ product.name }}
+{{ product.description }}
+{{ spec }}
+Technical specifications
+{{ product.name }} — product photo
+Ecosystem
+Tools that complete the picture
+{{ item.name }}
+{{ item.description }}
+{{ feature }}
+Why Auterion
+Open beats proprietary.
+Legacy drone systems lock you into a single vendor. Auterion gives you choice, interoperability, and the largest open-source ecosystem in autonomous robotics.
+Feature
+Auterion
+Legacy
+{{ row.feature }}
+&mdash;
+&mdash;
+Ready to deploy?
+Talk to our team about integrating Auterion into your fleet operations.
+Contact sales
+
+--- FILE: website/WebsiteHomePage.vue ---
+We build the platform for autonomous mass.
+Open architecture that transforms individual drones into coordinated swarms across air, land, and sea. Protecting democracies with scalable, interoperable autonomy.
+Request a demo
+Explore capabilities
+Hero — drone swarm formation
+{{ stat.value }}
+{{ stat.label }}
+Trusted by
+{{ partner }}
+Everything you need to deploy autonomous fleets
+From silicon to software, Auterion provides the complete stack, purpose-built for swarm operations at scale.
+{{ product.tag }}
+{{ product.name }}
+{{ product.description }}
+{{ spec }}
+Learn more
+Capabilities
+Built for the demands of autonomous operations
+{{ cap.number }}
+{{ cap.title }}
+{{ cap.description }}
+About
+We are engineers and mission partners.
+Auterion integrates  autonomy, open architecture, and battle-proven resilience  to deliver measurable impact for defense and commercial operations.
+Our roots are in open-source development. Making PX4 freely available created the largest developer community for autonomous robots in the world. Today we turn that foundation into products that democracies can trust.
+We feel a moral obligation to support liberal democracies. Technology companies should support armed forces protecting freedom. Our systems ensure that human operators always remain in control.
+2017
+Founded in Zurich
+350+
+Team members
+PX4
+Open-source heritage
+$50M
+Pentagon contract
+Industries
+Autonomous systems for every domain
+{{ vertical }}
+Join the mission.
+We are building the future of autonomous systems. If you want to work on technology that matters, for defense, for democracies, for the world, we would love to meet you.
+View open positions
+
+--- FILE: website/WebsiteLayout.vue ---
+{{ item.name }}
+{{ item.name }}
+{{ isDark ? 'Light mode' : 'Dark mode' }}
+The platform for autonomous mass. Open architecture for coordinated swarms across air, land, and sea.
+LinkedIn
+GitHub
+Product
+{{ link.name }}
+Company
+{{ link.name }}
+Resources
+{{ link.name }}
+Legal
+{{ link.name }}
+&copy; {{ new Date().getFullYear() }} Auterion AG. All rights reserved.
+Zurich &middot; Arlington &middot; Kyiv
+
+--- FILE: website/WebsitePartnersPage.vue ---
+Partners
+Trusted by those who protect democracies.
+From the Pentagon to the frontlines of Ukraine, Auterion technology is deployed by organizations that demand mission-critical reliability.
+{{ stat.value }}
+{{ stat.label }}
+{{ tier.tier }}
+{{ tier.description }}
+{{ partner.name }}
+{{ partner.detail }}
+Partner Program
+Build on the world's most deployed open drone platform.
+Join the ecosystem of manufacturers, integrators, and developers building the next generation of autonomous systems on Auterion.
+{{ benefit.title }}
+{{ benefit.description }}
+Become a partner.
+Whether you build platforms, integrate payloads, or develop applications, there is a place for you in the Auterion ecosystem.
+Get in touch
+
+--- FILE: language/LanguageSocialMediaPage.vue ---
+Language & Style
+Social Media
+Platform-specific copy guidelines for LinkedIn, X/Twitter, and YouTube.
+LinkedIn
+Professional audience. Thought leadership, product launches, partnerships, and hiring.
+Format Rules
+-- Max 1,300 characters per post
+-- Lead with the strongest sentence (visible before "see more")
+-- Use line breaks between paragraphs for readability
+-- End with a clear CTA or question to drive engagement
+-- 2-4 hashtags max, placed at the end
+Tone
+Professional but not corporate. Share substance, not slogans. Data points, milestones, and technical insights perform best. Avoid "excited to announce" and "thrilled to share."
+Example Post
+33,000 AI strike kits. One contract. That's the scale the Pentagon just ordered from Auterion.
+Skynode S costs about as much as an Android phone, but it gives any drone autonomous target tracking, GPS-denied navigation, and swarm coordination.
+This isn't a prototype. It's production at a scale that changes what autonomous mass means for allied forces.
+#autonomy #defense #drones #auterion
+X / Twitter
+Fast, technical, news-driven. Reach developers, defense analysts, and aerospace press.
+Format Rules
+-- 280 characters per tweet (aim for under 240 for retweet room)
+-- Use threads for longer narratives (max 5 tweets)
+-- 1-2 hashtags max, only if they add discoverability
+-- Tag partners and relevant accounts when appropriate
+Tone
+Concise and direct. Technical facts over marketing language. Short declarative sentences. Numbers and specifics always outperform abstractions.
+Example Posts
+Skynode S: autonomous target lock, GPS-denied nav, swarm-ready. Fits in your hand. Costs less than a phone.
+AuterionOS now runs on 14 airframe types from 6 manufacturers. One operator interface for the entire fleet.
+YouTube
+Long-form content: product demos, conference talks, field footage, technical explainers.
+Description Template
+[One-sentence summary of the video content]
+[2-3 sentences expanding on what the viewer will learn or see]
+Chapters:
+0:00 Introduction 1:30 [Topic 1] 4:00 [Topic 2] 7:15 [Topic 3] 10:00 Summary
+Links:
+Product page: [URL] Documentation: [URL] Blog post: [URL]
+Chapter Markers
+Always include chapter markers for videos over 3 minutes. Start with "0:00 Introduction." Use descriptive labels, not generic ones ("Skynode S Field Test" not "Demo").
+Title Conventions
+Title case. Lead with the product or topic name. Include a descriptor after a colon or dash. Keep under 60 characters to avoid truncation.
+"Skynode S: Autonomous Target Tracking Demo"
+"Check Out Our Amazing New Product!!!"
+Hashtag Reference
+Category
+Hashtags
+Usage
+Brand
+#auterion
+Every post
+Industry
+#drones #autonomy #UAV
+When relevant to content
+Sector
+#defense #aerospace
+Defense-related content only
+Technical
+#PX4 #opensource #robotics
+Developer and engineering content
+
+--- FILE: language/LanguageBlogPage.vue ---
+Language & Style
+Blog
+Post structure, headline patterns, and editorial conventions for the Auterion blog.
+Post Structure
+Every blog post follows a four-part arc. This structure works for product announcements, technical deep-dives, and thought leadership alike.
+01
+Hook
+Open with a concrete fact, statistic, or scenario that creates tension. No "In today's rapidly evolving landscape" openings. State the problem or stakes in one to two sentences.
+02
+Context
+Expand on why this matters. Provide background the reader needs to understand the detail section. Keep this to two or three paragraphs. Reference real deployments, partnerships, or technical constraints.
+03
+Detail
+The substance of the post. For product announcements: features, specs, what it enables. For thought leadership: analysis, evidence, implications. Use subheadings, bullet lists, and images to break up long sections.
+04
+Call to Action
+End with a clear next step: contact sales, read the documentation, attend the event, or explore a product page. Never end a post without directing the reader somewhere.
+Headline Patterns
+Effective
+"33,000 Skynode Strike Kits: What the Pentagon Contract Means for Autonomous Warfare"
+Specific number, names the product, states the implication.
+Effective
+"How AuterionOS Unifies a Mixed Fleet of 12 Drone Types"
+How-to framing with a concrete scope.
+Avoid
+"Exciting News from Auterion!"
+Vague, self-referential, exclamation mark.
+Avoid
+"The Future of Drones is Here"
+Cliche, says nothing specific about the content.
+Meta & Formatting
+Element
+Guideline
+Example
+Meta description
+150-160 characters, includes primary keyword
+"Auterion delivers 33,000 Skynode S strike kits under a $50M Pentagon contract, scaling autonomous drone swarms for allied forces."
+Author attribution
+Full name, title, no headshot in byline
+"By Lorenz Meier, CEO & Founder"
+Tags
+2-4 tags per post, lowercase
+autonomy, defense, product-update
+Categories
+One primary category per post
+Product, Engineering, Company, Industry
+Reading time
+Display estimated reading time
+"5 min read"
+
+--- FILE: language/LanguageWritingPage.vue ---
+Language & Style
+Writing Auterion
+Capitalization, punctuation, sentence structure, and formatting conventions for all Auterion communications.
+Capitalization
+Sentence Case for Product UI
+All buttons, labels, menu items, tooltips, and error messages use sentence case. Only the first word and proper nouns are capitalized.
+Do
+"Upload flight plan" / "Mission complete" / "Connect to Skynode"
+Don't
+"Upload Flight Plan" / "Mission Complete" / "Connect To Skynode"
+Title Case for Marketing
+Headlines, page titles, and marketing materials use title case. Capitalize all words except articles (a, an, the), conjunctions (and, but, or), and short prepositions (in, on, at, for, to) unless they start the title.
+Do
+"Autonomous Swarms at Scale" / "The Future of Fleet Operations"
+Don't
+"Autonomous swarms at scale" / "THE FUTURE OF FLEET OPERATIONS"
+Punctuation
+Rule
+Convention
+Example
+Oxford comma
+Always use
+"Air, land, and sea"
+Exclamation marks
+Never in product UI
+"Mission complete." not "Mission complete!"
+Em dashes
+No spaces around
+"Skynode S&thinsp;&mdash;&thinsp;the smallest autopilot"
+Ellipses
+Avoid in formal copy
+Use only for truncation in UI: "Loading mission data..."
+Periods in lists
+Full sentences get periods; fragments do not
+"Autonomous flight" (no period) vs. "The drone flies autonomously." (period)
+Abbreviations & Acronyms
+Spell Out on First Use
+Always spell out the full term on first use with the abbreviation in parentheses. Use the abbreviation alone after that. Example: "Beyond Visual Line of Sight (BVLOS) operations require... BVLOS-capable aircraft..."
+Exceptions
+Universally known abbreviations do not need expansion: API, GPS, AI, USB, WiFi. Product names (PX4, MAVLink, ROS 2) are never expanded.
+Per-Page Rule
+Each page or document stands alone. Re-expand on first use even if the same term was expanded on a different page.
+Sentence Structure
+Active Voice
+Default to active voice. The subject performs the action.
+"AuterionOS unifies mixed fleets."
+"Mixed fleets are unified by AuterionOS."
+Sentence Length
+Aim for 15-25 words per sentence. Mix short and medium sentences for rhythm. Break any sentence over 30 words into two.
+"Deploy AI models at the edge. Skynode processes data on the drone, reducing latency and bandwidth."
+"By deploying AI models at the edge, which means processing data directly on the drone using Skynode's onboard compute, you can significantly reduce latency and bandwidth requirements while maintaining autonomous capabilities."
+
+--- FILE: language/LanguageProductNamesPage.vue ---
+Language & Style
+Product Names
+Correct formatting for every Auterion product name. Consistency here signals precision everywhere else.
+Product Name Reference
+Product
+Correct Format
+Category
+Description
+AuterionOS
+One word, capital A and OS
+Software
+Modular operating system for autonomous fleets
+Skynode
+One word, capital S
+Hardware
+Avionics platform (base name, used generically)
+Skynode X
+Space before variant letter
+Hardware
+Enterprise avionics with full compute
+Skynode S
+Space before variant letter
+Hardware
+Compact AI strike autopilot
+Skynode N
+Space before variant letter
+Hardware
+Navigation-focused autopilot module
+Nemyx
+One word, capital N
+Software
+Defense swarming and coordination platform
+Trellys
+One word, capital T
+Software
+Commercial fleet management platform
+PX4
+All caps PX, numeral 4
+Open Source
+Open-source autopilot framework
+Common Mistakes
+Wrong
+"Auterion OS" or "auterionOS" or "Auterion-OS"
+Always one word:  AuterionOS
+Wrong
+"SkyNode" or "Sky Node" or "Sky-node"
+One word, single capital:  Skynode
+Wrong
+"Skynode-S" or "SkynodeS" or "SKYNODE S"
+Space separates variant:  Skynode S
+Wrong
+"NEMYX" or "nemyx" or "Nemix"
+Capital N, lowercase rest, y not i:  Nemyx
+Wrong
+"Px4" or "px4" or "PX-4"
+All caps PX, no separator:  PX4
+Usage Guidelines
+Never Genericize
+Product names are proper nouns. Do not use them as verbs or common nouns. Write "a Skynode-powered drone," not "a skynode drone."
+No Possessive on Products
+Write "the AuterionOS architecture" not "AuterionOS's architecture." Rephrase to avoid the possessive form.
+First Reference Rule
+On first reference in any document, use the full product name. After that, a shortened form is acceptable: "Skynode S" then "the S" in subsequent mentions.
+
+--- FILE: language/LanguageVoicePrinciplesPage.vue ---
+Language & Style
+Voice Principles
+Practical writing guidance for tone, register, and audience — how to sound like Auterion in every sentence.
+Tone Spectrum
+Auterion's voice lives in a deliberate range. Every piece of copy should land somewhere on these spectrums.
+Technical
+Approachable
+We lean technical. We know our subject matter deeply and it shows — but we never use jargon as a barrier.
+Confident
+Humble
+We state what we know directly. We don't hedge with "we believe" or "we think" — but we never overstate or disparage competitors.
+Urgent
+Measured
+Our mission matters and timelines are real. We convey stakes without resorting to hype or alarm.
+Direct
+Diplomatic
+Say what you mean. Short sentences, active voice, no filler — but stay respectful of the reader's perspective.
+Audience Register
+Formality and vocabulary shift depending on who you are writing for. The core voice stays the same — only the register changes.
+Defense & Government
+Formal
+Use precise military and regulatory terminology. Reference compliance standards by name (NDAA, ITAR). Avoid casual phrasing. Spell out acronyms on first use even when the audience likely knows them — it signals rigor.
+Commercial & Enterprise
+Professional
+Focus on outcomes — productivity gains, cost reduction, reliability. Use industry terms but explain aerospace-specific concepts. Keep sentences concise and benefit-oriented.
+Developers & Engineers
+Technical-casual
+Be direct and specific. Use technical terms freely (API, SDK, MAVLink, ROS 2). Code examples speak louder than marketing copy. Skip the pitch — lead with what it does and how.
+Do / Don't
+Do
+"Skynode S enables autonomous target tracking when GPS and comms links are denied."
+Direct, specific, states the capability and condition clearly.
+Don't
+"Our amazing next-gen AI-powered solution revolutionizes the battlefield!"
+Hyperbolic, vague, uses buzzwords without substance.
+Do
+"AuterionOS runs on hardware from multiple manufacturers, giving operators a single interface for mixed fleets."
+Explains interoperability in concrete terms the reader can picture.
+Don't
+"We leverage synergies across the ecosystem to deliver best-in-class interoperability."
+Corporate filler. Says nothing actionable.
+Do
+"The PX4 autopilot is open-source. Inspect it, modify it, contribute to it."
+Short, imperative, developer-friendly. Shows transparency.
+Don't
+"We believe in the power of community-driven innovation to shape the future of autonomy."
+Passive, vague "we believe" hedging. Sounds like a mission statement, not useful information.
+
+--- FILE: logo/LogoBasicsPage.vue ---
+Logo
+Basics
+The Auterion logo exists in three forms. Choose the right variant based on context, available space, and surrounding content.
+Primary Logo
+The primary logo combines the symbol and wordmark. This is the preferred form and should be used whenever space allows. It provides the strongest brand recognition and should appear on all primary touchpoints.
+Primary logo, dark background
+On dark backgrounds
+Primary logo, light background
+On light backgrounds
+When to use
+Website headers and footers
+Presentations and pitch decks
+Marketing collateral and print materials
+Trade show displays and signage
+Product packaging and documentation
+Symbol Only
+The symbol can be used independently when the Auterion brand is already established in context or when space is limited. It should never replace the primary logo as a first introduction to the brand.
+Symbol, full color
+Full color
+Symbol, white
+White (on dark)
+Symbol, black
+Black (on light)
+When to use
+App icons and favicons
+Social media profile images
+Hardware badges and physical labels
+Watermarks on imagery and video
+Contexts where the brand name already appears nearby
+Wordmark Only
+The wordmark without the symbol is used in rare cases where a text-only treatment is required, such as inline text references or narrow horizontal spaces where the full logo would be too small.
+Wordmark, dark background
+On dark backgrounds
+Wordmark, light background
+On light backgrounds
+When to use
+Legal documents and contracts
+Narrow navigation bars where the symbol is already present elsewhere
+Text-heavy editorial contexts
+
+--- FILE: logo/LogoScalePage.vue ---
+Logo
+Scale & Clear Space
+Minimum sizes ensure legibility. Clear space protects the logo from visual interference. These rules are non-negotiable.
+Minimum Sizes
+Below these thresholds, the logo loses legibility and fine details collapse. If the available space is smaller than the minimum for the primary logo, switch to the symbol-only variant.
+Primary logo at minimum size
+Primary Logo
+120px
+wide (digital)
+30mm wide for print at 300 DPI
+Symbol at minimum size
+Symbol Only
+24px
+wide (digital)
+6mm wide for print at 300 DPI
+Wordmark at minimum size
+Wordmark Only
+80px
+wide (digital)
+20mm wide for print at 300 DPI
+Clear Space
+The clear space is a protected area around the logo where no other visual elements may appear. It is measured using the symbol height as the base unit (1x). Maintain at least 1x on all sides of the logo.
+Clear space diagram: 1x symbol height on all sides of primary logo
+Primary Logo Clear Space
+Primary logo with 1x clear space overlay
+1x symbol height minimum on all sides. In hero layouts, increase to 2x for greater visual breathing room.
+Symbol Clear Space
+Symbol with 1x clear space overlay
+1x symbol height minimum on all sides. For app icons, the container itself provides the clear space.
+Scale Reference
+Common sizing recommendations for typical use cases.
+Context
+Variant
+Recommended Size
+Clear Space
+Website header
+Primary
+140-160px wide
+1x
+Mobile header
+Primary
+120px wide
+1x
+Favicon
+Symbol
+32px / 16px
+Container
+App icon
+Symbol
+512px (source)
+20% padding
+Presentation title
+Primary
+200-240px wide
+2x
+Vehicle label
+Symbol
+10mm minimum
+1x
+
+--- FILE: logo/LogoIntroductionPage.vue ---
+Logo
+Introduction
+The Auterion mark is the visual foundation of our brand. It represents our mission to bring autonomous intelligence to the sky at scale.
+The Mark
+Our logo is more than a symbol. It is the signature of a company building the operating system for autonomous drone fleets. Every element of the mark has been designed to communicate precision, connectivity, and trust in safety-critical aerospace environments.
+Auterion primary logo, full color on dark background
+Symbol
+The geometric symbol distills our technology into a single, recognizable form. It works at every scale, from a 24px favicon to a 10-meter trade show banner.
+Wordmark
+The custom wordmark pairs with the symbol to form the complete logo. Its letterforms are engineered for clarity in both digital interfaces and physical hardware labels.
+Symbol Meaning
+The Auterion symbol encodes the core concepts of our technology into its geometry. Each visual element maps to a fundamental principle of autonomous swarm systems.
+Icon
+Connected Nodes
+The interconnected vertices represent the mesh network topology that enables drone-to-drone communication. Every node is both autonomous and collaborative.
+Icon
+Swarm Intelligence
+The radiating structure mirrors swarm behavior patterns, where simple individual rules produce sophisticated collective outcomes. One operator, many drones.
+Icon
+Autonomous Systems
+The self-contained geometric form conveys self-sufficiency and edge computing capability. Each vehicle thinks independently while remaining part of the whole.
+Symbol anatomy diagram with labeled elements
+Evolution
+The Auterion mark has evolved alongside our technology. From our roots in open-source autopilot software to our current position as the platform for autonomous mass, the logo has been refined to reflect each stage of growth.
+Original mark (2017)
+2017 -- Foundation
+The original mark established the brand identity as Auterion launched from the PX4 open-source ecosystem.
+Refined mark (2021)
+2021 -- Refinement
+Geometry was tightened and the wordmark redrawn for improved legibility across digital and physical applications.
+Current mark (2024)
+2024 -- Current
+The current mark reflects Auterion's evolution into swarm autonomy and defense applications, with sharper geometry and increased confidence.
+
+--- FILE: logo/LogoBlackWhitePage.vue ---
+Logo
+Black & White
+When color reproduction is unavailable or undesirable, use the monochrome versions of the logo. These are not grayscale conversions -- they are purpose-built single-color variants.
+White Logo
+Use the white logo on dark or saturated backgrounds. This is the most common monochrome variant since Auterion's primary brand context is dark-mode-first.
+White logo on dark background
+On dark neutrals (#000 -- #333)
+White logo on brand blue
+On saturated brand colors
+When to use
+Dark UI backgrounds and dark-mode interfaces
+Photography overlays on dark or busy imagery
+Colored backgrounds where the full-color logo lacks contrast
+Laser-etched hardware labels on dark chassis
+Single-color print processes (white ink on dark stock)
+Black Logo
+Use the black logo on light backgrounds. This is the standard choice for print documents, contracts, and light-themed contexts.
+Black logo on white background
+On white (#fff)
+Black logo on light gray
+On light neutrals (#eee -- #fff)
+When to use
+Print documents, letterheads, and invoices
+Legal and compliance materials
+Fax and single-color print output
+Light-mode UI contexts
+Embossed or stamped applications
+Do / Don't
+Follow these rules to maintain the integrity of the monochrome logo variants.
+White logo on dark background
+Do: Use white logo on dark backgrounds
+White logo on light background (wrong)
+Don't: Use white logo on light backgrounds
+Black logo on white background
+Do: Use black logo on light backgrounds
+Black logo on dark background (wrong)
+Don't: Use black logo on dark backgrounds
+Full-color logo on neutral background
+Do: Prefer the full-color logo when color is available
+Grayscale conversion of color logo (wrong)
+Don't: Convert the color logo to grayscale -- use the purpose-built B&W versions
+
+--- FILE: logo/LogoPlacementPage.vue ---
+Logo
+Placement
+Consistent logo placement builds recognition. These guidelines cover positioning, co-branding, and partner logo relationships across all touchpoints.
+Positioning
+The Auterion logo has two default positions depending on context. Consistent placement across all materials strengthens brand recognition and creates a professional, unified appearance.
+Top-Left (Default)
+Logo
+The default position for most applications. Used in website headers, document headers, presentation slides, and product UI. Aligns with left-to-right reading patterns.
+Centered (Hero)
+Logo
+Reserved for hero contexts where the logo is the focal point. Splash screens, loading states, event backdrops, and landing page hero sections. Use the larger tagline lockup when appropriate.
+Bottom-Left (Footer)
+Logo
+Used in website footers and document footers. Typically at a smaller scale than the header placement.
+Bottom-Right (Badge)
+S
+Symbol-only in bottom-right for "powered by" contexts, video watermarks, and photography attribution.
+Co-Branding
+When the Auterion logo appears alongside partner or customer logos, specific rules ensure both brands are treated with equal respect and visual balance.
+Co-branding layout: Auterion logo + divider + partner logo, equal optical height
+Rules
+Match optical height of both logos (not pixel height)
+Separate with a vertical divider line (1px, 50% opacity)
+Maintain 2x clear space between logos and divider
+Auterion logo appears on the left in LTR contexts
+Both logos use the same color treatment (both full-color or both monochrome)
+Avoid
+Making one logo significantly larger than the other
+Placing logos so close that their clear spaces overlap
+Mixing color treatments (e.g., Auterion in color, partner in grayscale)
+Stacking more than three logos horizontally
+Partner Logo Relationships
+Different partnership tiers have different logo placement conventions. Follow these patterns based on the relationship type.
+Integrated Partner
+Side-by-side, equal size
+Hardware manufacturers and deep integration partners. Logos appear side-by-side at equal optical height.
+Powered By
+"Powered by Auterion" badge
+When Auterion technology runs inside another product. Use the "Powered by" lockup with the Auterion logo at a smaller scale.
+Ecosystem
+Logo grid / wall
+For partner ecosystem pages and event materials. Logos appear in a grid with consistent sizing and spacing across all partners.
+Spacing Guidelines
+Consistent spacing between the logo and surrounding elements reinforces the brand's precision and attention to detail.
+Context
+Distance from edge
+Distance from content
+Website header
+24-32px from left edge
+48px from navigation
+Presentation slide
+5% of slide width from edge
+2x logo height from title
+Print document
+20mm from page edge
+15mm from body text
+Email signature
+Flush left
+16px from divider
+Vehicle livery
+10% of surface width
+3x symbol height from other marks
+
+--- FILE: logo/LogoLockupPage.vue ---
+Logo
+Lockups
+Logo lockups define the fixed spatial relationships between the symbol, wordmark, and optional tagline. Never alter the proportions or spacing within a lockup.
+Horizontal Lockup
+The default lockup arrangement. The symbol sits to the left of the wordmark with a fixed gap equal to 50% of the symbol width. Use this in most applications, especially wide formats like website headers, presentation title slides, and signage.
+Horizontal lockup with spacing annotations
+Symbol-to-wordmark gap
+0.5x symbol width
+Vertical alignment
+Optical center
+Aspect ratio
+Approximately 3:1
+Vertical Lockup
+The stacked lockup places the symbol above the wordmark, both centered on the vertical axis. Use this when the layout favors a square or portrait format, such as app splash screens, social media posts, or square promotional materials.
+Vertical lockup with spacing annotations
+Symbol-to-wordmark gap
+0.75x symbol height
+Alignment
+Center-aligned
+Aspect ratio
+Approximately 1:1
+Tagline Lockup
+The tagline "Platform for Autonomous Mass" can be included below the horizontal lockup. The tagline is set in a lighter weight and smaller size, separated by a thin horizontal rule. Use this only in hero contexts where there is ample space and the brand message needs reinforcement.
+Tagline lockup: "Platform for Autonomous Mass"
+Do
+Use in hero banners and keynote title slides
+Use in trade show booth backdrops
+Maintain the exact tagline text as written
+Don't
+Use in navigation bars or small UI elements
+Modify the tagline wording
+Combine with the vertical lockup
+
+--- FILE: typography/TypographyFormattingPage.vue ---
+Typography
+Formatting
+Number formatting, date/time patterns, units, and coordinate conventions for aerospace interfaces. Consistency in data display prevents misreads at critical moments.
+Number Formatting
+Always use  tabular figures  (enabled by default via OpenType  ss01 ) so digits align in columns. Use monospace for numeric readouts in dashboards.
+Value
+Correct
+Incorrect
+Rule
+{{ item.label }}
+{{ item.good }}
+{{ item.bad }}
+{{ item.note }}
+Thousands Separator
+Use commas for numbers with 4+ digits:  1,240  not  1240 . For numbers under 10,000 in tight UI contexts (badge counts, table cells), the comma may be omitted if space is constrained.
+Decimal Precision
+Match precision to the sensor or context. Coordinates need 4-6 decimal places. Altitude needs 0-1. Speed needs 1. Always use a leading zero:  0.42  not  .42 .
+Date & Time
+Use ISO 8601 for data interchange and logs. Use human-readable formats for UI display. Always use 24-hour time &mdash; AM/PM is ambiguous in multinational operations.
+Context
+Format
+Standard
+Note
+{{ item.context }}
+{{ item.format }}
+{{ item.standard }}
+{{ item.note }}
+Timezone Handling
+Store and transmit all timestamps in UTC. Display in the operator's local timezone with an explicit indicator:  14:32 UTC  or  14:32 (local) . In multi-timezone operations, always show UTC alongside local time.
+Units & Measures
+Always place a space between the number and unit. Use SI units as the primary system. Lowercase for unit symbols (m, km, kg) except where convention dictates otherwise (FL for flight level).
+Quantity
+Unit
+Display
+Note
+{{ item.quantity }}
+{{ item.unit }}
+{{ item.display }}
+{{ item.note }}
+Do
+1,240 m AGL
+34.2 m/s
+23 &deg;C
+247&deg;
+Don't
+1240m AGL
+34.2M/S
+23C
+247 degrees
+Coordinate Formatting
+Coordinates are critical flight data. Always use monospace, display with the degree symbol ( &deg; ), and include the hemisphere indicator (N/S/E/W).
+{{ item.label }}
+{{ item.example }}
+{{ item.usage }}
+Precision Guidelines
+The number of decimal places in coordinates determines position accuracy. Match precision to the operational context.
+47.38&deg;
+~1.1 km
+47.377&deg;
+~110 m
+47.3769&deg;
+~11 m
+47.37694&deg;
+~1.1 m
+Aerospace Conventions
+Domain-specific formatting rules that differ from general-purpose software conventions.
+Heading & Bearing
+Always 3 digits, zero-padded. No space before the degree symbol. Use &ldquo;T&rdquo; suffix for true north, &ldquo;M&rdquo; for magnetic when disambiguation is needed.
+045&deg;
+247&deg;T
+003&deg;M
+Altitude Qualifiers
+Always specify the reference: AGL (above ground level), MSL (above mean sea level), or FL (flight level). Never display altitude without a qualifier.
+120 m AGL
+1,240 m MSL
+Vehicle Identifiers
+Use monospace for vehicle IDs, serial numbers, and callsigns. Keep consistent casing as defined by the source system.
+AUT-2847
+SKY-003
+Mission Time
+Elapsed mission time uses  HH:MM:SS  format, always zero-padded. For sub-second precision, append milliseconds with a period separator.
+01:23:45
+00:02:34.127
+
+--- FILE: typography/TypographyUsingTypePage.vue ---
+Typography
+Using Type
+When to use each size, weight, and style combination. Clear typographic hierarchy keeps operators focused on mission-critical information.
+Size & Weight Reference
+Three weights &mdash; Regular (400), Medium (500), and SemiBold (600) &mdash; cover every use case. Letter spacing tightens as size increases: -2% at body sizes, -3% at heading sizes, -4% at display sizes.
+{{ item.px }}
+{{ item.weight }}
+{{ item.role }}
+{{ item.usage }}
+{{ item.tracking }}
+Hierarchy in Practice
+A well-structured page uses no more than 3-4 distinct type sizes. Here is how they combine in typical layouts.
+Documentation Page
+Section Label
+Page Title
+Description paragraph using base size regular weight with relaxed line height for comfortable reading.
+Section Heading
+Secondary body text at 14px for compact content areas.
+Dashboard Card
+Vehicle Telemetry
+Live
+Altitude
+1,240 m
+Speed
+34.2 m/s
+Battery
+78 %
+Last updated 2 seconds ago
+Form Pattern
+Mission Name
+Enter mission name&hellip;
+Alphanumeric, 3-64 characters
+Waypoint Count
+24
+Code & Monospace
+Use monospace for token names, numeric readouts, coordinates, and code.
+--color-primary : var(--color-blue-7);
+--font-size-base : 16px;
+--tracking-base : -0.32px;
+Common Mistakes
+Consistent hierarchy requires discipline. Avoid these patterns that weaken scannability and increase cognitive load.
+Do
+Use one weight for headings, one for body
+SemiBold headings
+Regular weight for body text keeps clear contrast.
+Use uppercase sparingly for labels only
+Section Label
+Heading Below
+Use monospace for numeric data
+47.3815, 8.5421
+Don't
+Mix many weights without clear purpose
+Regular heading
+Semibold body text reverses the hierarchy.
+Use uppercase for long text
+THIS ENTIRE PARAGRAPH IS SET IN UPPERCASE WHICH SIGNIFICANTLY REDUCES READABILITY
+Use proportional figures for tabular data
+1,111 vs 8,888
+Digits won't align in columns without tabular figures.
+Weight Decision Guide
+Three weights are sufficient for every interface. Adding more creates visual noise that slows operator decision-making.
+Aa
+SemiBold (600)
+Page titles, section headings, card titles, button labels, navigation items, data values in dashboards.
+Aa
+Medium (500)
+Form labels, table headers, overline section labels, badge text, tabs, breadcrumbs, small interactive elements.
+Aa
+Regular (400)
+Body text, descriptions, captions, help text, form input values, secondary information, long-form content.
+

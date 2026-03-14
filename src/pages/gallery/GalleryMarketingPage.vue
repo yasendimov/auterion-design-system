@@ -3,18 +3,18 @@
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Gallery</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Gallery</p>
       <h1 class="text-5xl font-medium text-high">Marketing</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Trade show materials, presentations, print collateral, and campaign assets showing the design system in physical and digital marketing contexts.
       </p>
     </header>
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Collateral Examples</h2>
+    <section class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Collateral Examples</h2>
       <div class="grid gap-8 sm:grid-cols-2">
         <div>
           <div class="aspect-video bg-surface-1 flex items-center justify-center mb-4">
@@ -69,21 +69,21 @@
 
     <div class="border-t border-line"></div>
 
-    <section class="px-8 lg:px-16 py-16">
-      <h2 class="text-xl font-semibold text-high mb-8">Event Banners</h2>
+    <section class="px-10 lg:px-20 py-24">
+      <h2 class="text-xl font-semibold text-high mb-10">Event Banners</h2>
       <div class="aspect-3/1 bg-surface-1 flex items-center justify-center mb-4">
         <span class="text-sm text-dim">Wide-format event banner</span>
       </div>
       <div class="grid gap-4 sm:grid-cols-3 mt-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Typography</p>
           <p class="text-sm text-low">Headline in Inter Semibold at maximum legible size for viewing distance. Tagline in Inter Regular, 40-50% of headline size. All text left-aligned.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Color</p>
           <p class="text-sm text-low">Dark background (zinc-950 / page-bg). White text for headlines. Primary blue for accent elements — a single line, bar, or highlight. No gradients.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-2">Layout</p>
           <p class="text-sm text-low">Logo in top-left or bottom-left corner with minimum clear space. Product imagery (if used) on the right third. URL or QR code in bottom-right.</p>
         </div>

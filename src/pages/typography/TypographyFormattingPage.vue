@@ -39,10 +39,10 @@ const aerospaceUnits = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Typography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Typography</p>
       <h1 class="text-5xl font-medium text-high">Formatting</h1>
-      <p class="text-base text-low mt-4 max-w-xl leading-relaxed">
+      <p class="text-base text-low mt-6 max-w-xl leading-relaxed">
         Number formatting, date/time patterns, units, and coordinate conventions for aerospace interfaces. Consistency in data display prevents misreads at critical moments.
       </p>
     </header>
@@ -50,7 +50,7 @@ const aerospaceUnits = [
     <div class="border-t border-line"></div>
 
     <!-- Number Formatting -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Number Formatting</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Always use <strong class="text-high font-medium">tabular figures</strong> (enabled by default via OpenType <code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">ss01</code>) so digits align in columns. Use monospace for numeric readouts in dashboards.
@@ -78,13 +78,13 @@ const aerospaceUnits = [
       </div>
 
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Thousands Separator</h3>
           <p class="text-xs text-low leading-relaxed">
             Use commas for numbers with 4+ digits: <span class="font-mono text-high">1,240</span> not <span class="font-mono text-dim line-through">1240</span>. For numbers under 10,000 in tight UI contexts (badge counts, table cells), the comma may be omitted if space is constrained.
           </p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Decimal Precision</h3>
           <p class="text-xs text-low leading-relaxed">
             Match precision to the sensor or context. Coordinates need 4-6 decimal places. Altitude needs 0-1. Speed needs 1. Always use a leading zero: <span class="font-mono text-high">0.42</span> not <span class="font-mono text-dim line-through">.42</span>.
@@ -96,7 +96,7 @@ const aerospaceUnits = [
     <div class="border-t border-line"></div>
 
     <!-- Date & Time -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Date &amp; Time</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Use ISO 8601 for data interchange and logs. Use human-readable formats for UI display. Always use 24-hour time &mdash; AM/PM is ambiguous in multinational operations.
@@ -123,7 +123,7 @@ const aerospaceUnits = [
         </table>
       </div>
 
-      <div class="mt-8 p-6 border border-line">
+      <div class="mt-8 p-8 border border-line">
         <h3 class="text-sm font-semibold text-high mb-2">Timezone Handling</h3>
         <p class="text-xs text-low leading-relaxed max-w-2xl">
           Store and transmit all timestamps in UTC. Display in the operator's local timezone with an explicit indicator: <span class="font-mono text-high">14:32 UTC</span> or <span class="font-mono text-high">14:32 (local)</span>. In multi-timezone operations, always show UTC alongside local time.
@@ -134,7 +134,7 @@ const aerospaceUnits = [
     <div class="border-t border-line"></div>
 
     <!-- Units -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Units &amp; Measures</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Always place a space between the number and unit. Use SI units as the primary system. Lowercase for unit symbols (m, km, kg) except where convention dictates otherwise (FL for flight level).
@@ -163,7 +163,7 @@ const aerospaceUnits = [
 
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
         <div class="p-6 border-2 border-ok/30">
-          <p class="text-[11px] uppercase tracking-widest font-medium mb-3" :style="{ color: 'var(--color-ok)' }">Do</p>
+          <p class="text-[11px] uppercase tracking-widest font-medium mb-5" :style="{ color: 'var(--color-ok)' }">Do</p>
           <div class="space-y-2 font-mono text-sm text-high">
             <p>1,240 m AGL</p>
             <p>34.2 m/s</p>
@@ -172,7 +172,7 @@ const aerospaceUnits = [
           </div>
         </div>
         <div class="p-6 border-2 border-alarm/30">
-          <p class="text-[11px] uppercase tracking-widest font-medium mb-3" :style="{ color: 'var(--color-alarm)' }">Don't</p>
+          <p class="text-[11px] uppercase tracking-widest font-medium mb-5" :style="{ color: 'var(--color-alarm)' }">Don't</p>
           <div class="space-y-2 font-mono text-sm text-dim line-through">
             <p>1240m AGL</p>
             <p>34.2M/S</p>
@@ -186,7 +186,7 @@ const aerospaceUnits = [
     <div class="border-t border-line"></div>
 
     <!-- Coordinates -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Coordinate Formatting</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Coordinates are critical flight data. Always use monospace, display with the degree symbol (<code class="text-xs font-mono bg-surface-1 px-1 py-0.5 rounded">&deg;</code>), and include the hemisphere indicator (N/S/E/W).
@@ -208,7 +208,7 @@ const aerospaceUnits = [
         </div>
       </div>
 
-      <div class="mt-8 p-6 border border-line">
+      <div class="mt-8 p-8 border border-line">
         <h3 class="text-sm font-semibold text-high mb-2">Precision Guidelines</h3>
         <p class="text-xs text-low leading-relaxed max-w-2xl mb-4">
           The number of decimal places in coordinates determines position accuracy. Match precision to the operational context.
@@ -237,14 +237,14 @@ const aerospaceUnits = [
     <div class="border-t border-line"></div>
 
     <!-- Aerospace-Specific Conventions -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-4">Aerospace Conventions</h2>
       <p class="text-sm text-low leading-relaxed max-w-2xl mb-8">
         Domain-specific formatting rules that differ from general-purpose software conventions.
       </p>
 
       <div class="grid gap-4 sm:grid-cols-2">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Heading &amp; Bearing</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Always 3 digits, zero-padded. No space before the degree symbol. Use &ldquo;T&rdquo; suffix for true north, &ldquo;M&rdquo; for magnetic when disambiguation is needed.
@@ -256,7 +256,7 @@ const aerospaceUnits = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Altitude Qualifiers</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Always specify the reference: AGL (above ground level), MSL (above mean sea level), or FL (flight level). Never display altitude without a qualifier.
@@ -267,7 +267,7 @@ const aerospaceUnits = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Vehicle Identifiers</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Use monospace for vehicle IDs, serial numbers, and callsigns. Keep consistent casing as defined by the source system.
@@ -278,7 +278,7 @@ const aerospaceUnits = [
           </div>
         </div>
 
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">Mission Time</h3>
           <p class="text-xs text-low leading-relaxed mb-3">
             Elapsed mission time uses <span class="font-mono">HH:MM:SS</span> format, always zero-padded. For sub-second precision, append milliseconds with a period separator.

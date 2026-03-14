@@ -28,8 +28,8 @@ const principles = [
 
 <template>
   <div>
-    <header class="px-8 lg:px-16 pt-16 pb-12">
-      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-3">Iconography</p>
+    <header class="px-10 lg:px-20 pt-24 pb-16">
+      <p class="text-[11px] text-dim uppercase tracking-widest font-medium mb-5">Iconography</p>
       <h1 class="text-5xl font-medium text-high">Introduction</h1>
       <p class="text-base text-low mt-4">Icons are a critical communication layer in aerospace interfaces. They must be unambiguous at a glance, legible at small sizes, and consistent across every surface of the Auterion platform.</p>
     </header>
@@ -37,12 +37,12 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- Design Principles -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Design Principles</h2>
       <p class="text-sm text-low mb-8">Four rules that govern every icon in the system. These are non-negotiable — they exist to protect usability in high-stakes operational environments.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div v-for="principle in principles" :key="principle.title" class="p-6 border border-line">
+        <div v-for="principle in principles" :key="principle.title" class="p-8 border border-line">
           <h3 class="text-sm font-semibold text-high mb-2">{{ principle.title }}</h3>
           <p class="text-sm text-low">{{ principle.description }}</p>
         </div>
@@ -52,7 +52,7 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- 24px Base Grid -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">24px Base Grid</h2>
       <p class="text-sm text-low mb-8">All icons are designed on a 24 x 24 pixel grid. A 2px padding zone on each edge defines the live area where icon geometry should remain. Corner radii are set to 2px for consistency.</p>
 
@@ -73,17 +73,17 @@ const principles = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-xs font-mono text-dim mb-2">Grid</p>
           <p class="text-2xl font-semibold text-high mb-1">24 x 24</p>
           <p class="text-sm text-low">Base pixel grid for all icon construction</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-xs font-mono text-dim mb-2">Stroke</p>
           <p class="text-2xl font-semibold text-high mb-1">1.5px</p>
           <p class="text-sm text-low">Consistent stroke weight at the base size</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-xs font-mono text-dim mb-2">Corner Radius</p>
           <p class="text-2xl font-semibold text-high mb-1">2px</p>
           <p class="text-sm text-low">Applied to rectangular shapes and open paths</p>
@@ -94,12 +94,12 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- Icon Categories -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Icon Categories</h2>
       <p class="text-sm text-low mb-8">The icon system is divided into two categories, each with distinct design considerations and usage contexts.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex gap-3 mb-4">
             <div class="w-10 h-10 bg-surface-1 flex items-center justify-center shrink-0">
               <span class="text-[10px] text-dim">UAV</span>
@@ -114,7 +114,7 @@ const principles = [
           <h3 class="text-sm font-semibold text-high mb-2">Product Symbols</h3>
           <p class="text-sm text-low">Domain-specific icons representing vehicle types, mission modes, system states, and payloads. These are custom-designed for aerospace contexts and have no generic equivalent. They encode operational meaning that operators must recognize instantly.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="flex gap-3 mb-4">
             <div class="w-10 h-10 bg-surface-1 flex items-center justify-center shrink-0">
               <span class="text-[10px] text-dim">Menu</span>
@@ -135,12 +135,12 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- Sizing -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Sizing</h2>
       <p class="text-sm text-low mb-8">Four sizes cover all use cases. Icons are always rendered at these exact pixel values — never at arbitrary or interpolated sizes.</p>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div v-for="size in sizes" :key="size.label" class="p-6 border border-line text-center">
+        <div v-for="size in sizes" :key="size.label" class="p-8 border border-line text-center">
           <div class="flex items-center justify-center mb-4">
             <div
               class="rounded bg-surface-1 flex items-center justify-center"
@@ -158,12 +158,12 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- Color Usage -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Color Usage</h2>
       <p class="text-sm text-low mb-8">Icons inherit the text color of their parent element. They are monochromatic by design — multi-color icons are not permitted in the system.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] font-medium text-dim uppercase tracking-widest mb-4">Correct</p>
           <div class="flex gap-4 items-center">
             <div class="w-10 h-10 bg-surface-1 flex items-center justify-center">
@@ -172,7 +172,7 @@ const principles = [
             <p class="text-sm text-low">Icon inherits <code class="font-mono text-xs">currentColor</code> from its parent text color. Changes automatically with theme.</p>
           </div>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <p class="text-[11px] font-medium text-dim uppercase tracking-widest mb-4">Incorrect</p>
           <div class="flex gap-4 items-center">
             <div class="w-10 h-10 bg-surface-1 flex items-center justify-center">
@@ -191,26 +191,26 @@ const principles = [
     <div class="border-t border-line"></div>
 
     <!-- Optical Alignment -->
-    <section class="px-8 lg:px-16 py-16">
+    <section class="px-10 lg:px-20 py-24">
       <h2 class="text-xl font-semibold text-high mb-1">Optical Alignment</h2>
       <p class="text-sm text-low mb-8">Mathematical centering does not equal visual centering. Icons with directional weight — arrows, play triangles, asymmetric shapes — must be optically adjusted.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="w-16 h-16 bg-surface-1 flex items-center justify-center mb-4 mx-auto">
             <span class="text-xs text-dim">Play</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1 text-center">Directional Shapes</h3>
           <p class="text-xs text-low text-center">Triangles and arrows are shifted slightly toward their point direction to appear centered.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="w-16 h-16 bg-surface-1 flex items-center justify-center mb-4 mx-auto">
             <span class="text-xs text-dim">Circle</span>
           </div>
           <h3 class="text-sm font-semibold text-high mb-1 text-center">Round Shapes</h3>
           <p class="text-xs text-low text-center">Circles and rounded forms extend slightly beyond the grid to match the perceived size of square shapes.</p>
         </div>
-        <div class="p-6 border border-line">
+        <div class="p-8 border border-line">
           <div class="w-16 h-16 bg-surface-1 flex items-center justify-center mb-4 mx-auto">
             <span class="text-xs text-dim">Text+Ic</span>
           </div>
